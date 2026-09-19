@@ -230,25 +230,25 @@ def plot_patient_biomarker_radar(patient_dict: dict) -> go.Figure:
             radialaxis=dict(
                 visible=True,
                 range=[0, 100],
-                tickfont=dict(color="#64748B", size=8),
-                gridcolor="rgba(0, 240, 255, 0.15)"
+                tickfont=dict(color="#94A3B8", size=9),
+                gridcolor="rgba(0, 240, 255, 0.2)"
             ),
             angularaxis=dict(
-                tickfont=dict(color="#F8FAFC", size=9),
-                gridcolor="rgba(0, 240, 255, 0.15)"
+                tickfont=dict(color="#F8FAFC", size=10, family="'Space Grotesk', -apple-system, sans-serif"),
+                gridcolor="rgba(0, 240, 255, 0.2)"
             ),
-            bgcolor="rgba(7, 11, 20, 0.6)"
+            bgcolor="rgba(7, 11, 20, 0.75)"
         ),
         paper_bgcolor="rgba(0,0,0,0)",
         title="<b>BIOMETRIC DEVIATION RADAR</b>",
-        title_font=dict(color="#00F0FF", size=12, family="'Chakra Petch', sans-serif"),
+        title_font=dict(color="#00F0FF", size=13, family="'Chakra Petch', sans-serif"),
         legend=dict(
             orientation="h",
             yanchor="bottom",
             y=-0.28,
             xanchor="center",
             x=0.5,
-            font=dict(color="#94A3B8", size=9)
+            font=dict(color="#CBD5E1", size=10)
         ),
         height=265,
         margin=dict(l=45, r=45, t=40, b=45)

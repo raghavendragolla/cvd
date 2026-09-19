@@ -12,7 +12,8 @@ __pycache__/
 .pytest_cache/
 
 # Streamlit temporary files
-.streamlit/
+.streamlit/*
+!.streamlit/config.toml
 
 # OS Specific
 .DS_Store

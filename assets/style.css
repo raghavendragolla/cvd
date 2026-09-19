@@ -68,6 +68,267 @@ code, pre, .stat-pill, .mono-val {
 }
 
 /* --------------------------------------------------------------------------
+   CRITICAL FIX: HIGH-CONTRAST STREAMLIT WIDGET LABELS & ACCESSIBILITY
+   Ensures all input labels are bright, crisp, and 100% readable on dark HUD
+   -------------------------------------------------------------------------- */
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] label,
+[data-testid="stWidgetLabel"] p,
+[data-testid="stWidgetLabel"] span,
+.stSelectbox label,
+.stSlider label,
+.stNumberInput label,
+.stTextInput label,
+.stMultiSelect label,
+.stFileUploader label,
+div[data-testid="stMarkdownContainer"] label {
+    color: #F1F5F9 !important;
+    font-family: var(--font-body) !important;
+    font-weight: 600 !important;
+    font-size: 0.94rem !important;
+    letter-spacing: 0.01em !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Captions and Subtitles */
+.stCaption,
+[data-testid="stCaptionContainer"],
+[data-testid="stCaptionContainer"] p {
+    color: #94A3B8 !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.85rem !important;
+}
+
+/* Markdown body text */
+.stMarkdown p, .stMarkdown li {
+    color: #CBD5E1 !important;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   SLIDERS: HIGH-CONTRAST VALUE NUMBERS & NEON THUMB
+   -------------------------------------------------------------------------- */
+/* Slider active value (e.g. 130.00, 2.20, 2.00) */
+[data-testid="stSlider"] [data-testid="stThumbValue"],
+div[data-testid="stSlider"] div[role="slider"] ~ div,
+div[data-testid="stSlider"] div[data-testid="stMarkdownContainer"] p,
+div[data-testid="stSlider"] [data-testid="stSliderTickBar"] ~ div {
+    color: #00F0FF !important;
+    font-family: var(--font-mono) !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.4) !important;
+}
+
+/* Slider min & max bounds */
+[data-testid="stSlider"] [data-testid="stTickBarMin"],
+[data-testid="stSlider"] [data-testid="stTickBarMax"],
+div[data-testid="stSlider"] div[data-baseweb="slider"] + div > div {
+    color: #94A3B8 !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+}
+
+/* Slider thumb knob */
+[data-testid="stSlider"] [role="slider"] {
+    background-color: #00F0FF !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: 0 0 14px rgba(0, 240, 255, 0.85) !important;
+}
+
+/* --------------------------------------------------------------------------
+   SELECTBOX & BASEWEB DROPDOWNS (CYBER-CARDIO HUD SURFACES)
+   -------------------------------------------------------------------------- */
+/* Main selectbox field */
+[data-baseweb="select"] > div {
+    background: rgba(14, 22, 44, 0.92) !important;
+    border: 1px solid rgba(0, 240, 255, 0.35) !important;
+    border-radius: 10px !important;
+    color: #F8FAFC !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.2s ease !important;
+}
+
+[data-baseweb="select"] > div:hover {
+    border-color: #00F0FF !important;
+    box-shadow: 0 0 14px rgba(0, 240, 255, 0.3) !important;
+}
+
+[data-baseweb="select"] * {
+    color: #F8FAFC !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.92rem !important;
+}
+
+[data-baseweb="select"] svg {
+    fill: #00F0FF !important;
+}
+
+/* Popover & Options Menu list */
+[data-baseweb="popover"],
+[data-baseweb="menu"],
+ul[data-baseweb="menu"],
+div[role="listbox"] {
+    background: #0A1124 !important;
+    border: 1px solid rgba(0, 240, 255, 0.4) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.85) !important;
+    overflow: hidden !important;
+}
+
+li[data-baseweb="menu-item"],
+li[role="option"] {
+    color: #E2E8F0 !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.92rem !important;
+    background: transparent !important;
+    padding: 10px 16px !important;
+    transition: all 0.15s ease !important;
+}
+
+li[data-baseweb="menu-item"]:hover,
+li[role="option"]:hover,
+li[data-baseweb="menu-item"][aria-selected="true"],
+li[role="option"][aria-selected="true"] {
+    background: linear-gradient(90deg, rgba(0, 240, 255, 0.22), rgba(255, 46, 91, 0.18)) !important;
+    color: #00F0FF !important;
+    font-weight: 600 !important;
+}
+
+/* --------------------------------------------------------------------------
+   SIDEBAR: DEEP OBSIDIAN THEMED HUD
+   -------------------------------------------------------------------------- */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #070B16 0%, #0A0F22 100%) !important;
+    border-right: 1px solid rgba(0, 240, 255, 0.2) !important;
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.6) !important;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #CBD5E1;
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] h4 {
+    color: #FFFFFF !important;
+    font-family: var(--font-heading) !important;
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.3) !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stWidgetLabel"] label,
+section[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+    color: #00F0FF !important;
+    font-family: var(--font-heading) !important;
+    font-size: 0.92rem !important;
+    font-weight: 700 !important;
+}
+
+section[data-testid="stSidebar"] .stCaption,
+section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
+    color: #94A3B8 !important;
+}
+
+section[data-testid="stSidebar"] hr {
+    border-color: rgba(0, 240, 255, 0.18) !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stMetricValue"] {
+    color: #00F0FF !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stMetricLabel"] {
+    color: #94A3B8 !important;
+}
+
+/* --------------------------------------------------------------------------
+   EXPANDERS: VISIBLE SUMMARY TITLES & ICONS
+   -------------------------------------------------------------------------- */
+[data-testid="stExpander"] {
+    background: rgba(9, 15, 29, 0.78) !important;
+    border: 1px solid rgba(0, 240, 255, 0.22) !important;
+    border-radius: 12px !important;
+    margin-bottom: 0.85rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+[data-testid="stExpander"] summary {
+    color: #FFFFFF !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 700 !important;
+    font-size: 1.0rem !important;
+    transition: color 0.2s ease !important;
+}
+
+[data-testid="stExpander"] summary:hover {
+    color: #00F0FF !important;
+}
+
+[data-testid="stExpander"] summary p,
+[data-testid="stExpander"] summary span {
+    color: #FFFFFF !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 700 !important;
+    font-size: 1.0rem !important;
+}
+
+[data-testid="stExpander"] summary:hover p,
+[data-testid="stExpander"] summary:hover span {
+    color: #00F0FF !important;
+}
+
+[data-testid="stExpander"] svg {
+    fill: #00F0FF !important;
+    stroke: #00F0FF !important;
+}
+
+/* MultiSelect, TextArea, FileUploader, Tooltips */
+[data-baseweb="tag"] {
+    background: rgba(0, 240, 255, 0.18) !important;
+    border: 1px solid rgba(0, 240, 255, 0.5) !important;
+    border-radius: 6px !important;
+}
+
+[data-baseweb="tag"] span,
+[data-baseweb="tag"] * {
+    color: #00F0FF !important;
+    font-weight: 600 !important;
+}
+
+[data-baseweb="textarea"] textarea,
+textarea {
+    background-color: #070B16 !important;
+    color: #F8FAFC !important;
+    border: 1px solid rgba(0, 240, 255, 0.3) !important;
+    border-radius: 10px !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.88rem !important;
+}
+
+[data-testid="stFileUploader"] section {
+    background-color: rgba(9, 15, 29, 0.85) !important;
+    border: 1px dashed rgba(0, 240, 255, 0.45) !important;
+    border-radius: 12px !important;
+}
+
+[data-testid="stFileUploader"] section * {
+    color: #CBD5E1 !important;
+}
+
+[data-testid="stTooltipIcon"] svg {
+    fill: #00F0FF !important;
+}
+
+[data-baseweb="tooltip"] {
+    background: #0A1124 !important;
+    color: #F8FAFC !important;
+    border: 1px solid rgba(0, 240, 255, 0.4) !important;
+    border-radius: 8px !important;
+}
+
+/* --------------------------------------------------------------------------
    SKYROOT-INSPIRED CARDIOPULSE MISSION HEADER
    -------------------------------------------------------------------------- */
 .custom-header {

@@ -87,6 +87,17 @@ def load_theme(theme_choice: str = "🔴 Crimson EKG Pulse"):
                         #050811 !important;
             color: #F8FAFC !important;
         }
+        section[data-testid="stSidebar"] {
+            background: linear-gradient(180deg, #070B14 0%, #120914 100%) !important;
+            border-right: 1px solid rgba(255, 46, 91, 0.22) !important;
+        }
+        [data-testid="stWidgetLabel"] label, [data-testid="stWidgetLabel"] p, [data-testid="stWidgetLabel"] span {
+            color: #F1F5F9 !important;
+        }
+        [data-baseweb="select"] > div:hover {
+            border-color: #FF2E5B !important;
+            box-shadow: 0 0 12px rgba(255, 46, 91, 0.35) !important;
+        }
         </style>
         """, unsafe_allow_html=True)
     elif theme_choice == "🔵 Cybernetic Bio-Teal":
@@ -94,9 +105,20 @@ def load_theme(theme_choice: str = "🔴 Crimson EKG Pulse"):
         <style>
         .stApp {
             background: radial-gradient(circle at 15% 15%, rgba(0, 240, 255, 0.16) 0%, transparent 50%),
-                        radial-gradient(circle at 85% 85%, rgba(112, 0, 255, 0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 85% 85%, rgba(0, 229, 153, 0.12) 0%, transparent 50%),
                         #040814 !important;
             color: #F0FDFA !important;
+        }
+        section[data-testid="stSidebar"] {
+            background: linear-gradient(180deg, #040814 0%, #061520 100%) !important;
+            border-right: 1px solid rgba(0, 240, 255, 0.22) !important;
+        }
+        [data-testid="stWidgetLabel"] label, [data-testid="stWidgetLabel"] p, [data-testid="stWidgetLabel"] span {
+            color: #F0FDFA !important;
+        }
+        [data-baseweb="select"] > div:hover {
+            border-color: #00F0FF !important;
+            box-shadow: 0 0 12px rgba(0, 240, 255, 0.35) !important;
         }
         </style>
         """, unsafe_allow_html=True)
@@ -109,25 +131,189 @@ def load_theme(theme_choice: str = "🔴 Crimson EKG Pulse"):
                         #080412 !important;
             color: #FAF5FF !important;
         }
+        section[data-testid="stSidebar"] {
+            background: linear-gradient(180deg, #080412 0%, #150A22 100%) !important;
+            border-right: 1px solid rgba(181, 23, 158, 0.28) !important;
+        }
+        [data-testid="stWidgetLabel"] label, [data-testid="stWidgetLabel"] p, [data-testid="stWidgetLabel"] span {
+            color: #FAF5FF !important;
+        }
+        [data-baseweb="select"] > div:hover {
+            border-color: #B5179E !important;
+            box-shadow: 0 0 12px rgba(181, 23, 158, 0.35) !important;
+        }
         </style>
         """, unsafe_allow_html=True)
     elif theme_choice == "⚪ Nordic Clinical Lab":
         st.markdown("""
         <style>
         .stApp {
-            background: #F1F5F9 !important;
+            background: #F8FAFC !important;
             color: #0F172A !important;
+        }
+        section[data-testid="stSidebar"] {
+            background: #FFFFFF !important;
+            border-right: 1px solid #E2E8F0 !important;
+            box-shadow: 2px 0 15px rgba(0, 0, 0, 0.04) !important;
+        }
+        section[data-testid="stSidebar"] * {
+            color: #334155 !important;
+        }
+        section[data-testid="stSidebar"] h1,
+        section[data-testid="stSidebar"] h2,
+        section[data-testid="stSidebar"] h3,
+        section[data-testid="stSidebar"] h4 {
+            color: #0F172A !important;
+            text-shadow: none !important;
+        }
+        section[data-testid="stSidebar"] [data-testid="stWidgetLabel"] label,
+        section[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+            color: #0284C7 !important;
+        }
+        section[data-testid="stSidebar"] hr {
+            border-color: #E2E8F0 !important;
+        }
+        section[data-testid="stSidebar"] [data-testid="stMetricValue"] {
+            color: #0284C7 !important;
+        }
+        section[data-testid="stSidebar"] [data-testid="stMetricLabel"] {
+            color: #64748B !important;
+        }
+        [data-testid="stWidgetLabel"],
+        [data-testid="stWidgetLabel"] label,
+        [data-testid="stWidgetLabel"] p,
+        [data-testid="stWidgetLabel"] span,
+        .stSelectbox label,
+        .stSlider label,
+        .stNumberInput label,
+        .stTextInput label,
+        .stMultiSelect label,
+        .stFileUploader label {
+            color: #0F172A !important;
+            text-shadow: none !important;
+        }
+        [data-baseweb="select"] > div {
+            background: #FFFFFF !important;
+            border: 1px solid #CBD5E1 !important;
+            color: #0F172A !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+        }
+        [data-baseweb="select"] * {
+            color: #0F172A !important;
+        }
+        [data-baseweb="select"] svg {
+            fill: #0284C7 !important;
+        }
+        [data-baseweb="popover"],
+        [data-baseweb="menu"],
+        ul[data-baseweb="menu"] {
+            background: #FFFFFF !important;
+            border: 1px solid #CBD5E1 !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+        }
+        li[data-baseweb="menu-item"],
+        li[role="option"] {
+            color: #0F172A !important;
+        }
+        li[data-baseweb="menu-item"]:hover,
+        li[role="option"]:hover,
+        li[data-baseweb="menu-item"][aria-selected="true"],
+        li[role="option"][aria-selected="true"] {
+            background: #F1F5F9 !important;
+            color: #0284C7 !important;
+        }
+        [data-testid="stSlider"] [data-testid="stThumbValue"],
+        div[data-testid="stSlider"] div[role="slider"] ~ div,
+        div[data-testid="stSlider"] div[data-testid="stMarkdownContainer"] p {
+            color: #0284C7 !important;
+            text-shadow: none !important;
+        }
+        [data-testid="stSlider"] [data-testid="stTickBarMin"],
+        [data-testid="stSlider"] [data-testid="stTickBarMax"] {
+            color: #64748B !important;
+        }
+        [data-testid="stSlider"] [role="slider"] {
+            background-color: #0284C7 !important;
+            border: 2px solid #FFFFFF !important;
+            box-shadow: 0 0 8px rgba(2, 132, 199, 0.4) !important;
         }
         .custom-header, .clinical-card, .heart-core-container {
             background: #FFFFFF !important;
             border-color: #E2E8F0 !important;
             box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06) !important;
         }
-        .header-title, .card-title, [data-testid="stMetricValue"] { color: #0F172A !important; text-shadow: none !important; }
-        .stat-pill { background: #F8FAFC !important; border-color: #CBD5E1 !important; color: #475569 !important; }
-        .stat-pill b { color: #0284C7 !important; }
-        .stExpander { background: #FFFFFF !important; border-color: #E2E8F0 !important; }
-        .stExpander summary { color: #0F172A !important; }
+        .header-title, .card-title, [data-testid="stMetricValue"] {
+            color: #0F172A !important;
+            text-shadow: none !important;
+        }
+        .header-subtitle {
+            color: #64748B !important;
+        }
+        .stat-pill {
+            background: #F8FAFC !important;
+            border-color: #CBD5E1 !important;
+            color: #475569 !important;
+        }
+        .stat-pill b {
+            color: #0284C7 !important;
+        }
+        .stExpander {
+            background: #FFFFFF !important;
+            border-color: #E2E8F0 !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03) !important;
+        }
+        .stExpander summary,
+        .stExpander summary p,
+        .stExpander summary span {
+            color: #0F172A !important;
+        }
+        .stExpander summary:hover,
+        .stExpander summary:hover p {
+            color: #0284C7 !important;
+        }
+        .stExpander svg {
+            fill: #0284C7 !important;
+            stroke: #0284C7 !important;
+        }
+        .stCaption,
+        [data-testid="stCaptionContainer"] p {
+            color: #64748B !important;
+        }
+        .stMarkdown p, .stMarkdown li {
+            color: #334155 !important;
+        }
+        .stTabs [data-baseweb="tab-list"] {
+            background: #F1F5F9 !important;
+            border: 1px solid #E2E8F0 !important;
+        }
+        .stTabs [data-baseweb="tab"] {
+            color: #64748B !important;
+        }
+        .stTabs [aria-selected="true"] {
+            background: #FFFFFF !important;
+            color: #0284C7 !important;
+            border: 1px solid #CBD5E1 !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+        }
+        [data-baseweb="textarea"] textarea {
+            background-color: #FFFFFF !important;
+            color: #0F172A !important;
+            border: 1px solid #CBD5E1 !important;
+        }
+        [data-testid="stFileUploader"] section {
+            background-color: #F8FAFC !important;
+            border: 1px dashed #CBD5E1 !important;
+        }
+        [data-testid="stFileUploader"] section * {
+            color: #475569 !important;
+        }
+        [data-baseweb="tag"] {
+            background: #E0F2FE !important;
+            border: 1px solid #38BDF8 !important;
+        }
+        [data-baseweb="tag"] span {
+            color: #0369A1 !important;
+        }
         </style>
         """, unsafe_allow_html=True)
 
