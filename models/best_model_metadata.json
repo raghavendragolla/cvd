@@ -1,0 +1,20 @@
+{
+    "best_model_name": "\ud83c\udf33 Extra Trees Classifier",
+    "test_roc_auc": 93.83,
+    "test_accuracy": 81.97,
+    "test_f1_score": 81.36,
+    "test_sensitivity": 85.71,
+    "test_specificity": 78.79,
+    "confusion_matrix": {
+        "tp": 24,
+        "tn": 26,
+        "fp": 7,
+        "fn": 4
+    },
+    "best_hyperparameters": {
+        "max_depth": 4,
+        "min_samples_split": 2,
+        "n_estimators": 100
+    },
+    "cv_roc_auc_5fold": "88.75% \u00b1 2.34%"
+}

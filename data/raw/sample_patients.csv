@@ -1,0 +1,9 @@
+patient_id,patient_name,age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal,actual_condition
+PT-1001,Marcus Vance,63.0,1.0,4.0,145.0,233.0,1.0,2.0,150.0,0.0,2.3,3.0,0.0,6.0,Heart Disease
+PT-1002,Elena Rostova,41.0,0.0,2.0,130.0,204.0,0.0,2.0,172.0,0.0,1.4,1.0,0.0,3.0,Healthy
+PT-1003,David Sterling,67.0,1.0,4.0,160.0,286.0,0.0,2.0,108.0,1.0,1.5,2.0,3.0,3.0,Heart Disease
+PT-1004,Sarah Chen,57.0,0.0,4.0,120.0,354.0,0.0,0.0,163.0,1.0,0.6,1.0,0.0,3.0,Healthy
+PT-1005,Robert Tanaka,58.0,1.0,4.0,140.0,260.0,0.0,2.0,130.0,1.0,2.2,2.0,2.0,7.0,Heart Disease
+PT-1006,Amina Morales,37.0,0.0,3.0,120.0,215.0,0.0,0.0,170.0,0.0,0.0,1.0,0.0,3.0,Healthy
+PT-1007,Arthur Pendelton,60.0,1.0,4.0,140.0,293.0,0.0,2.0,170.0,0.0,0.1,1.0,2.0,7.0,Heart Disease
+PT-1008,Claire Dupont,48.0,0.0,3.0,130.0,275.0,0.0,0.0,139.0,0.0,0.2,1.0,0.0,3.0,Healthy

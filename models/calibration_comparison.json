@@ -1,0 +1,30 @@
+{
+    "\u26a1 XGBoost (Primary Tree)": {
+        "uncalibrated": {
+            "brier": 0.124,
+            "ece": 0.1037
+        },
+        "platt_sigmoid": {
+            "brier": 0.1169,
+            "ece": 0.1477
+        },
+        "isotonic": {
+            "brier": 0.118,
+            "ece": 0.1844
+        }
+    },
+    "\ud83e\udec0 Super-Ensemble (Top Precision)": {
+        "uncalibrated": {
+            "brier": 0.1116,
+            "ece": 0.12
+        },
+        "platt_sigmoid": {
+            "brier": 0.1021,
+            "ece": 0.1272
+        },
+        "isotonic": {
+            "brier": 0.1027,
+            "ece": 0.0995
+        }
+    }
+}

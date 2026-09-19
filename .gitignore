@@ -1,0 +1,28 @@
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Streamlit temporary files
+.streamlit/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs & temp training info
+*.log
+catboost_info/

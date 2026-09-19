@@ -1,0 +1,27 @@
+{
+    "class_distribution": {
+        "negative_healthy": 131,
+        "positive_disease": 111,
+        "ratio": 0.847
+    },
+    "cost_sensitive_weights": {
+        "0": 0.9237,
+        "1": 1.0901
+    },
+    "smote_audit": {
+        "synthetic_samples_generated": 20,
+        "audit_results": {
+            "total_synthetic_samples": 20,
+            "samples_with_violations": 0,
+            "clinical_violation_rate_pct": 0.0,
+            "violations_breakdown": {
+                "trestbps_out_of_bounds": 0,
+                "chol_out_of_bounds": 0,
+                "impossible_hr_for_age": 0,
+                "oldpeak_negative_or_extreme": 0,
+                "fractional_discrete_category": 20
+            }
+        },
+        "note": "Evaluated via linear feature space interpolation audit"
+    }
+}

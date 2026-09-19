@@ -1,0 +1,230 @@
+{
+    "dataset_name": "UCI Cleveland Clinic Foundation (Heart Disease)",
+    "total_cohort_size": 303,
+    "feature_count": 13,
+    "target_distribution": {
+        "healthy_n": 164,
+        "cad_positive_n": 139,
+        "cad_prevalence_pct": 45.87
+    },
+    "demographics": {
+        "age_mean": 54.4,
+        "age_std": 9.0,
+        "age_range": [
+            29.0,
+            77.0
+        ],
+        "male_count": 206,
+        "female_count": 97,
+        "male_percentage": 68.0
+    },
+    "missing_biomarkers": {
+        "ca": {
+            "missing_samples": 4,
+            "missing_percentage": 1.32
+        },
+        "thal": {
+            "missing_samples": 2,
+            "missing_percentage": 0.66
+        }
+    },
+    "correlations_with_cad": {
+        "age": {
+            "pearson_r": 0.223,
+            "spearman_rho": 0.237,
+            "relationship": "Positive Risk Factor"
+        },
+        "sex": {
+            "pearson_r": 0.277,
+            "spearman_rho": 0.277,
+            "relationship": "Positive Risk Factor"
+        },
+        "cp": {
+            "pearson_r": 0.414,
+            "spearman_rho": 0.472,
+            "relationship": "Positive Risk Factor"
+        },
+        "trestbps": {
+            "pearson_r": 0.151,
+            "spearman_rho": 0.128,
+            "relationship": "Positive Risk Factor"
+        },
+        "chol": {
+            "pearson_r": 0.085,
+            "spearman_rho": 0.121,
+            "relationship": "Positive Risk Factor"
+        },
+        "fbs": {
+            "pearson_r": 0.025,
+            "spearman_rho": 0.025,
+            "relationship": "Positive Risk Factor"
+        },
+        "restecg": {
+            "pearson_r": 0.169,
+            "spearman_rho": 0.169,
+            "relationship": "Positive Risk Factor"
+        },
+        "thalach": {
+            "pearson_r": -0.417,
+            "spearman_rho": -0.423,
+            "relationship": "Protective/Inverse Factor"
+        },
+        "exang": {
+            "pearson_r": 0.432,
+            "spearman_rho": 0.432,
+            "relationship": "Positive Risk Factor"
+        },
+        "oldpeak": {
+            "pearson_r": 0.425,
+            "spearman_rho": 0.413,
+            "relationship": "Positive Risk Factor"
+        },
+        "slope": {
+            "pearson_r": 0.339,
+            "spearman_rho": 0.364,
+            "relationship": "Positive Risk Factor"
+        },
+        "ca": {
+            "pearson_r": 0.46,
+            "spearman_rho": 0.489,
+            "relationship": "Positive Risk Factor"
+        },
+        "thal": {
+            "pearson_r": 0.526,
+            "spearman_rho": 0.522,
+            "relationship": "Positive Risk Factor"
+        }
+    },
+    "feature_statistics": {
+        "age": {
+            "description": "Patient Age (years)",
+            "type": "Continuous",
+            "mean": 54.44,
+            "std": 9.04,
+            "min": 29.0,
+            "median": 56.0,
+            "max": 77.0,
+            "missing": 0
+        },
+        "sex": {
+            "description": "Biological Sex (1=Male, 0=Female)",
+            "type": "Categorical/Discrete",
+            "mean": 0.68,
+            "std": 0.47,
+            "min": 0.0,
+            "median": 1.0,
+            "max": 1.0,
+            "missing": 0
+        },
+        "cp": {
+            "description": "Chest Pain Type (1=Typical Angina, 2=Atypical, 3=Non-anginal, 4=Asymptomatic)",
+            "type": "Categorical/Discrete",
+            "mean": 3.16,
+            "std": 0.96,
+            "min": 1.0,
+            "median": 3.0,
+            "max": 4.0,
+            "missing": 0
+        },
+        "trestbps": {
+            "description": "Resting Blood Pressure (mm Hg upon hospital admission)",
+            "type": "Continuous",
+            "mean": 131.69,
+            "std": 17.6,
+            "min": 94.0,
+            "median": 130.0,
+            "max": 200.0,
+            "missing": 0
+        },
+        "chol": {
+            "description": "Serum Cholesterol (mg/dL)",
+            "type": "Continuous",
+            "mean": 246.69,
+            "std": 51.78,
+            "min": 126.0,
+            "median": 241.0,
+            "max": 564.0,
+            "missing": 0
+        },
+        "fbs": {
+            "description": "Fasting Blood Sugar > 120 mg/dL (1=True, 0=False)",
+            "type": "Categorical/Discrete",
+            "mean": 0.15,
+            "std": 0.36,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 1.0,
+            "missing": 0
+        },
+        "restecg": {
+            "description": "Resting Electrocardiogram (0=Normal, 1=ST-T Abnormality, 2=LV Hypertrophy)",
+            "type": "Categorical/Discrete",
+            "mean": 0.99,
+            "std": 0.99,
+            "min": 0.0,
+            "median": 1.0,
+            "max": 2.0,
+            "missing": 0
+        },
+        "thalach": {
+            "description": "Maximum Heart Rate Achieved during stress test (bpm)",
+            "type": "Continuous",
+            "mean": 149.61,
+            "std": 22.88,
+            "min": 71.0,
+            "median": 153.0,
+            "max": 202.0,
+            "missing": 0
+        },
+        "exang": {
+            "description": "Exercise-Induced Angina (1=Yes, 0=No)",
+            "type": "Categorical/Discrete",
+            "mean": 0.33,
+            "std": 0.47,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 1.0,
+            "missing": 0
+        },
+        "oldpeak": {
+            "description": "ST Depression induced by exercise relative to rest",
+            "type": "Continuous",
+            "mean": 1.04,
+            "std": 1.16,
+            "min": 0.0,
+            "median": 0.8,
+            "max": 6.2,
+            "missing": 0
+        },
+        "slope": {
+            "description": "Slope of Peak Exercise ST Segment (1=Upsloping, 2=Flat, 3=Downsloping)",
+            "type": "Categorical/Discrete",
+            "mean": 1.6,
+            "std": 0.62,
+            "min": 1.0,
+            "median": 2.0,
+            "max": 3.0,
+            "missing": 0
+        },
+        "ca": {
+            "description": "Major Vessels Colored by Fluoroscopy (0-3)",
+            "type": "Categorical/Discrete",
+            "mean": 0.67,
+            "std": 0.94,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 3.0,
+            "missing": 4
+        },
+        "thal": {
+            "description": "Thallium Stress Test (3=Normal, 6=Fixed Defect, 7=Reversible Defect)",
+            "type": "Categorical/Discrete",
+            "mean": 4.73,
+            "std": 1.94,
+            "min": 3.0,
+            "median": 3.0,
+            "max": 7.0,
+            "missing": 2
+        }
+    }
+}

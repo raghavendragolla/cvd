@@ -1,0 +1,26 @@
+{
+    "total_audited_patients": 60,
+    "mean_concordance_index": 0.603,
+    "mean_concordance_score_pct": 60.3,
+    "automated_recommendation_rate_pct": 18.3,
+    "flagged_secondary_review_rate_pct": 81.7,
+    "single_patient_case": {
+        "concordance_index": 0.37,
+        "concordance_score": 37.0,
+        "spearman_rho": 0.0,
+        "kendall_tau": 0.0,
+        "jaccard_top3": 20.0,
+        "jaccard_top5": 66.7,
+        "sign_concordance_pct": 100.0,
+        "overlapping_features": [
+            "sex",
+            "cp",
+            "exang",
+            "thal"
+        ],
+        "consensus_status": "\ud83d\udd34 Discordant Explanations (Audit Triggered)",
+        "audit_action": "Flag for Secondary Clinical Review",
+        "flag_secondary_review": true,
+        "audit_badge": "SECONDARY_REVIEW_REQUIRED"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "cohort": "UCI Cleveland",
+    "records": 303,
+    "features": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "chol",
+        "fbs",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak",
+        "slope",
+        "ca",
+        "thal"
+    ],
+    "holdout_size": 61,
+    "selection_method": "stratified 5-fold cross-validation on training data"
+}
