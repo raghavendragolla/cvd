@@ -1,0 +1,61 @@
+train_dataset,test_dataset,feature,feature_type,smd,wasserstein_distance,ks_statistic,ks_pvalue,tvd,jensen_shannon_divergence,chi2_statistic,chi2_pvalue,train_summary,test_summary
+Cleveland,Hungarian,age,continuous,0.784,6.6164,0.3549,0.0,,,,,"mean=54.439, std=9.024, iqr=13.0","mean=47.823, std=7.812, iqr=12.0"
+Cleveland,Hungarian,trestbps,continuous,-0.0553,1.4603,0.0645,0.536906,,,,,"mean=131.69, std=17.571, iqr=20.0","mean=132.661, std=17.577, iqr=20.0"
+Cleveland,Hungarian,thalach,continuous,0.4547,10.6216,0.2639,0.0,,,,,"mean=149.607, std=22.837, iqr=32.5","mean=139.058, std=23.558, iqr=33.0"
+Cleveland,Hungarian,oldpeak,continuous,0.4337,0.4515,0.3149,0.0,,,,,"mean=1.04, std=1.159, iqr=1.6","mean=0.588, std=0.908, iqr=1.0"
+Cleveland,Hungarian,sex,categorical,,,,,0.0471,0.0019,1.365,0.242699,cat_0.0:0.32; cat_1.0:0.68,cat_0.0:0.27; cat_1.0:0.73
+Cleveland,Hungarian,cp,categorical,,,,,0.1933,0.0401,32.559,0.0,cat_1.0:0.08; cat_2.0:0.17; cat_3.0:0.28; cat_4.0:0.48,cat_1.0:0.04; cat_2.0:0.36; cat_3.0:0.18; cat_4.0:0.42
+Cleveland,Hungarian,fbs,categorical,,,,,0.0783,0.0116,8.387,0.003779,cat_0.0:0.85; cat_1.0:0.15,cat_0.0:0.93; cat_1.0:0.07
+Cleveland,Hungarian,restecg,categorical,,,,,0.4679,0.2791,189.833,0.0,cat_0.0:0.50; cat_1.0:0.01; cat_2.0:0.49,cat_0.0:0.80; cat_1.0:0.18; cat_2.0:0.02
+Cleveland,Hungarian,exang,categorical,,,,,0.0219,0.0004,0.237,0.626091,cat_0.0:0.67; cat_1.0:0.33,cat_0.0:0.70; cat_1.0:0.30
+Cleveland,Hungarian,slope,categorical,,,,,0.413,0.1478,53.903,0.0,cat_1.0:0.47; cat_2.0:0.46; cat_3.0:0.07,cat_1.0:0.12; cat_2.0:0.88; cat_3.0:0.01
+Cleveland,Zurich,age,continuous,-0.0975,1.2734,0.0839,0.535431,,,,,"mean=54.439, std=9.024, iqr=13.0","mean=55.317, std=8.995, iqr=10.5"
+Cleveland,Zurich,trestbps,continuous,0.0735,4.8851,0.159,0.022437,,,,,"mean=131.69, std=17.571, iqr=20.0","mean=130.207, std=22.466, iqr=30.0"
+Cleveland,Zurich,thalach,continuous,1.1495,28.0499,0.4642,0.0,,,,,"mean=149.607, std=22.837, iqr=32.5","mean=121.557, std=25.871, iqr=35.75"
+Cleveland,Zurich,oldpeak,continuous,0.3486,0.3858,0.1263,0.122416,,,,,"mean=1.04, std=1.159, iqr=1.6","mean=0.654, std=1.052, iqr=1.5"
+Cleveland,Zurich,sex,categorical,,,,,0.2388,0.0677,25.277,0.0,cat_0.0:0.32; cat_1.0:0.68,cat_0.0:0.08; cat_1.0:0.92
+Cleveland,Zurich,cp,categorical,,,,,0.3215,0.0896,38.305,0.0,cat_1.0:0.08; cat_2.0:0.17; cat_3.0:0.28; cat_4.0:0.48,cat_1.0:0.03; cat_2.0:0.03; cat_3.0:0.14; cat_4.0:0.80
+Cleveland,Zurich,fbs,categorical,,,,,0.0443,0.0032,0.353,0.552153,cat_0.0:0.85; cat_1.0:0.15,cat_0.0:0.90; cat_1.0:0.10
+Cleveland,Zurich,restecg,categorical,,,,,0.4311,0.2444,109.354,0.0,cat_0.0:0.50; cat_1.0:0.01; cat_2.0:0.49,cat_0.0:0.70; cat_1.0:0.25; cat_2.0:0.06
+Cleveland,Zurich,exang,categorical,,,,,0.1159,0.0103,4.58,0.032353,cat_0.0:0.67; cat_1.0:0.33,cat_0.0:0.56; cat_1.0:0.44
+Cleveland,Zurich,slope,categorical,,,,,0.1573,0.0199,8.474,0.014449,cat_1.0:0.47; cat_2.0:0.46; cat_3.0:0.07,cat_1.0:0.31; cat_2.0:0.58; cat_3.0:0.11
+Cleveland,VA Long Beach,age,continuous,-0.5827,4.9178,0.2609,0.0,,,,,"mean=54.439, std=9.024, iqr=13.0","mean=59.357, std=7.811, iqr=9.0"
+Cleveland,VA Long Beach,trestbps,continuous,-0.1613,2.9889,0.0991,0.275621,,,,,"mean=131.69, std=17.571, iqr=20.0","mean=134.592, std=18.401, iqr=25.5"
+Cleveland,VA Long Beach,thalach,continuous,1.1946,26.7785,0.5147,0.0,,,,,"mean=149.607, std=22.837, iqr=32.5","mean=122.829, std=21.987, iqr=31.5"
+Cleveland,VA Long Beach,oldpeak,continuous,-0.257,0.354,0.2274,6.7e-05,,,,,"mean=1.04, std=1.159, iqr=1.6","mean=1.33, std=1.101, iqr=2.0"
+Cleveland,VA Long Beach,sex,categorical,,,,,0.29,0.1195,60.169,0.0,cat_0.0:0.32; cat_1.0:0.68,cat_0.0:0.03; cat_1.0:0.97
+Cleveland,VA Long Beach,cp,categorical,,,,,0.183,0.0308,19.537,0.000212,cat_1.0:0.08; cat_2.0:0.17; cat_3.0:0.28; cat_4.0:0.48,cat_1.0:0.04; cat_2.0:0.07; cat_3.0:0.23; cat_4.0:0.66
+Cleveland,VA Long Beach,fbs,categorical,,,,,0.2057,0.0415,27.059,0.0,cat_0.0:0.85; cat_1.0:0.15,cat_0.0:0.65; cat_1.0:0.35
+Cleveland,VA Long Beach,restecg,categorical,,,,,0.4491,0.2743,171.988,0.0,cat_0.0:0.50; cat_1.0:0.01; cat_2.0:0.49,cat_0.0:0.40; cat_1.0:0.46; cat_2.0:0.14
+Cleveland,VA Long Beach,exang,categorical,,,,,0.3171,0.0739,39.141,0.0,cat_0.0:0.67; cat_1.0:0.33,cat_0.0:0.36; cat_1.0:0.64
+Cleveland,VA Long Beach,slope,categorical,,,,,0.3054,0.1124,48.979,0.0,cat_1.0:0.47; cat_2.0:0.46; cat_3.0:0.07,cat_1.0:0.16; cat_2.0:0.54; cat_3.0:0.30
+Hungarian,Cleveland,age,continuous,-0.784,6.6164,0.3549,0.0,,,,,"mean=47.823, std=7.812, iqr=12.0","mean=54.439, std=9.024, iqr=13.0"
+Hungarian,Cleveland,trestbps,continuous,0.0553,1.4603,0.0645,0.536906,,,,,"mean=132.661, std=17.577, iqr=20.0","mean=131.69, std=17.571, iqr=20.0"
+Hungarian,Cleveland,thalach,continuous,-0.4547,10.6216,0.2639,0.0,,,,,"mean=139.058, std=23.558, iqr=33.0","mean=149.607, std=22.837, iqr=32.5"
+Hungarian,Cleveland,oldpeak,continuous,-0.4337,0.4515,0.3149,0.0,,,,,"mean=0.588, std=0.908, iqr=1.0","mean=1.04, std=1.159, iqr=1.6"
+Hungarian,Cleveland,sex,categorical,,,,,0.0471,0.0019,1.365,0.242699,cat_0:0.27; cat_1:0.73,cat_0:0.32; cat_1:0.68
+Hungarian,Cleveland,cp,categorical,,,,,0.1933,0.0401,32.559,0.0,cat_1:0.04; cat_2:0.36; cat_3:0.18; cat_4:0.42,cat_1:0.08; cat_2:0.17; cat_3:0.28; cat_4:0.48
+Hungarian,Cleveland,fbs,categorical,,,,,0.0783,0.0116,8.387,0.003779,cat_0.0:0.93; cat_1.0:0.07,cat_0.0:0.85; cat_1.0:0.15
+Hungarian,Cleveland,restecg,categorical,,,,,0.4679,0.2791,189.833,0.0,cat_0.0:0.80; cat_1.0:0.18; cat_2.0:0.02,cat_0.0:0.50; cat_1.0:0.01; cat_2.0:0.49
+Hungarian,Cleveland,exang,categorical,,,,,0.0219,0.0004,0.237,0.626091,cat_0.0:0.70; cat_1.0:0.30,cat_0.0:0.67; cat_1.0:0.33
+Hungarian,Cleveland,slope,categorical,,,,,0.413,0.1478,53.903,0.0,cat_1.0:0.12; cat_2.0:0.88; cat_3.0:0.01,cat_1.0:0.47; cat_2.0:0.46; cat_3.0:0.07
+Zurich,Cleveland,age,continuous,0.0975,1.2734,0.0839,0.535431,,,,,"mean=55.317, std=8.995, iqr=10.5","mean=54.439, std=9.024, iqr=13.0"
+Zurich,Cleveland,trestbps,continuous,-0.0735,4.8851,0.159,0.022437,,,,,"mean=130.207, std=22.466, iqr=30.0","mean=131.69, std=17.571, iqr=20.0"
+Zurich,Cleveland,thalach,continuous,-1.1495,28.0499,0.4642,0.0,,,,,"mean=121.557, std=25.871, iqr=35.75","mean=149.607, std=22.837, iqr=32.5"
+Zurich,Cleveland,oldpeak,continuous,-0.3486,0.3858,0.1263,0.122416,,,,,"mean=0.654, std=1.052, iqr=1.5","mean=1.04, std=1.159, iqr=1.6"
+Zurich,Cleveland,sex,categorical,,,,,0.2388,0.0677,25.277,0.0,cat_0:0.08; cat_1:0.92,cat_0:0.32; cat_1:0.68
+Zurich,Cleveland,cp,categorical,,,,,0.3215,0.0896,38.305,0.0,cat_1:0.03; cat_2:0.03; cat_3:0.14; cat_4:0.80,cat_1:0.08; cat_2:0.17; cat_3:0.28; cat_4:0.48
+Zurich,Cleveland,fbs,categorical,,,,,0.0443,0.0032,0.353,0.552153,cat_0.0:0.90; cat_1.0:0.10,cat_0.0:0.85; cat_1.0:0.15
+Zurich,Cleveland,restecg,categorical,,,,,0.4311,0.2444,109.354,0.0,cat_0.0:0.70; cat_1.0:0.25; cat_2.0:0.06,cat_0.0:0.50; cat_1.0:0.01; cat_2.0:0.49
+Zurich,Cleveland,exang,categorical,,,,,0.1159,0.0103,4.58,0.032353,cat_0.0:0.56; cat_1.0:0.44,cat_0.0:0.67; cat_1.0:0.33
+Zurich,Cleveland,slope,categorical,,,,,0.1573,0.0199,8.474,0.014449,cat_1.0:0.31; cat_2.0:0.58; cat_3.0:0.11,cat_1.0:0.47; cat_2.0:0.46; cat_3.0:0.07
+VA Long Beach,Cleveland,age,continuous,0.5827,4.9178,0.2609,0.0,,,,,"mean=59.357, std=7.811, iqr=9.0","mean=54.439, std=9.024, iqr=13.0"
+VA Long Beach,Cleveland,trestbps,continuous,0.1613,2.9889,0.0991,0.275621,,,,,"mean=134.592, std=18.401, iqr=25.5","mean=131.69, std=17.571, iqr=20.0"
+VA Long Beach,Cleveland,thalach,continuous,-1.1946,26.7785,0.5147,0.0,,,,,"mean=122.829, std=21.987, iqr=31.5","mean=149.607, std=22.837, iqr=32.5"
+VA Long Beach,Cleveland,oldpeak,continuous,0.257,0.354,0.2274,6.7e-05,,,,,"mean=1.33, std=1.101, iqr=2.0","mean=1.04, std=1.159, iqr=1.6"
+VA Long Beach,Cleveland,sex,categorical,,,,,0.29,0.1195,60.169,0.0,cat_0:0.03; cat_1:0.97,cat_0:0.32; cat_1:0.68
+VA Long Beach,Cleveland,cp,categorical,,,,,0.183,0.0308,19.537,0.000212,cat_1:0.04; cat_2:0.07; cat_3:0.23; cat_4:0.66,cat_1:0.08; cat_2:0.17; cat_3:0.28; cat_4:0.48
+VA Long Beach,Cleveland,fbs,categorical,,,,,0.2057,0.0415,27.059,0.0,cat_0.0:0.65; cat_1.0:0.35,cat_0.0:0.85; cat_1.0:0.15
+VA Long Beach,Cleveland,restecg,categorical,,,,,0.4491,0.2743,171.988,0.0,cat_0:0.40; cat_1:0.46; cat_2:0.14,cat_0:0.50; cat_1:0.01; cat_2:0.49
+VA Long Beach,Cleveland,exang,categorical,,,,,0.3171,0.0739,39.141,0.0,cat_0.0:0.36; cat_1.0:0.64,cat_0.0:0.67; cat_1.0:0.33
+VA Long Beach,Cleveland,slope,categorical,,,,,0.3054,0.1124,48.979,0.0,cat_1.0:0.16; cat_2.0:0.54; cat_3.0:0.30,cat_1.0:0.47; cat_2.0:0.46; cat_3.0:0.07

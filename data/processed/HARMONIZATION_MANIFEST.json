@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "title": "Clinical Cohort Harmonization Manifest (Phase 3)",
+    "research_project": "Beyond Accuracy: Cross-Dataset Generalization, Calibration and Explanation Stability",
+    "tracks": {
+      "Track A": "13 diagnostic clinical & imaging biomarkers (Cleveland single-cohort benchmark)",
+      "Track B": "10 universally recorded clinical biomarkers (Cross-cohort transportability across 4 centers)"
+    }
+  },
+  "cohorts": {
+    "Cleveland_Track_A": {
+      "file": "data/processed/cleveland_track_a.csv",
+      "n_samples": 303,
+      "n_features": 13,
+      "features": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "chol",
+        "fbs",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak",
+        "slope",
+        "ca",
+        "thal"
+      ],
+      "cad_positive_count": 139,
+      "cad_negative_count": 164,
+      "prevalence_rate": 0.4587,
+      "missing_cells": 6,
+      "missing_cell_percentage": 0.15
+    },
+    "Cleveland_Track_B": {
+      "file": "data/processed/cleveland_track_b.csv",
+      "n_samples": 303,
+      "n_features": 10,
+      "features": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "fbs",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak",
+        "slope"
+      ],
+      "cad_positive_count": 139,
+      "cad_negative_count": 164,
+      "prevalence_rate": 0.4587,
+      "missing_cells": 0,
+      "missing_cell_percentage": 0.0
+    },
+    "Hungarian_Track_B": {
+      "file": "data/processed/hungarian_track_b.csv",
+      "n_samples": 293,
+      "n_features": 10,
+      "features": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "fbs",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak",
+        "slope"
+      ],
+      "cad_positive_count": 106,
+      "cad_negative_count": 187,
+      "prevalence_rate": 0.3618,
+      "missing_cells": 201,
+      "missing_cell_percentage": 6.86
+    },
+    "Zurich_Track_B": {
+      "file": "data/processed/zurich_track_b.csv",
+      "n_samples": 123,
+      "n_features": 10,
+      "features": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "fbs",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak",
+        "slope"
+      ],
+      "cad_positive_count": 115,
+      "cad_negative_count": 8,
+      "prevalence_rate": 0.935,
+      "missing_cells": 103,
+      "missing_cell_percentage": 8.37
+    },
+    "VA_Long_Beach_Track_B": {
+      "file": "data/processed/va_long_beach_track_b.csv",
+      "n_samples": 199,
+      "n_features": 10,
+      "features": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "fbs",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak",
+        "slope"
+      ],
+      "cad_positive_count": 148,
+      "cad_negative_count": 51,
+      "prevalence_rate": 0.7437,
+      "missing_cells": 327,
+      "missing_cell_percentage": 16.43
+    }
+  }
+}

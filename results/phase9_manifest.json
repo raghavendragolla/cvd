@@ -1,0 +1,48 @@
+{
+  "phase": "Phase 9 \u2014 Integrated Statistical Synthesis & Evidence Consolidation",
+  "timestamp": "2026-09-19T16:35:00",
+  "primary_statistical_unit": "MODEL x DIRECTED TRANSFER EXPERIMENT (N=24)",
+  "number_of_models": 4,
+  "number_of_transfer_directions": 6,
+  "bootstrap_parameters": {
+    "iterations": 2000,
+    "random_seed": 42,
+    "clustering_variable": "transfer_pair (6 clusters)"
+  },
+  "locked_analyses": {
+    "primary": [
+      "Prevalence Shift vs External ECE",
+      "Prevalence Shift vs Brier Degradation",
+      "Mean Wasserstein vs AUC Degradation",
+      "Mean Wasserstein vs SHAP Stability"
+    ],
+    "secondary": [
+      "SHAP Stability vs AUC Degradation",
+      "SHAP Stability vs Brier Degradation"
+    ],
+    "robustness": [
+      "Zurich Exclusion (N=16)",
+      "Transfer-Direction Median Aggregation (N=6)",
+      "Subgroup Disparity Synthesis (Phase 8)",
+      "Missingness Sensitivity Synthesis (Phase 8)"
+    ]
+  },
+  "key_estimands_overall": {
+    "median_external_auc": 81.49,
+    "median_delta_auc": -1.165,
+    "median_external_brier": 0.1636,
+    "median_delta_brier": 0.0191,
+    "median_external_ece": 0.09455,
+    "median_delta_ece": -0.027250000000000003,
+    "median_shap_stability": 0.92125,
+    "median_mean_wasserstein": 8.64855,
+    "median_prevalence_shift_pct": 28.5
+  },
+  "artifact_hashes": {
+    "integrated_estimands.csv": "e93c8bef86eeb38173a5af7f98489360b5a6a657af396cd3289c5b48271b9ef3",
+    "integrated_correlations.csv": "0f40cdc1c5881f0a8a554e68704a86a329ff3d4134a81f794ca4eb46c0bfb9bf",
+    "integrated_cluster_summary.csv": "9206b58f6ba9440f0ec7d18fd4eee87ff02a2fe4463a9942675f651e50de046c",
+    "subgroup_synthesis.csv": "1da727271da5b0a5d88217ff7ce0a27409838c10b1b6991a36818585eb62d93f",
+    "missingness_synthesis.csv": "57537d95503fccd34c59d331287a57cc3eda3da4f6880a2fbf2cc1de25273fb6"
+  }
+}

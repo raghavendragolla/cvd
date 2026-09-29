@@ -1,0 +1,145 @@
+experiment_id,train_dataset,test_dataset,model,metric,internal_value,external_value,change,relative_change_percent
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,ROC-AUC,86.922,87.09,0.17,0.2
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,PR-AUC,86.932,82.89,-4.04,-4.65
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,Brier,0.1449,0.1356,-0.0093,-6.42
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,Sensitivity,76.27,77.36,1.09,1.43
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,Specificity,82.388,81.82,-0.57,-0.69
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,MCC,0.5923,0.5814,-0.0109,-1.84
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,ROC-AUC,86.8,87.73,0.93,1.07
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,PR-AUC,86.618,82.21,-4.41,-5.09
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,Brier,0.1487,0.1377,-0.011,-7.4
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,Sensitivity,74.074,76.42,2.35,3.17
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,Specificity,79.926,83.96,4.03,5.04
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,MCC,0.5442,0.598,0.0538,9.89
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,ROC-AUC,87.118,87.38,0.26,0.3
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,PR-AUC,87.312,81.53,-5.78,-6.62
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,Brier,0.1441,0.1414,-0.0027,-1.87
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,Sensitivity,76.268,76.42,0.15,0.2
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,Specificity,83.6,79.68,-3.92,-4.69
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,MCC,0.6061,0.5488,-0.0573,-9.45
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,ROC-AUC,86.134,87.6,1.47,1.71
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,PR-AUC,85.224,81.33,-3.89,-4.56
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,Brier,0.1544,0.1401,-0.0143,-9.26
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,Sensitivity,74.79,76.42,1.63,2.18
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,Specificity,77.52,82.89,5.37,6.93
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,MCC,0.5287,0.5854,0.0567,10.72
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,ROC-AUC,86.922,72.07,-14.85,-17.08
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,PR-AUC,86.932,97.33,10.4,11.96
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,Brier,0.1449,0.1638,0.0189,13.04
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,Sensitivity,76.27,78.26,1.99,2.61
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,Specificity,82.388,50.0,-32.39,-39.31
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,MCC,0.5923,0.1642,-0.4281,-72.28
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,ROC-AUC,86.8,81.41,-5.39,-6.21
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,PR-AUC,86.618,98.37,11.75,13.57
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,Brier,0.1487,0.1633,0.0146,9.82
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,Sensitivity,74.074,73.91,-0.16,-0.22
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,Specificity,79.926,62.5,-17.43,-21.81
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,MCC,0.5442,0.199,-0.3452,-63.43
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,ROC-AUC,87.118,78.59,-8.53,-9.79
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,PR-AUC,87.312,98.13,10.82,12.39
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,Brier,0.1441,0.1634,0.0193,13.39
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,Sensitivity,76.268,76.52,0.25,0.33
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,Specificity,83.6,62.5,-21.1,-25.24
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,MCC,0.6061,0.2193,-0.3868,-63.82
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,ROC-AUC,86.134,76.52,-9.61,-11.16
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,PR-AUC,85.224,97.93,12.71,14.91
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,Brier,0.1544,0.1555,0.0011,0.71
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,Sensitivity,74.79,77.39,2.6,3.48
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,Specificity,77.52,62.5,-15.02,-19.38
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,MCC,0.5287,0.2266,-0.3021,-57.14
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,ROC-AUC,86.922,75.81,-11.11,-12.78
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,PR-AUC,86.932,89.07,2.14,2.46
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,Brier,0.1449,0.16,0.0151,10.42
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,Sensitivity,76.27,91.89,15.62,20.48
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,Specificity,82.388,41.18,-41.21,-50.02
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,MCC,0.5923,0.3882,-0.2041,-34.46
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,ROC-AUC,86.8,75.34,-11.46,-13.2
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,PR-AUC,86.618,88.97,2.35,2.71
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,Brier,0.1487,0.1644,0.0157,10.56
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,Sensitivity,74.074,89.86,15.79,21.32
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,Specificity,79.926,43.14,-36.79,-46.03
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,MCC,0.5442,0.3703,-0.1739,-31.96
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,ROC-AUC,87.118,73.05,-14.07,-16.15
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,PR-AUC,87.312,86.58,-0.73,-0.84
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,Brier,0.1441,0.1708,0.0267,18.53
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,Sensitivity,76.268,89.86,13.59,17.82
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,Specificity,83.6,39.22,-44.38,-53.09
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,MCC,0.6061,0.3335,-0.2726,-44.98
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,ROC-AUC,86.134,75.64,-10.49,-12.18
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,PR-AUC,85.224,88.37,3.15,3.7
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,Brier,0.1544,0.1594,0.005,3.24
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,Sensitivity,74.79,91.89,17.1,22.86
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,Specificity,77.52,37.25,-40.27,-51.95
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,MCC,0.5287,0.3509,-0.1778,-33.63
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,ROC-AUC,89.878,83.51,-6.37,-7.09
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,PR-AUC,86.474,82.83,-3.64,-4.21
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,Brier,0.1175,0.1672,0.0497,42.3
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,Sensitivity,70.604,66.91,-3.69,-5.23
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,Specificity,90.344,86.59,-3.75,-4.15
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,MCC,0.6377,0.5493,-0.0884,-13.86
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,ROC-AUC,89.438,86.94,-2.5,-2.8
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,PR-AUC,85.526,86.68,1.15,1.34
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,Brier,0.1261,0.1542,0.0281,22.28
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,Sensitivity,68.786,64.75,-4.04,-5.87
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,Specificity,89.774,93.29,3.52,3.92
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,MCC,0.6209,0.6135,-0.0074,-1.19
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,ROC-AUC,88.392,82.3,-6.09,-6.89
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,PR-AUC,84.16,80.94,-3.22,-3.83
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,Brier,0.1279,0.1762,0.0483,37.76
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,Sensitivity,68.742,61.87,-6.87,-9.99
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,Specificity,91.396,91.46,0.06,0.07
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,MCC,0.6404,0.5652,-0.0752,-11.74
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,ROC-AUC,90.05,84.81,-5.24,-5.82
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,PR-AUC,87.086,84.1,-2.99,-3.43
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,Brier,0.1244,0.1574,0.033,26.53
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,Sensitivity,70.648,66.91,-3.74,-5.29
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,Specificity,89.232,85.98,-3.25,-3.64
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,MCC,0.6287,0.5421,-0.0866,-13.77
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,ROC-AUC,59.566,64.74,5.17,8.68
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,PR-AUC,95.88,60.08,-35.8,-37.34
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,Brier,0.0822,0.4015,0.3193,388.44
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,Sensitivity,95.652,97.12,1.47,1.54
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,Specificity,0.0,4.27,4.27,
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,MCC,-0.0283,0.037,0.0653,-230.74
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,ROC-AUC,61.74,81.57,19.83,32.12
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,PR-AUC,96.818,73.35,-23.47,-24.24
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,Brier,0.0662,0.3418,0.2756,416.31
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,Sensitivity,100.0,100.0,0.0,0.0
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,Specificity,0.0,0.0,0.0,
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,MCC,0.0,0.0,0.0,
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,ROC-AUC,46.956,70.8,23.84,50.77
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,PR-AUC,93.988,66.88,-27.11,-28.84
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,Brier,0.0681,0.4453,0.3772,553.89
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,Sensitivity,100.0,100.0,0.0,0.0
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,Specificity,0.0,0.0,0.0,
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,MCC,0.0,0.0,0.0,
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,ROC-AUC,59.566,81.84,22.27,37.39
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,PR-AUC,96.712,74.26,-22.45,-23.21
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,Brier,0.0655,0.3133,0.2478,378.32
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,Sensitivity,99.13,99.28,0.15,0.15
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,Specificity,0.0,7.93,7.93,
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,MCC,-0.0087,0.1711,0.1798,-2066.67
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,ROC-AUC,70.988,85.06,14.07,19.82
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,PR-AUC,87.022,84.68,-2.34,-2.69
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,Brier,0.1733,0.1555,-0.0178,-10.27
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,Sensitivity,89.818,72.66,-17.16,-19.11
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,Specificity,31.636,82.32,50.68,160.2
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,MCC,0.2745,0.5535,0.279,101.64
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,ROC-AUC,67.684,80.26,12.58,18.59
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,PR-AUC,85.204,80.42,-4.78,-5.61
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,Brier,0.1791,0.2051,0.026,14.52
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,Sensitivity,94.552,84.89,-9.66,-10.22
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,Specificity,19.454,46.95,27.5,141.36
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,MCC,0.2193,0.3392,0.1199,54.67
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,ROC-AUC,64.878,67.87,2.99,4.61
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,PR-AUC,83.228,68.85,-14.38,-17.28
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,Brier,0.1808,0.2863,0.1055,58.35
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,Sensitivity,98.0,93.53,-4.47,-4.56
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,Specificity,5.818,7.93,2.11,36.27
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,MCC,0.1073,0.0279,-0.0794,-74.0
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,ROC-AUC,65.958,82.63,16.67,25.27
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,PR-AUC,84.27,82.19,-2.08,-2.47
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,Brier,0.1865,0.1811,-0.0054,-2.9
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,Sensitivity,89.128,80.58,-8.55,-9.59
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,Specificity,23.272,65.85,42.58,182.97
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,MCC,0.1608,0.4655,0.3047,189.49

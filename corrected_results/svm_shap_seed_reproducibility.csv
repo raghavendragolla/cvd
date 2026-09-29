@@ -1,0 +1,7 @@
+experiment_id,train_dataset,test_dataset,model,evaluated_seeds,min_cross_seed_spearman_rho,mean_cross_seed_spearman_rho,max_cross_seed_spearman_rho,is_reproducible
+EXP_PAIRWISE_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,"[42, 100, 2024, 777, 999]",0.7818,0.8861,1.0,True
+EXP_PAIRWISE_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,"[42, 100, 2024, 777, 999]",0.8182,0.9188,1.0,True
+EXP_PAIRWISE_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,"[42, 100, 2024, 777, 999]",0.7212,0.8606,0.9879,True
+EXP_PAIRWISE_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,"[42, 100, 2024, 777, 999]",0.9152,0.9539,0.9879,True
+EXP_PAIRWISE_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,"[42, 100, 2024, 777, 999]",0.8667,0.9224,0.9758,True
+EXP_PAIRWISE_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,"[42, 100, 2024, 777, 999]",0.8424,0.8933,0.9758,True

@@ -1,0 +1,7 @@
+transfer_pair,train_dataset,test_dataset,n_experiments,n_train,n_test,is_zurich_transfer,median_auc_change,median_brier_change,median_external_ece,median_cal_intercept,median_cal_slope,mean_standardized_wasserstein,mean_raw_wasserstein,abs_prevalence_delta_pct,median_shap_spearman
+Cleveland -> Hungarian,Cleveland,Hungarian,4,303,293,False,1.0,-0.01015,0.0817,-0.53645,1.00565,0.41705,4.78745,9.7,0.9879
+Cleveland -> VA Long Beach,Cleveland,VA Long Beach,4,303,199,False,-11.120000000000001,0.0154,0.0789,0.1269,0.68245,0.54735,8.7598,28.5,0.9091
+Cleveland -> Zurich,Cleveland,Zurich,4,303,123,True,-8.61,0.01675,0.28,2.4346,0.96175,0.4942249999999999,8.64855,47.62,0.897
+Hungarian -> Cleveland,Hungarian,Cleveland,4,293,303,False,-4.805,0.04055,0.08045,0.35745,1.14905,0.468775,4.78745,9.7,0.9394
+VA Long Beach -> Cleveland,VA Long Beach,Cleveland,4,199,303,False,14.49,0.01055,0.13385,-0.57035,1.197,0.5810500000000001,8.7598,28.5,0.8485
+Zurich -> Cleveland,Zurich,Cleveland,4,123,303,True,17.79,0.2974,0.39325,-2.4426,0.93655,0.45065,8.64855,47.62,0.9091

@@ -1,0 +1,7 @@
+experiment_id,train_dataset,test_dataset,model,coalition_method,old_heuristic_spearman_rho,corrected_spearman_rho,spearman_delta,old_heuristic_kendall_tau,corrected_kendall_tau,corrected_top3_overlap,corrected_top5_overlap,is_near_constant
+EXP_PAIRWISE_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,Exact_1024_Coalitions,0.9273,0.8788,-0.0485,0.8222,0.7333,0.2,1.0,False
+EXP_PAIRWISE_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,Exact_1024_Coalitions,0.7939,0.7939,0.0,0.6444,0.6,0.2,1.0,False
+EXP_PAIRWISE_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,Exact_1024_Coalitions,0.903,0.8909,-0.0121,0.7778,0.7778,0.5,0.6667,False
+EXP_PAIRWISE_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,Exact_1024_Coalitions,0.7818,0.8061,0.0243,0.5556,0.6,0.5,1.0,False
+EXP_PAIRWISE_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,Exact_1024_Coalitions,0.5636,0.5394,-0.0242,0.5111,0.4222,0.5,0.4286,False
+EXP_PAIRWISE_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,Exact_1024_Coalitions,0.8788,0.8303,-0.0485,0.7333,0.6889,1.0,0.6667,False

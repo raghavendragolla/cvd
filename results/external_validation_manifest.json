@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Phase 5 Cross-Dataset External Validation Manifest",
+    "project": "Beyond Accuracy: Cross-Dataset Generalization, Calibration and Explanation Stability",
+    "execution_timestamp": "2026-09-19T13:30:28.999655",
+    "python_version": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+    "random_seed": 42,
+    "classification_threshold": 0.5,
+    "feature_schema": [
+      "age",
+      "sex",
+      "cp",
+      "trestbps",
+      "fbs",
+      "restecg",
+      "thalach",
+      "exang",
+      "oldpeak",
+      "slope"
+    ],
+    "models_evaluated": [
+      "LogisticRegression",
+      "RandomForest",
+      "SVM",
+      "XGBoost"
+    ],
+    "primary_analysis": {
+      "description": "24 pairwise external validation experiments across 6 hospital transfer directions",
+      "results_file": "results/external_validation_results.csv",
+      "predictions_file": "results/external_predictions.csv",
+      "degradation_file": "results/performance_degradation.csv",
+      "n_experiments": 24
+    },
+    "secondary_analysis": {
+      "description": "16 Leave-One-Dataset-Out (LODO) experiments on pooled multi-hospital development data",
+      "results_file": "results/lodo_results.csv",
+      "predictions_file": "results/lodo_predictions.csv",
+      "n_experiments": 16
+    },
+    "total_experiments_completed": 40,
+    "isolation_rule": "Test cohorts strictly transformed via transform(); zero fitting or hyperparameter tuning on test data"
+  }
+}

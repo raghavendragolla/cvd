@@ -1,0 +1,56 @@
+{
+  "phase": 8,
+  "phase_name": "Subgroup Robustness, Fairness & Missingness Sensitivity",
+  "timestamp": "2026-09-19T16:24:12.825343",
+  "random_seed": 42,
+  "bootstrap_replicates": 1000,
+  "minimum_evaluable_cell_size": 30,
+  "subgroup_definitions": {
+    "sex": [
+      "0 (Female)",
+      "1 (Male)"
+    ],
+    "age_groups": [
+      "<50",
+      "50-64",
+      ">=65"
+    ]
+  },
+  "datasets": [
+    "Cleveland",
+    "Hungarian",
+    "Zurich",
+    "VA Long Beach"
+  ],
+  "features": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope"
+  ],
+  "output_files": [
+    "results/subgroup_performance.csv",
+    "results/subgroup_calibration.csv",
+    "results/subgroup_disparity.csv",
+    "results/missingness_sensitivity.csv",
+    "results/missingness_patterns.csv",
+    "results/subgroup_shap_stability.csv",
+    "results/phase8_manifest.json"
+  ],
+  "figures": [
+    "figures/subgroup_robustness/1_subgroup_roc_auc.png",
+    "figures/subgroup_robustness/2_subgroup_brier.png",
+    "figures/subgroup_robustness/3_subgroup_ece.png",
+    "figures/subgroup_robustness/4_sex_disparity.png",
+    "figures/subgroup_robustness/5_age_disparity.png",
+    "figures/missingness/6_missingness_rates.png",
+    "figures/missingness/7_complete_case_sensitivity.png",
+    "figures/subgroup_robustness/8_subgroup_shap_ranks.png"
+  ]
+}

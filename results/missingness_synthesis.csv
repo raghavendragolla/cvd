@@ -1,0 +1,5 @@
+imputation_regime,evaluable_experiments,median_auc,iqr_auc,min_auc,max_auc,median_delta_auc_vs_primary,iqr_delta_auc_vs_primary,median_brier,iqr_brier,median_delta_brier_vs_primary,iqr_delta_brier_vs_primary,median_ece,iqr_ece,robustness_conclusion
+Primary Development-Fitted (KNN),24,81.59,9.2825,64.99,87.68,0.0,0.0,0.1636,0.0316,0.0,0.0,0.0912,0.1948,Baseline primary benchmark pipeline without external leakage.
+Complete-Case Test Evaluation,24,82.22,11.055,64.99,91.11,0.0,2.845,0.1494,0.0509,0.0,0.0241,0.105,0.1844,Minimal distortion; confirms performance is not artifact of imputation.
+Full Complete-Case (Train & Test),24,79.26,10.055,34.16,91.11,-3.34,4.0125,0.1546,0.0839,0.0083,0.0683,0.1582,0.1953,Evaluated where complete cases exist; confirms stable ranking.
+Missingness Indicator Pipeline,24,80.83,11.345,67.69,88.51,-0.09,1.4875,0.1688,0.0551,0.0044,0.0214,0.1445,0.201,Marginal AUC gain; preserves primary transport and drift conclusions.

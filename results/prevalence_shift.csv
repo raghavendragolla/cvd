@@ -1,0 +1,7 @@
+train_dataset,test_dataset,train_n,train_prevalence_pct,test_n,test_prevalence_pct,prevalence_delta_pct,abs_prevalence_delta_pct
+Cleveland,Hungarian,303,45.87,293,36.18,-9.69,9.69
+Cleveland,Zurich,303,45.87,123,93.5,47.63,47.63
+Cleveland,VA Long Beach,303,45.87,199,74.37,28.5,28.5
+Hungarian,Cleveland,293,36.18,303,45.87,9.69,9.69
+Zurich,Cleveland,123,93.5,303,45.87,-47.63,47.63
+VA Long Beach,Cleveland,199,74.37,303,45.87,-28.5,28.5

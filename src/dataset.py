@@ -36,10 +36,15 @@ TRACK_A_FEATURES = [
     "thal"       # Thalassemia (3=normal, 6=fixed defect, 7=reversible defect)
 ]
 
-# Track B: 11 universally recorded features across all 4 international centers (excluding costly ca & thal)
-TRACK_B_FEATURES = [
+# Track B: Universal feature sets across international centers (excluding invasive ca & thal)
+TRACK_B_10_FEATURES = [
+    "age", "sex", "cp", "trestbps", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope"
+]
+TRACK_B_11_FEATURES = [
     "age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope"
 ]
+# Backward-compatible alias
+TRACK_B_FEATURES = TRACK_B_11_FEATURES
 
 FEATURE_COLUMNS = TRACK_A_FEATURES
 ALL_COLUMNS = FEATURE_COLUMNS + ["target"]
@@ -74,14 +79,14 @@ def load_raw_dataset(data_path: str = None) -> pd.DataFrame:
             return df[ALL_COLUMNS]
         elif set(FEATURE_COLUMNS).issubset(df.columns):
             return df
-            
+
     # Download primary Cleveland cohort from UCI Repository
     try:
         df = pd.read_csv(UCI_DATASET_URLS["Cleveland Clinic (USA)"], names=ALL_COLUMNS, na_values="?", header=None)
     except Exception as e:
         print(f"Warning: Could not fetch from UCI URL ({e}). Generating representative baseline dataset.")
         df = create_synthetic_heart_dataset(n_samples=303)
-        
+
     return df
 
 
@@ -100,7 +105,7 @@ def load_multi_hospital_datasets(data_dir: str = "data/raw") -> dict:
                 continue
             except Exception:
                 pass
-                
+
         try:
             df = pd.read_csv(url, names=ALL_COLUMNS, na_values="?", header=None)
             os.makedirs(data_dir, exist_ok=True)
@@ -115,7 +120,7 @@ def load_multi_hospital_datasets(data_dir: str = "data/raw") -> dict:
                     n = v
             df = create_synthetic_heart_dataset(n_samples=n, random_state=hash(center_name) % 1000)
             datasets[center_name] = df
-            
+
     return datasets
 
 
@@ -133,7 +138,7 @@ def load_cleveland_track_a(data_dir: str = "data/raw") -> pd.DataFrame:
             df.to_csv(fpath, index=False)
         except Exception:
             df = create_synthetic_heart_dataset(n_samples=303, random_state=42)
-            
+
     # Binarize target (0: healthy, 1-4: heart disease)
     df["target"] = (pd.to_numeric(df["target"], errors="coerce").fillna(0) > 0).astype(int)
     df["cohort"] = "Cleveland"
@@ -147,23 +152,147 @@ def load_multicenter_track_b(data_dir: str = "data/raw") -> pd.DataFrame:
     """
     multi_dict = load_multi_hospital_datasets(data_dir)
     merged_rows = []
-    
+
     for center_name, raw_df in multi_dict.items():
         df_copy = raw_df.copy()
-        
+
         # Ensure target is binary
         if "target" in df_copy.columns:
             df_copy["target"] = (pd.to_numeric(df_copy["target"], errors="coerce").fillna(0) > 0).astype(int)
-            
+
         short_name = center_name.split()[0]
         df_copy["cohort"] = short_name
-        
+
         # Keep Track B columns + target + cohort
         cols_to_keep = [c for c in TRACK_B_FEATURES if c in df_copy.columns] + ["target", "cohort"]
         merged_rows.append(df_copy[cols_to_keep])
-        
+
     combined_df = pd.concat(merged_rows, ignore_index=True)
     return combined_df
+
+
+def load_harmonized_cohort(
+    cohort_name: str,
+    track: str = "B10",
+    data_dir: str = "data/raw",
+    drop_duplicates: bool = True,
+    mask_zero_sentinels: bool = True
+) -> pd.DataFrame:
+    """
+    Loads and harmonizes an individual clinical cohort according to research specifications.
+
+    Parameters:
+        cohort_name: One of 'cleveland', 'hungarian', 'zurich' (or 'switzerland'), 'va' (or 'va_long_beach').
+        track: Feature track - 'A' (13 features), 'B10' (10 features), or 'B11' (11 features).
+        data_dir: Directory containing raw CSV files.
+        drop_duplicates: Whether to remove verified identical duplicate rows.
+        mask_zero_sentinels: Whether to convert non-physiological zeros (chol=0, trestbps=0) to NaN.
+    """
+    norm_name = cohort_name.lower().strip().replace(" ", "_")
+    file_map = {
+        "cleveland": ["cleveland_raw.csv", "cleveland.csv", "heart_disease.csv"],
+        "hungarian": ["hungarian_raw.csv", "hungarian.csv"],
+        "zurich": ["zurich_raw.csv", "switzerland.csv"],
+        "switzerland": ["zurich_raw.csv", "switzerland.csv"],
+        "va": ["va_raw.csv", "va_long_beach.csv"],
+        "va_long_beach": ["va_raw.csv", "va_long_beach.csv"]
+    }
+
+    candidates = file_map.get(norm_name, [f"{norm_name}_raw.csv", f"{norm_name}.csv"])
+    found_path = None
+    for cand in candidates:
+        p = os.path.join(data_dir, cand)
+        if os.path.exists(p):
+            found_path = p
+            break
+
+    if found_path is None:
+        raise FileNotFoundError(f"Cohort '{cohort_name}' file not found in {data_dir}. Looked for: {candidates}")
+
+    df = pd.read_csv(found_path)
+    # Standardize missing value indicators
+    df = df.replace("?", np.nan)
+
+    # Coerce columns to numeric
+    for col in df.columns:
+        if col != "cohort":
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    # Mask non-physiological zero sentinels
+    if mask_zero_sentinels:
+        if "chol" in df.columns:
+            df.loc[df["chol"] <= 0, "chol"] = np.nan
+        if "trestbps" in df.columns:
+            df.loc[df["trestbps"] <= 0, "trestbps"] = np.nan
+
+    # Deduplicate if requested
+    if drop_duplicates:
+        initial_len = len(df)
+        df = df.drop_duplicates().reset_index(drop=True)
+        dropped = initial_len - len(df)
+        if dropped > 0:
+            pass  # Duplicates successfully removed
+
+    # Standardize target to binary: 0 vs >= 1
+    if "target" in df.columns:
+        df["target"] = (df["target"] > 0).astype(int)
+
+    # Assign cohort identifier
+    canonical_cohort = {
+        "cleveland": "Cleveland",
+        "hungarian": "Hungarian",
+        "zurich": "Zurich",
+        "switzerland": "Zurich",
+        "va": "VA Long Beach",
+        "va_long_beach": "VA Long Beach"
+    }.get(norm_name, cohort_name.title())
+    df["cohort"] = canonical_cohort
+
+    # Filter features based on track
+    track_upper = track.upper()
+    if track_upper == "A":
+        feat_cols = TRACK_A_FEATURES
+    elif track_upper == "B10":
+        feat_cols = TRACK_B_10_FEATURES
+    elif track_upper in ["B", "B11"]:
+        feat_cols = TRACK_B_11_FEATURES
+    else:
+        raise ValueError(f"Unknown track: {track}. Must be 'A', 'B10', or 'B11'.")
+
+    keep_cols = [c for c in feat_cols if c in df.columns]
+    if "target" in df.columns:
+        keep_cols.append("target")
+    keep_cols.append("cohort")
+
+    return df[keep_cols]
+
+
+def load_all_harmonized_cohorts(
+    track: str = "B10",
+    data_dir: str = "data/raw",
+    drop_duplicates: bool = True,
+    mask_zero_sentinels: bool = True
+) -> dict:
+    """
+    Loads all 4 international clinical cohorts harmonized under the given track.
+    Returns dictionary with keys: 'Cleveland', 'Hungarian', 'Zurich', 'VA Long Beach'.
+    """
+    cohort_keys = ["cleveland", "hungarian", "zurich", "va_long_beach"]
+    return {
+        canonical: load_harmonized_cohort(
+            key,
+            track=track,
+            data_dir=data_dir,
+            drop_duplicates=drop_duplicates,
+            mask_zero_sentinels=mask_zero_sentinels
+        )
+        for key, canonical in [
+            ("cleveland", "Cleveland"),
+            ("hungarian", "Hungarian"),
+            ("zurich", "Zurich"),
+            ("va_long_beach", "VA Long Beach")
+        ]
+    }
 
 
 def create_sample_patient_cohort(output_path: str = None) -> pd.DataFrame:
@@ -251,7 +380,7 @@ def create_synthetic_heart_dataset(n_samples: int = 303, random_state: int = 42)
     slope = np.random.choice([1, 2, 3], size=n_samples, p=[0.47, 0.46, 0.07])
     ca = np.random.choice([0, 1, 2, 3], size=n_samples, p=[0.58, 0.22, 0.13, 0.07])
     thal = np.random.choice([3, 6, 7], size=n_samples, p=[0.55, 0.06, 0.39])
-    
+
     # Calculate synthetic log-odds risk score
     risk_score = (
         0.05 * (ages - 50) +
@@ -270,7 +399,7 @@ def create_synthetic_heart_dataset(n_samples: int = 303, random_state: int = 42)
     )
     prob = 1 / (1 + np.exp(-risk_score))
     target = (np.random.rand(n_samples) < prob).astype(int)
-    
+
     df = pd.DataFrame({
         "age": ages, "sex": sexes, "cp": cp, "trestbps": trestbps, "chol": chol,
         "fbs": fbs, "restecg": restecg, "thalach": thalach, "exang": exang,

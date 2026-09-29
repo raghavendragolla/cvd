@@ -1,3 +1,7 @@
+# ============================================================
+# Git Ignore Configuration for Reproducible Research Repository
+# ============================================================
+
 # Virtual Environments
 .venv/
 env/
@@ -11,19 +15,46 @@ __pycache__/
 *.so
 .pytest_cache/
 
-# Streamlit temporary files
-.streamlit/*
-!.streamlit/config.toml
+# IDE & Editor Directories
+.vscode/
+.idea/
+.devcontainer/
 
-# OS Specific
+# Scratch & Temporary Analysis Files
+scratch/
+
+# Operating System Files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# IDE files
-.vscode/
-.idea/
-
-# Logs & temp training info
+# Logs & Temporary Training Artifacts
 *.log
 catboost_info/
+
+# Streamlit Local Cache
+.streamlit/*
+!.streamlit/config.toml
+
+# LaTeX Compilation Artifacts (keep main.tex, references.bib, and main.pdf)
+main.aux
+main.bbl
+main.bcf
+main.blg
+main.log
+main.run.xml
+*.synctex.gz
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+
+# Local Working Drafts (Office formats)
+*.docx
+*.pptx
+
+# Legacy Model Binaries
+models/*.joblib
+
+# Internal Documentation & Audit Notes
+docs/

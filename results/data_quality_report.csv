@@ -1,0 +1,20 @@
+dataset,feature,issue_type,count,percentage,severity,description
+Hungarian,ALL (Row-level),Duplicate Rows,1,0.34,HIGH,1 exact duplicate patient record(s) found in raw dataset.
+Hungarian,ca,Severe Missingness (>80%),291,98.98,CRITICAL,291 records missing (99.0%); fluoroscopy not systematically acquired at this medical center.
+Hungarian,thal,Severe Missingness (>40%),266,90.48,HIGH,266 records missing (90.5%); thallium stress test omitted in large patient subsets.
+Hungarian,slope,High Missingness (>50%),190,64.63,HIGH,190 records missing (64.6%); ST segment slope unrecorded during stress test.
+Hungarian,target,Low Disease Prevalence,106,36.05,MEDIUM,Target positivity is 36.1%; outpatient screening profile with majority healthy baseline.
+Zurich,chol,Zero-Encoded Missingness,123,100.0,CRITICAL,100% of cohort has chol = 0; unrecorded cholesterol encoded as zero.
+Zurich,oldpeak,Negative Continuous Value,11,8.94,MEDIUM,11 record(s) with negative ST depression down to -2.6 mm (indicates ST elevation or negative baseline shift).
+Zurich,ca,Severe Missingness (>80%),118,95.93,CRITICAL,118 records missing (95.9%); fluoroscopy not systematically acquired at this medical center.
+Zurich,thal,Severe Missingness (>40%),52,42.28,HIGH,52 records missing (42.3%); thallium stress test omitted in large patient subsets.
+Zurich,sex,Severe Population Demographic Shift,113,91.87,HIGH,Cohort is 91.9% Male; extreme female under-representation restricts female subgroup transportability.
+Zurich,target,Severe Disease Referral Spectrum Shift,115,93.5,CRITICAL,Target positivity is 93.5%; extreme tertiary referral bias where almost all admitted patients have confirmed CAD.
+VA Long Beach,ALL (Row-level),Duplicate Rows,1,0.5,HIGH,1 exact duplicate patient record(s) found in raw dataset.
+VA Long Beach,trestbps,Impossible Zero Value,1,0.5,CRITICAL,1 record(s) with Resting Blood Pressure = 0 mm Hg (physiologically impossible in living outpatient).
+VA Long Beach,chol,Zero-Encoded Missingness,49,24.5,HIGH,49 patient(s) have chol = 0 mg/dL (unrecorded cholesterol coded as zero).
+VA Long Beach,oldpeak,Negative Continuous Value,1,0.5,MEDIUM,1 record(s) with negative ST depression down to -0.5 mm (indicates ST elevation or negative baseline shift).
+VA Long Beach,ca,Severe Missingness (>80%),198,99.0,CRITICAL,198 records missing (99.0%); fluoroscopy not systematically acquired at this medical center.
+VA Long Beach,thal,Severe Missingness (>40%),166,83.0,HIGH,166 records missing (83.0%); thallium stress test omitted in large patient subsets.
+VA Long Beach,slope,High Missingness (>50%),102,51.0,HIGH,102 records missing (51.0%); ST segment slope unrecorded during stress test.
+VA Long Beach,sex,Severe Population Demographic Shift,194,97.0,HIGH,Cohort is 97.0% Male; extreme female under-representation restricts female subgroup transportability.

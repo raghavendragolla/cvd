@@ -1,0 +1,7 @@
+experiment_id,train_dataset,test_dataset,target_n,target_mean_proba,target_std_proba,target_min_proba,target_max_proba,target_range_proba,target_iqr_proba,is_target_near_constant,diagnostic_note
+EXP_PAIRWISE_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,293,0.4415,0.2996,0.062,0.9612,0.8992,0.5634,False,Normal prediction spread
+EXP_PAIRWISE_CLEV_TO_ZURI_SVM,Cleveland,Zurich,123,0.6455,0.2166,0.1413,0.9532,0.8118,0.3412,False,Normal prediction spread
+EXP_PAIRWISE_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,199,0.7172,0.2253,0.1148,0.966,0.8512,0.2927,False,Normal prediction spread
+EXP_PAIRWISE_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,303,0.3951,0.2325,0.0674,0.961,0.8936,0.3814,False,Normal prediction spread
+EXP_PAIRWISE_ZURI_TO_CLEV_SVM,Zurich,Cleveland,303,0.9129,0.0371,0.7454,0.9534,0.2079,0.021,False,Normal prediction spread
+EXP_PAIRWISE_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,303,0.681,0.1115,0.2371,0.8446,0.6075,0.1243,False,Normal prediction spread

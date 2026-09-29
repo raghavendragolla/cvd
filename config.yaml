@@ -1,0 +1,110 @@
+# Phase 4 Central Experiment Configuration
+# Project: Beyond Accuracy: Cross-Dataset Generalization, Calibration and Explanation Stability
+
+experiment:
+  name: "Phase_4_Internal_Validation_Baseline"
+  random_seed: 42
+  cv_folds: 5
+  classification_threshold: 0.50
+  shuffle: true
+
+models:
+  - name: "LogisticRegression"
+    display_name: "Logistic Regression (Linear)"
+    type: "linear"
+    params:
+      C: 1.0
+      solver: "liblinear"
+      max_iter: 1000
+      random_state: 42
+    needs_scaling: true
+
+  - name: "RandomForest"
+    display_name: "Random Forest Ensemble"
+    type: "ensemble_tree"
+    params:
+      n_estimators: 100
+      max_depth: 5
+      min_samples_split: 4
+      min_samples_leaf: 2
+      random_state: 42
+    needs_scaling: false
+
+  - name: "SVM"
+    display_name: "Support Vector Machine (RBF)"
+    type: "kernel"
+    params:
+      C: 1.0
+      kernel: "rbf"
+      probability: true
+      random_state: 42
+    needs_scaling: true
+
+  - name: "XGBoost"
+    display_name: "XGBoost (Gradient Boosted Trees)"
+    type: "gradient_boosting"
+    params:
+      n_estimators: 100
+      max_depth: 3
+      learning_rate: 0.05
+      subsample: 0.8
+      eval_metric: "logloss"
+      random_state: 42
+    needs_scaling: false
+
+tracks:
+  track_a:
+    name: "Track_A"
+    description: "Cleveland 13 diagnostic features benchmark"
+    features:
+      - "age"
+      - "sex"
+      - "cp"
+      - "trestbps"
+      - "chol"
+      - "fbs"
+      - "restecg"
+      - "thalach"
+      - "exang"
+      - "oldpeak"
+      - "slope"
+      - "ca"
+      - "thal"
+    cohorts:
+      - "Cleveland"
+
+  track_b:
+    name: "Track_B"
+    description: "Universal 10 features cross-cohort transportability"
+    features:
+      - "age"
+      - "sex"
+      - "cp"
+      - "trestbps"
+      - "fbs"
+      - "restecg"
+      - "thalach"
+      - "exang"
+      - "oldpeak"
+      - "slope"
+    cohorts:
+      - "Cleveland"
+      - "Hungarian"
+      - "Zurich"
+      - "VA Long Beach"
+
+preprocessing:
+  imputer_strategy: "knn"
+  n_neighbors: 5
+  clamp_negative_oldpeak: false
+  mask_zero_sentinels: true
+  drop_duplicates: true
+
+paths:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  results_dir: "results"
+  figures_dir: "figures"
+  oof_predictions_file: "results/internal_oof_predictions.csv"
+  results_file: "results/internal_validation_results.csv"
+  summary_file: "results/internal_validation_summary.csv"

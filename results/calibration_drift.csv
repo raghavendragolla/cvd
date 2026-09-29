@@ -1,0 +1,73 @@
+experiment_id,train_dataset,test_dataset,model,calibration_method,brier_score,ece,calibration_slope,calibration_intercept,roc_auc,pr_auc,accuracy,sensitivity,specificity,f1_score,mcc
+RECAL_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,Raw_Uncalibrated,0.1356,0.0608,0.8905,-0.3641,87.09,82.89,80.2,77.36,81.82,73.87,0.5814
+RECAL_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,Platt_Recalibrated,0.1349,0.0601,0.9586,-0.334,87.09,82.89,81.23,76.42,83.96,74.65,0.598
+RECAL_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,Isotonic_Recalibrated,0.1424,0.0691,0.5352,-0.4733,86.14,77.55,80.2,77.36,81.82,73.87,0.5814
+RECAL_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,Raw_Uncalibrated,0.1377,0.0963,1.087,-0.5458,87.73,82.21,81.23,76.42,83.96,74.65,0.598
+RECAL_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,Platt_Recalibrated,0.1359,0.082,0.9069,-0.5463,87.73,82.21,81.23,76.42,83.96,74.65,0.598
+RECAL_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,Isotonic_Recalibrated,0.1381,0.0932,0.2905,-0.8569,86.96,78.56,80.89,80.19,81.28,75.22,0.6007
+RECAL_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,Raw_Uncalibrated,0.1414,0.0862,1.1266,-0.5368,87.38,81.53,78.5,76.42,79.68,72.0,0.5488
+RECAL_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,Platt_Recalibrated,0.1406,0.0865,1.0543,-0.5232,87.38,81.53,78.84,76.42,80.21,72.32,0.5548
+RECAL_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,Isotonic_Recalibrated,0.1429,0.0765,0.5819,-0.6422,85.86,76.81,82.25,66.98,90.91,73.2,0.6068
+RECAL_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,Raw_Uncalibrated,0.1401,0.0772,0.9244,-0.5736,87.6,81.33,80.55,76.42,82.89,73.97,0.5854
+RECAL_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,Platt_Recalibrated,0.1392,0.0927,1.1,-0.5269,87.6,81.33,81.57,76.42,84.49,75.0,0.6044
+RECAL_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,Isotonic_Recalibrated,0.1444,0.1156,0.7277,-0.5448,87.47,80.25,82.25,68.87,89.84,73.74,0.6078
+RECAL_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,Raw_Uncalibrated,0.1638,0.2464,0.4806,2.4042,72.07,97.33,76.42,78.26,50.0,86.12,0.1642
+RECAL_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,Platt_Recalibrated,0.1662,0.2581,0.5175,2.4199,72.07,97.33,75.61,77.39,50.0,85.58,0.1573
+RECAL_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,Isotonic_Recalibrated,0.1705,0.2413,0.3428,2.3725,70.27,96.53,78.05,80.0,50.0,87.2,0.1787
+RECAL_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,Raw_Uncalibrated,0.1633,0.3023,1.5073,2.5693,81.41,98.37,73.17,73.91,62.5,83.74,0.199
+RECAL_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,Platt_Recalibrated,0.1612,0.2884,1.2576,2.5678,81.41,98.37,73.17,73.91,62.5,83.74,0.199
+RECAL_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,Isotonic_Recalibrated,0.1731,0.2927,1.2109,2.5836,81.03,98.04,81.3,82.61,62.5,89.2,0.2764
+RECAL_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,Raw_Uncalibrated,0.1634,0.2894,0.9928,2.4317,78.59,98.13,75.61,76.52,62.5,85.44,0.2193
+RECAL_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,Platt_Recalibrated,0.1642,0.2858,0.93,2.4437,78.59,98.13,75.61,76.52,62.5,85.44,0.2193
+RECAL_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,Isotonic_Recalibrated,0.17,0.2723,0.7656,2.4364,77.93,97.72,63.41,62.61,75.0,76.19,0.1894
+RECAL_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,Raw_Uncalibrated,0.1555,0.2706,0.9294,2.4146,76.52,97.93,76.42,77.39,62.5,85.99,0.2266
+RECAL_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,Platt_Recalibrated,0.1629,0.2947,1.105,2.461,76.52,97.93,73.98,74.78,62.5,84.31,0.2056
+RECAL_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,Isotonic_Recalibrated,0.1591,0.2889,1.1111,2.4113,75.38,97.61,62.6,62.61,62.5,75.79,0.1269
+RECAL_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,Raw_Uncalibrated,0.16,0.0737,0.6664,0.2207,75.81,89.07,78.89,91.89,41.18,86.62,0.3882
+RECAL_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,Platt_Recalibrated,0.1592,0.0549,0.7177,0.2427,75.81,89.07,78.89,91.89,41.18,86.62,0.3882
+RECAL_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,Isotonic_Recalibrated,0.1625,0.0802,0.2115,0.5603,74.58,86.77,78.89,92.57,39.22,86.71,0.3826
+RECAL_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,Raw_Uncalibrated,0.1644,0.0926,0.7605,0.4646,75.34,88.97,77.89,89.86,43.14,85.81,0.3703
+RECAL_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,Platt_Recalibrated,0.1644,0.0915,0.6346,0.4638,75.34,88.97,77.89,89.86,43.14,85.81,0.3703
+RECAL_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,Isotonic_Recalibrated,0.1682,0.1079,0.1502,0.6583,74.83,86.75,78.39,91.89,39.22,86.35,0.3697
+RECAL_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,Raw_Uncalibrated,0.1708,0.0841,0.6708,0.4216,73.05,86.58,76.88,89.86,39.22,85.26,0.3335
+RECAL_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,Platt_Recalibrated,0.1718,0.0789,0.6276,0.4299,73.05,86.58,76.88,89.86,39.22,85.26,0.3335
+RECAL_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,Isotonic_Recalibrated,0.1837,0.0958,0.1084,0.7523,71.34,84.88,73.37,81.08,50.98,81.91,0.3148
+RECAL_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,Raw_Uncalibrated,0.1594,0.0616,0.6941,0.3137,75.64,88.37,77.89,91.89,37.25,86.08,0.3509
+RECAL_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,Platt_Recalibrated,0.1598,0.0638,0.8259,0.3489,75.64,88.37,78.89,91.89,41.18,86.62,0.3882
+RECAL_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,Isotonic_Recalibrated,0.1592,0.058,0.5165,0.5216,75.23,87.08,76.38,82.43,58.82,83.85,0.4005
+RECAL_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,Raw_Uncalibrated,0.1672,0.0834,0.6399,0.2454,83.51,82.83,77.56,66.91,86.59,73.23,0.5493
+RECAL_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,Platt_Recalibrated,0.1668,0.082,0.6819,0.2879,83.51,82.83,77.23,65.47,87.2,72.51,0.5436
+RECAL_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,Isotonic_Recalibrated,0.1702,0.1037,0.3846,0.0814,83.28,80.51,76.9,61.15,90.24,70.83,0.5433
+RECAL_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,Raw_Uncalibrated,0.1542,0.0775,1.418,0.5939,86.94,86.68,80.2,64.75,93.29,75.0,0.6135
+RECAL_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,Platt_Recalibrated,0.1535,0.0786,1.2955,0.6071,86.94,86.68,79.54,63.31,93.29,73.95,0.6014
+RECAL_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,Isotonic_Recalibrated,0.1579,0.0802,1.1387,0.5375,86.22,83.67,79.87,69.78,88.41,76.08,0.5966
+RECAL_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,Raw_Uncalibrated,0.1762,0.0928,1.315,0.5045,82.3,80.94,77.89,61.87,91.46,71.97,0.5652
+RECAL_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,Platt_Recalibrated,0.175,0.0773,1.2697,0.4583,82.3,80.94,77.56,61.87,90.85,71.67,0.5573
+RECAL_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,Isotonic_Recalibrated,0.1778,0.0403,1.0412,0.187,80.79,75.31,75.58,67.63,82.32,71.76,0.5068
+RECAL_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,Raw_Uncalibrated,0.1574,0.0548,0.983,0.2703,84.81,84.1,77.23,66.91,85.98,72.94,0.5421
+RECAL_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,Platt_Recalibrated,0.158,0.0464,1.0607,0.304,84.81,84.1,77.23,66.91,85.98,72.94,0.5421
+RECAL_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,Isotonic_Recalibrated,0.1666,0.0766,0.9206,0.2336,83.69,80.37,76.9,71.22,81.71,73.88,0.5334
+RECAL_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,Raw_Uncalibrated,0.4015,0.4049,0.4309,-1.193,64.74,60.08,46.86,97.12,4.27,62.65,0.037
+RECAL_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,Platt_Recalibrated,0.4725,0.475,6.014,-16.1079,64.74,60.08,45.87,100.0,0.0,62.9,0.0
+RECAL_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,Isotonic_Recalibrated,0.4457,0.4558,0.0988,-0.5205,62.84,55.04,45.87,100.0,0.0,62.9,0.0
+RECAL_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,Raw_Uncalibrated,0.3418,0.3816,0.9064,-2.0703,81.57,73.35,45.87,100.0,0.0,62.9,0.0
+RECAL_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,Platt_Recalibrated,0.4367,0.4507,2.9749,-7.1727,81.57,73.35,45.87,100.0,0.0,62.9,0.0
+RECAL_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,Isotonic_Recalibrated,0.4246,0.4376,0.1422,-0.5895,61.45,53.36,45.87,100.0,0.0,62.9,0.0
+RECAL_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,Raw_Uncalibrated,0.4453,0.4541,2.1977,-5.5325,70.8,66.88,45.87,100.0,0.0,62.9,0.0
+RECAL_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,Platt_Recalibrated,0.4744,0.4758,70.4597,-187.5489,70.8,66.88,45.87,100.0,0.0,62.9,0.0
+RECAL_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,Isotonic_Recalibrated,0.4623,0.4681,1.3256,-3.6366,55.61,49.04,45.87,100.0,0.0,62.9,0.0
+RECAL_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,Raw_Uncalibrated,0.3133,0.3583,0.9667,-2.2254,81.84,74.26,49.83,99.28,7.93,64.49,0.1711
+RECAL_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,Platt_Recalibrated,0.4225,0.4427,2.7426,-6.5663,81.84,74.26,45.87,100.0,0.0,62.9,0.0
+RECAL_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,Isotonic_Recalibrated,0.3848,0.414,0.5874,-1.4506,78.78,68.27,45.87,100.0,0.0,62.9,0.0
+RECAL_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,Raw_Uncalibrated,0.1555,0.044,1.2099,0.1092,85.06,84.68,77.89,72.66,82.32,75.09,0.5535
+RECAL_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,Platt_Recalibrated,0.174,0.1383,1.8647,-0.6083,85.06,84.68,76.57,84.89,69.51,76.87,0.5454
+RECAL_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,Isotonic_Recalibrated,0.1599,0.0957,1.5353,-0.2467,85.08,81.76,77.23,76.98,77.44,75.62,0.543
+RECAL_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,Raw_Uncalibrated,0.2051,0.1572,1.7077,-0.9334,80.26,80.42,64.36,84.89,46.95,68.6,0.3392
+RECAL_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,Platt_Recalibrated,0.2345,0.2102,2.5385,-1.7933,80.26,80.42,57.43,95.68,25.0,67.34,0.2847
+RECAL_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,Isotonic_Recalibrated,0.2209,0.1819,1.5621,-1.0447,79.59,77.15,67.33,79.14,57.32,68.97,0.3699
+RECAL_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,Raw_Uncalibrated,0.2863,0.2408,1.0479,-1.0209,67.87,68.85,47.19,93.53,7.93,61.9,0.0279
+RECAL_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,Platt_Recalibrated,0.2879,0.2478,1.0575,-1.0454,67.87,68.85,47.19,93.53,7.93,61.9,0.0279
+RECAL_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,Isotonic_Recalibrated,0.2639,0.2035,0.9918,-0.8631,67.22,63.95,46.2,95.68,4.27,62.0,-0.0012
+RECAL_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,Raw_Uncalibrated,0.1811,0.1105,1.184,-0.5991,82.63,82.19,72.61,80.58,65.85,72.96,0.4655
+RECAL_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,Platt_Recalibrated,0.2267,0.2093,2.5456,-1.8269,82.63,82.19,61.39,95.68,32.32,69.45,0.3524
+RECAL_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,Isotonic_Recalibrated,0.2213,0.1599,0.1791,0.0209,80.77,74.92,64.69,89.21,43.9,69.86,0.3647

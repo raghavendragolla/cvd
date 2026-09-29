@@ -1,0 +1,49 @@
+experiment_id,train_dataset,test_dataset,model,comparison,subgroup_a,subgroup_b,n_a,n_b,spearman_rank_correlation,top3_overlap,top5_overlap,top3_features_a,top3_features_b,evaluation_status
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,Sex (Male vs Female),Male (sex=1),Female (sex=0),193,6,,,,NA,NA,"Cell size below threshold (Male N=193, Female N=6)"
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,Age (<50 vs 50-64),Age <50,Age 50-64,19,138,,,,NA,NA,"Cell size below threshold (<50 N=19, 50-64 N=138)"
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,Sex (Male vs Female),Male (sex=1),Female (sex=0),193,6,,,,NA,NA,"Cell size below threshold (Male N=193, Female N=6)"
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,Age (<50 vs 50-64),Age <50,Age 50-64,19,138,,,,NA,NA,"Cell size below threshold (<50 N=19, 50-64 N=138)"
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,Sex (Male vs Female),Male (sex=1),Female (sex=0),193,6,,,,NA,NA,"Cell size below threshold (Male N=193, Female N=6)"
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,Age (<50 vs 50-64),Age <50,Age 50-64,19,138,,,,NA,NA,"Cell size below threshold (<50 N=19, 50-64 N=138)"
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,0.7333,0.5,0.6667,oldpeak; cp; slope,sex; oldpeak; slope,Valid
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.9879,1.0,1.0,oldpeak; slope; cp,oldpeak; cp; slope,Valid
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,0.9394,1.0,0.6667,cp; oldpeak; exang,cp; exang; oldpeak,Valid
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.903,1.0,0.6667,cp; exang; oldpeak,oldpeak; exang; cp,Valid
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,0.903,0.5,0.6667,oldpeak; exang; slope,exang; oldpeak; sex,Valid
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.9636,1.0,1.0,exang; oldpeak; slope,oldpeak; exang; slope,Valid
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,0.8424,0.5,1.0,oldpeak; cp; exang,sex; oldpeak; cp,Valid
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.9394,1.0,1.0,cp; oldpeak; exang,oldpeak; cp; exang,Valid
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,0.8788,0.5,1.0,cp; thalach; exang,sex; cp; thalach,Valid
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.9394,1.0,1.0,thalach; cp; sex,sex; cp; thalach,Valid
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,1.0,1.0,1.0,cp; thalach; slope,cp; thalach; slope,Valid
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.9758,1.0,1.0,cp; thalach; slope,cp; thalach; slope,Valid
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,0.4545,0.5,0.6667,cp; thalach; slope,cp; sex; thalach,Valid
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.6364,0.5,0.6667,cp; thalach; slope,cp; restecg; thalach,Valid
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,Sex (Male vs Female),Male (sex=1),Female (sex=0),213,80,0.9758,1.0,1.0,cp; sex; exang,sex; cp; exang,Valid
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,Age (<50 vs 50-64),Age <50,Age 50-64,160,129,0.9152,0.5,1.0,sex; cp; oldpeak,sex; cp; exang,Valid
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,1.0,1.0,1.0,cp; thalach; age,cp; thalach; age,Valid
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,1.0,1.0,1.0,cp; thalach; age,cp; thalach; age,Valid
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,0.4545,0.5,0.6667,cp; oldpeak; exang,sex; cp; oldpeak,Valid
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.7333,0.5,0.6667,cp; age; oldpeak,cp; oldpeak; sex,Valid
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,0.9879,1.0,1.0,cp; thalach; age,cp; thalach; age,Valid
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.5515,0.5,0.6667,age; cp; thalach,cp; thalach; oldpeak,Valid
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,0.3455,0.2,0.6667,exang; fbs; restecg,sex; cp; exang,Valid
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.7818,0.5,0.6667,fbs; exang; restecg,exang; fbs; cp,Valid
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,Sex (Male vs Female),Male (sex=1),Female (sex=0),206,97,0.9758,1.0,1.0,cp; oldpeak; thalach,cp; thalach; oldpeak,Valid
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,Age (<50 vs 50-64),Age <50,Age 50-64,87,175,0.6485,0.5,0.6667,age; cp; thalach,cp; thalach; oldpeak,Valid
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,Sex (Male vs Female),Male (sex=1),Female (sex=0),213,80,0.8424,0.5,0.6667,cp; thalach; oldpeak,cp; sex; oldpeak,Valid
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,Age (<50 vs 50-64),Age <50,Age 50-64,160,129,1.0,1.0,1.0,cp; thalach; oldpeak,cp; thalach; oldpeak,Valid
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,Sex (Male vs Female),Male (sex=1),Female (sex=0),213,80,0.6848,0.2,0.6667,cp; thalach; oldpeak,sex; cp; exang,Valid
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,Age (<50 vs 50-64),Age <50,Age 50-64,160,129,0.9273,1.0,1.0,cp; thalach; oldpeak,cp; oldpeak; thalach,Valid
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,Sex (Male vs Female),Male (sex=1),Female (sex=0),213,80,0.9152,0.5,0.6667,cp; oldpeak; thalach,cp; sex; oldpeak,Valid
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,Age (<50 vs 50-64),Age <50,Age 50-64,160,129,0.9515,1.0,0.6667,cp; sex; oldpeak,cp; oldpeak; sex,Valid
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,Sex (Male vs Female),Male (sex=1),Female (sex=0),113,10,,,,NA,NA,"Cell size below threshold (Male N=113, Female N=10)"
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,Age (<50 vs 50-64),Age <50,Age 50-64,25,82,,,,NA,NA,"Cell size below threshold (<50 N=25, 50-64 N=82)"
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,Sex (Male vs Female),Male (sex=1),Female (sex=0),113,10,,,,NA,NA,"Cell size below threshold (Male N=113, Female N=10)"
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,Age (<50 vs 50-64),Age <50,Age 50-64,25,82,,,,NA,NA,"Cell size below threshold (<50 N=25, 50-64 N=82)"
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,Sex (Male vs Female),Male (sex=1),Female (sex=0),113,10,,,,NA,NA,"Cell size below threshold (Male N=113, Female N=10)"
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,Age (<50 vs 50-64),Age <50,Age 50-64,25,82,,,,NA,NA,"Cell size below threshold (<50 N=25, 50-64 N=82)"
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,Sex (Male vs Female),Male (sex=1),Female (sex=0),113,10,,,,NA,NA,"Cell size below threshold (Male N=113, Female N=10)"
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,Age (<50 vs 50-64),Age <50,Age 50-64,25,82,,,,NA,NA,"Cell size below threshold (<50 N=25, 50-64 N=82)"
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,Sex (Male vs Female),Male (sex=1),Female (sex=0),193,6,,,,NA,NA,"Cell size below threshold (Male N=193, Female N=6)"
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,Age (<50 vs 50-64),Age <50,Age 50-64,19,138,,,,NA,NA,"Cell size below threshold (<50 N=19, 50-64 N=138)"

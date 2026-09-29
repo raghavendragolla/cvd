@@ -13,6 +13,8 @@ from sklearn.impute import KNNImputer
 from src.dataset import (
     TRACK_A_FEATURES,
     TRACK_B_FEATURES,
+    TRACK_B_10_FEATURES,
+    TRACK_B_11_FEATURES,
     FEATURE_COLUMNS,
     ALL_COLUMNS,
     FEATURE_DESCRIPTIONS
@@ -69,32 +71,32 @@ def clean_and_prepare_data(df: pd.DataFrame, feature_set: list = None, impute_mi
     """
     if feature_set is None:
         feature_set = FEATURE_COLUMNS
-        
+
     df_clean = df.copy()
-    
+
     # Replace strings or missing marks
     df_clean = df_clean.replace("?", np.nan)
-    
+
     # Coerce columns to numeric
     for col in df_clean.columns:
         if col != "cohort":
             df_clean[col] = pd.to_numeric(df_clean[col], errors="coerce")
-        
+
     # Drop records where target is missing if target column exists
     if "target" in df_clean.columns:
         df_clean = df_clean.dropna(subset=["target"]).reset_index(drop=True)
         df_clean["target"] = (df_clean["target"] > 0).astype(int)
-        
+
     if not impute_missing:
         return df_clean.dropna(subset=[c for c in feature_set if c in df_clean.columns]).reset_index(drop=True)
-        
+
     # Multi-variable Clinical Feature Imputation
     cols_to_impute = [c for c in feature_set if c in df_clean.columns]
     if cols_to_impute and df_clean[cols_to_impute].isna().sum().sum() > 0:
         imputer = KNNImputer(n_neighbors=5, weights="distance")
         imputed_array = imputer.fit_transform(df_clean[cols_to_impute])
         df_clean[cols_to_impute] = imputed_array
-        
+
         # Post-process discrete/categorical features to valid integers / categories
         if "sex" in df_clean.columns:
             df_clean["sex"] = df_clean["sex"].round().clip(0, 1)
@@ -116,7 +118,7 @@ def clean_and_prepare_data(df: pd.DataFrame, feature_set: list = None, impute_mi
                 opts = [3.0, 6.0, 7.0]
                 return float(min(opts, key=lambda x: abs(x - v)))
             df_clean["thal"] = df_clean["thal"].apply(map_thal)
-            
+
         # Bound continuous clinical variables within physiological ranges
         if "trestbps" in df_clean.columns:
             df_clean["trestbps"] = df_clean["trestbps"].clip(80, 220)
@@ -129,9 +131,124 @@ def clean_and_prepare_data(df: pd.DataFrame, feature_set: list = None, impute_mi
             df_clean["thalach"] = df_clean["thalach"].clip(60, 220)
         if "oldpeak" in df_clean.columns:
             df_clean["oldpeak"] = df_clean["oldpeak"].clip(0.0, 7.0)
-            
+
     cols_to_check = [c for c in feature_set if c in df_clean.columns]
     return df_clean.dropna(subset=cols_to_check).reset_index(drop=True)
+
+
+def mask_clinical_zero_sentinels(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Identifies non-physiological clinical zero sentinels and masks them with NaN.
+    Specifically:
+      - 'chol' <= 0: Serum cholesterol of 0 mg/dL is biologically impossible in living patients.
+      - 'trestbps' <= 0: Blood pressure of 0 mmHg is incompatible with life in ambulatory outpatients.
+    Legitimate clinical zeros (e.g. oldpeak == 0.0, ca == 0, sex == 0, fbs == 0) are strictly preserved.
+    """
+    df_masked = df.copy()
+    if "chol" in df_masked.columns:
+        df_masked.loc[df_masked["chol"] <= 0, "chol"] = np.nan
+    if "trestbps" in df_masked.columns:
+        df_masked.loc[df_masked["trestbps"] <= 0, "trestbps"] = np.nan
+    return df_masked
+
+
+class HarmonizedClinicalPreprocessor:
+    """
+    Research-grade, leak-free clinical preprocessor supporting Dual-Track
+    (Track A 13-feature, Track B 10/11-feature) workflows.
+
+    Guarantees:
+      1. Zero-value sentinel masking (chol=0, trestbps=0 -> NaN) prior to imputation.
+      2. Strict train-only fitting for KNN or median imputers and scalers.
+      3. Valid physiological boundary enforcement without leaking test distributions.
+      4. Support for continuous signed oldpeak (or configurable clamping).
+      5. Out-of-sample transformation for cross-dataset external evaluation.
+    """
+    def __init__(
+        self,
+        imputer_strategy: str = "knn",
+        n_neighbors: int = 5,
+        scale_features: bool = False,
+        clamp_negative_oldpeak: bool = False
+    ):
+        self.imputer_strategy = imputer_strategy
+        self.n_neighbors = n_neighbors
+        self.scale_features = scale_features
+        self.clamp_negative_oldpeak = clamp_negative_oldpeak
+        self.imputer_ = None
+        self.scaler_ = None
+        self.feature_names_ = None
+        self.is_fitted_ = False
+
+    def fit(self, X: pd.DataFrame, y=None):
+        X_df = X.copy()
+        X_df = mask_clinical_zero_sentinels(X_df)
+        self.feature_names_ = list(X_df.columns)
+
+        if self.imputer_strategy == "knn":
+            self.imputer_ = KNNImputer(n_neighbors=self.n_neighbors, weights="distance")
+        else:
+            from sklearn.impute import SimpleImputer
+            self.imputer_ = SimpleImputer(strategy="median")
+
+        imputed_vals = self.imputer_.fit_transform(X_df)
+
+        if self.scale_features:
+            self.scaler_ = StandardScaler()
+            self.scaler_.fit(imputed_vals)
+
+        self.is_fitted_ = True
+        return self
+
+    def transform(self, X: pd.DataFrame) -> pd.DataFrame:
+        if not self.is_fitted_:
+            raise RuntimeError("HarmonizedClinicalPreprocessor must be fitted before transforming.")
+
+        X_df = X.copy()
+        X_df = mask_clinical_zero_sentinels(X_df)
+
+        # Ensure exact feature column alignment
+        imputed_array = self.imputer_.transform(X_df[self.feature_names_])
+        X_res = pd.DataFrame(imputed_array, columns=self.feature_names_, index=X_df.index)
+
+        # Post-process discrete/categorical features to valid boundaries
+        discrete_bounds = {
+            "sex": (0, 1), "cp": (1, 4), "fbs": (0, 1),
+            "restecg": (0, 2), "exang": (0, 1), "slope": (1, 3), "ca": (0, 3)
+        }
+        for col, (b_min, b_max) in discrete_bounds.items():
+            if col in X_res.columns:
+                X_res[col] = X_res[col].round().clip(b_min, b_max)
+
+        if "thal" in X_res.columns:
+            def map_thal(v):
+                if np.isnan(v): return 3.0
+                opts = [3.0, 6.0, 7.0]
+                return float(min(opts, key=lambda x: abs(x - v)))
+            X_res["thal"] = X_res["thal"].apply(map_thal)
+
+        # Physiological clinical boundaries
+        if "trestbps" in X_res.columns:
+            X_res["trestbps"] = X_res["trestbps"].clip(80, 220)
+        if "chol" in X_res.columns:
+            X_res["chol"] = X_res["chol"].clip(100, 600)
+        if "thalach" in X_res.columns:
+            X_res["thalach"] = X_res["thalach"].clip(60, 220)
+
+        if "oldpeak" in X_res.columns:
+            if self.clamp_negative_oldpeak:
+                X_res["oldpeak"] = X_res["oldpeak"].clip(0.0, 7.0)
+            else:
+                X_res["oldpeak"] = X_res["oldpeak"].clip(-3.0, 7.0)
+
+        if self.scale_features and self.scaler_ is not None:
+            scaled_vals = self.scaler_.transform(X_res[self.feature_names_])
+            X_res = pd.DataFrame(scaled_vals, columns=self.feature_names_, index=X_df.index)
+
+        return X_res
+
+    def fit_transform(self, X: pd.DataFrame, y=None) -> pd.DataFrame:
+        return self.fit(X, y).transform(X)
 
 
 def prepare_train_test_split(
@@ -140,24 +257,34 @@ def prepare_train_test_split(
     test_size: float = 0.2,
     random_state: int = 42,
     impute_missing: bool = True,
+    drop_duplicates: bool = True,
+    clamp_negative_oldpeak: bool = False,
+    scale_features: bool = False,
+    mask_zero_sentinels: bool = True
 ):
     """
-    Splits cleaned data into stratified train/test subsets and imputes missing values
-    using train-only statistics to prevent information leakage.
+    Splits data into stratified train/test subsets and imputes/scales strictly using
+    train-only statistics via HarmonizedClinicalPreprocessor to prevent data leakage.
     """
-    if feature_set is None:
-        feature_set = TRACK_A_FEATURES if "ca" in df.columns and "thal" in df.columns else TRACK_B_FEATURES
-
     df_clean = df.copy()
     df_clean = df_clean.replace("?", np.nan)
+
+    if drop_duplicates:
+        df_clean = df_clean.drop_duplicates().reset_index(drop=True)
 
     for col in df_clean.columns:
         if col != "cohort":
             df_clean[col] = pd.to_numeric(df_clean[col], errors="coerce")
 
+    if mask_zero_sentinels:
+        df_clean = mask_clinical_zero_sentinels(df_clean)
+
     if "target" in df_clean.columns:
         df_clean = df_clean.dropna(subset=["target"]).reset_index(drop=True)
         df_clean["target"] = (df_clean["target"] > 0).astype(int)
+
+    if feature_set is None:
+        feature_set = TRACK_A_FEATURES if "ca" in df_clean.columns and "thal" in df_clean.columns else TRACK_B_10_FEATURES
 
     available_features = [c for c in feature_set if c in df_clean.columns]
     X = df_clean[available_features].copy()
@@ -168,29 +295,14 @@ def prepare_train_test_split(
     )
 
     if impute_missing:
-        imputer = KNNImputer(n_neighbors=5, weights="distance")
-        X_train = pd.DataFrame(
-            imputer.fit_transform(X_train[available_features]),
-            columns=available_features,
-            index=X_train.index,
+        preprocessor = HarmonizedClinicalPreprocessor(
+            imputer_strategy="knn",
+            n_neighbors=5,
+            scale_features=scale_features,
+            clamp_negative_oldpeak=clamp_negative_oldpeak
         )
-        X_test = pd.DataFrame(
-            imputer.transform(X_test[available_features]),
-            columns=available_features,
-            index=X_test.index,
-        )
-
-        for col in ["sex", "cp", "fbs", "restecg", "exang", "slope", "ca", "thal"]:
-            if col in X_train.columns:
-                max_val = {"sex": 1, "cp": 4, "fbs": 1, "restecg": 2, "exang": 1, "slope": 3, "ca": 3, "thal": 7}[col]
-                min_val = 0 if col not in ["cp", "slope", "ca", "thal"] else 1
-                X_train[col] = pd.to_numeric(X_train[col], errors="coerce").round().clip(min_val, max_val)
-                X_test[col] = pd.to_numeric(X_test[col], errors="coerce").round().clip(min_val, max_val)
-
-        for col, bounds in {"trestbps": (80, 220), "chol": (100, 600), "thalach": (60, 220), "oldpeak": (0.0, 7.0)}.items():
-            if col in X_train.columns:
-                X_train[col] = pd.to_numeric(X_train[col], errors="coerce").clip(bounds[0], bounds[1])
-                X_test[col] = pd.to_numeric(X_test[col], errors="coerce").clip(bounds[0], bounds[1])
+        X_train = preprocessor.fit_transform(X_train)
+        X_test = preprocessor.transform(X_test)
 
     return X_train, X_test, y_train, y_test
 
@@ -210,7 +322,7 @@ def audit_synthetic_samples(X_synthetic: pd.DataFrame) -> dict:
     n_total = len(X_synthetic)
     if n_total == 0:
         return {"total_samples": 0, "violation_rate": 0.0, "violations_by_type": {}}
-        
+
     violations = {
         "trestbps_out_of_bounds": 0,
         "chol_out_of_bounds": 0,
@@ -218,26 +330,26 @@ def audit_synthetic_samples(X_synthetic: pd.DataFrame) -> dict:
         "oldpeak_negative_or_extreme": 0,
         "fractional_discrete_category": 0
     }
-    
+
     for _, row in X_synthetic.iterrows():
         # 1. Trestbps check
         if "trestbps" in row and (row["trestbps"] < 80 or row["trestbps"] > 220):
             violations["trestbps_out_of_bounds"] += 1
-            
+
         # 2. Chol check
         if "chol" in row and (row["chol"] < 100 or row["chol"] > 600):
             violations["chol_out_of_bounds"] += 1
-            
+
         # 3. Maximum HR physiology check: max achievable HR approx 220 - age
         if "thalach" in row and "age" in row:
             max_physio_hr = (220 - row["age"]) + 15
             if row["thalach"] > max_physio_hr or row["thalach"] < 50:
                 violations["impossible_hr_for_age"] += 1
-                
+
         # 4. Oldpeak bounds
         if "oldpeak" in row and (row["oldpeak"] < 0.0 or row["oldpeak"] > 7.0):
             violations["oldpeak_negative_or_extreme"] += 1
-            
+
         # 5. Discrete category interpolation check
         for cat_col in ["sex", "cp", "fbs", "restecg", "exang", "slope", "ca", "thal"]:
             if cat_col in row:
@@ -252,9 +364,9 @@ def audit_synthetic_samples(X_synthetic: pd.DataFrame) -> dict:
         ("thalach" in row and "age" in row and (row["thalach"] > (220 - row["age"]) + 15 or row["thalach"] < 50)) or
         ("oldpeak" in row and (row["oldpeak"] < 0.0 or row["oldpeak"] > 7.0))
     ))
-    
+
     violation_rate = (any_violation_count / n_total) * 100.0
-    
+
     return {
         "total_synthetic_samples": n_total,
         "samples_with_violations": any_violation_count,
@@ -269,7 +381,7 @@ def compare_imbalance_strategies(X_train: pd.DataFrame, y_train: pd.Series, rand
     Performs a physiological validity audit on SMOTE-generated instances.
     """
     results = {}
-    
+
     # 1. Baseline class distribution
     neg_count = int((y_train == 0).sum())
     pos_count = int((y_train == 1).sum())
@@ -279,7 +391,7 @@ def compare_imbalance_strategies(X_train: pd.DataFrame, y_train: pd.Series, rand
         "positive_disease": pos_count,
         "ratio": round(imbalance_ratio, 3)
     }
-    
+
     # 2. Cost-sensitive weights (balanced)
     total_samples = len(y_train)
     weight_neg = total_samples / (2.0 * neg_count)
@@ -288,17 +400,17 @@ def compare_imbalance_strategies(X_train: pd.DataFrame, y_train: pd.Series, rand
         0: round(float(weight_neg), 4),
         1: round(float(weight_pos), 4)
     }
-    
+
     # 3. SMOTE Generation & Physiological Validity Audit
     try:
         from imblearn.over_sampling import SMOTE
         smote = SMOTE(random_state=random_state)
         X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
-        
+
         # Extract purely synthetic samples
         n_orig = len(X_train)
         X_synthetic = X_resampled.iloc[n_orig:] if isinstance(X_resampled, pd.DataFrame) else pd.DataFrame(X_resampled[n_orig:], columns=X_train.columns)
-        
+
         audit_res = audit_synthetic_samples(X_synthetic)
         results["smote_audit"] = {
             "synthetic_samples_generated": len(X_synthetic),
@@ -320,13 +432,13 @@ def compare_imbalance_strategies(X_train: pd.DataFrame, y_train: pd.Series, rand
             audit_res = audit_synthetic_samples(X_synthetic)
         else:
             audit_res = {"total_synthetic_samples": 0, "clinical_violation_rate_pct": 0.0, "violations_breakdown": {}}
-            
+
         results["smote_audit"] = {
             "synthetic_samples_generated": n_to_gen,
             "audit_results": audit_res,
             "note": "Evaluated via linear feature space interpolation audit"
         }
-        
+
     return results
 
 
@@ -346,7 +458,7 @@ def validate_patient_input(patient_dict: dict, feature_set: list = None) -> dict
     """
     if feature_set is None:
         feature_set = TRACK_A_FEATURES if "ca" in patient_dict and "thal" in patient_dict else TRACK_B_FEATURES
-        
+
     validated = {}
     for col in feature_set:
         if col not in patient_dict:

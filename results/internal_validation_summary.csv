@@ -1,0 +1,241 @@
+cohort,track,model,metric,mean,std,ci_lower,ci_upper
+Cleveland,Track_A,LogisticRegression,roc_auc,90.788,1.9576,88.3577,93.2183
+Cleveland,Track_A,LogisticRegression,pr_auc,90.46,3.7662,85.7844,95.1356
+Cleveland,Track_A,LogisticRegression,accuracy,83.158,4.6136,77.4304,88.8856
+Cleveland,Track_A,LogisticRegression,sensitivity,79.842,7.4537,70.5885,89.0955
+Cleveland,Track_A,LogisticRegression,specificity,86.024,5.4365,79.2747,92.7733
+Cleveland,Track_A,LogisticRegression,precision,83.044,6.1974,75.3501,90.7379
+Cleveland,Track_A,LogisticRegression,f1_score,81.23,5.231,74.736,87.724
+Cleveland,Track_A,LogisticRegression,mcc,0.6627,0.0949,0.545,0.7805
+Cleveland,Track_A,LogisticRegression,brier_score,0.1214,0.0141,0.1039,0.1389
+Cleveland,Track_A,LogisticRegression,ece,0.1175,0.015,0.0988,0.1361
+Cleveland,Track_A,LogisticRegression,calibration_intercept,-0.0606,0.3449,-0.4887,0.3675
+Cleveland,Track_A,LogisticRegression,calibration_slope,0.9557,0.1728,0.7412,1.1703
+Cleveland,Track_A,RandomForest,roc_auc,90.338,2.2916,87.4931,93.1829
+Cleveland,Track_A,RandomForest,pr_auc,89.716,3.3904,85.507,93.925
+Cleveland,Track_A,RandomForest,accuracy,83.504,3.0381,79.7324,87.2756
+Cleveland,Track_A,RandomForest,sensitivity,76.956,5.5211,70.1018,83.8102
+Cleveland,Track_A,RandomForest,specificity,89.054,3.3885,84.8473,93.2607
+Cleveland,Track_A,RandomForest,precision,85.718,4.0805,80.6522,90.7838
+Cleveland,Track_A,RandomForest,f1_score,81.002,3.7356,76.3644,85.6396
+Cleveland,Track_A,RandomForest,mcc,0.6692,0.0624,0.5917,0.7467
+Cleveland,Track_A,RandomForest,brier_score,0.1261,0.0099,0.1138,0.1383
+Cleveland,Track_A,RandomForest,ece,0.1211,0.0164,0.1007,0.1414
+Cleveland,Track_A,RandomForest,calibration_intercept,0.0761,0.2506,-0.235,0.3872
+Cleveland,Track_A,RandomForest,calibration_slope,1.5047,0.4131,0.9918,2.0176
+Cleveland,Track_A,SVM,roc_auc,89.6,2.6947,86.2546,92.9454
+Cleveland,Track_A,SVM,pr_auc,90.056,3.8199,85.3138,94.7982
+Cleveland,Track_A,SVM,accuracy,83.82,3.2226,79.8192,87.8208
+Cleveland,Track_A,SVM,sensitivity,80.556,5.5071,73.7192,87.3928
+Cleveland,Track_A,SVM,specificity,86.63,4.5202,81.0183,92.2417
+Cleveland,Track_A,SVM,precision,83.782,5.1584,77.3781,90.1859
+Cleveland,Track_A,SVM,f1_score,81.998,3.6969,77.4084,86.5876
+Cleveland,Track_A,SVM,mcc,0.6755,0.0665,0.5929,0.7581
+Cleveland,Track_A,SVM,brier_score,0.1226,0.0169,0.1016,0.1436
+Cleveland,Track_A,SVM,ece,0.1144,0.0121,0.0994,0.1294
+Cleveland,Track_A,SVM,calibration_intercept,0.034,0.3405,-0.3887,0.4568
+Cleveland,Track_A,SVM,calibration_slope,1.1086,0.2148,0.842,1.3753
+Cleveland,Track_A,XGBoost,roc_auc,90.384,1.6684,88.3128,92.4552
+Cleveland,Track_A,XGBoost,pr_auc,90.02,1.7168,87.8887,92.1513
+Cleveland,Track_A,XGBoost,accuracy,82.832,3.2757,78.7653,86.8987
+Cleveland,Track_A,XGBoost,sensitivity,76.904,6.4414,68.9072,84.9008
+Cleveland,Track_A,XGBoost,specificity,87.842,4.2182,82.6052,93.0788
+Cleveland,Track_A,XGBoost,precision,84.414,4.7303,78.5415,90.2865
+Cleveland,Track_A,XGBoost,f1_score,80.334,4.3632,74.9173,85.7507
+Cleveland,Track_A,XGBoost,mcc,0.6555,0.0673,0.5719,0.739
+Cleveland,Track_A,XGBoost,brier_score,0.126,0.0145,0.108,0.144
+Cleveland,Track_A,XGBoost,ece,0.1107,0.0224,0.0829,0.1386
+Cleveland,Track_A,XGBoost,calibration_intercept,0.0079,0.2464,-0.2979,0.3138
+Cleveland,Track_A,XGBoost,calibration_slope,0.9584,0.1316,0.795,1.1218
+Cleveland,Track_B,LogisticRegression,roc_auc,86.922,0.5877,86.1924,87.6516
+Cleveland,Track_B,LogisticRegression,pr_auc,86.932,2.4425,83.8998,89.9642
+Cleveland,Track_B,LogisticRegression,accuracy,79.554,2.6209,76.3003,82.8077
+Cleveland,Track_B,LogisticRegression,sensitivity,76.27,6.4294,68.2882,84.2518
+Cleveland,Track_B,LogisticRegression,specificity,82.388,7.1585,73.5009,91.2751
+Cleveland,Track_B,LogisticRegression,precision,79.236,6.8468,70.7359,87.7361
+Cleveland,Track_B,LogisticRegression,f1_score,77.362,2.7028,74.0066,80.7174
+Cleveland,Track_B,LogisticRegression,mcc,0.5923,0.0555,0.5233,0.6612
+Cleveland,Track_B,LogisticRegression,brier_score,0.1449,0.0086,0.1342,0.1555
+Cleveland,Track_B,LogisticRegression,ece,0.1341,0.0301,0.0967,0.1715
+Cleveland,Track_B,LogisticRegression,calibration_intercept,-0.0227,0.2938,-0.3874,0.342
+Cleveland,Track_B,LogisticRegression,calibration_slope,0.9684,0.1478,0.7848,1.1519
+Cleveland,Track_B,RandomForest,roc_auc,86.8,0.5709,86.0913,87.5087
+Cleveland,Track_B,RandomForest,pr_auc,86.618,2.0894,84.0241,89.2119
+Cleveland,Track_B,RandomForest,accuracy,77.22,1.934,74.8191,79.6209
+Cleveland,Track_B,RandomForest,sensitivity,74.074,7.8511,64.3272,83.8208
+Cleveland,Track_B,RandomForest,specificity,79.926,5.3693,73.2602,86.5918
+Cleveland,Track_B,RandomForest,precision,76.074,3.8936,71.2402,80.9078
+Cleveland,Track_B,RandomForest,f1_score,74.75,3.2329,70.7364,78.7636
+Cleveland,Track_B,RandomForest,mcc,0.5442,0.0409,0.4934,0.5949
+Cleveland,Track_B,RandomForest,brier_score,0.1487,0.0047,0.1428,0.1546
+Cleveland,Track_B,RandomForest,ece,0.1336,0.0393,0.0849,0.1824
+Cleveland,Track_B,RandomForest,calibration_intercept,0.0192,0.3174,-0.3748,0.4133
+Cleveland,Track_B,RandomForest,calibration_slope,1.2411,0.1403,1.0669,1.4153
+Cleveland,Track_B,SVM,roc_auc,87.118,1.9934,84.6432,89.5928
+Cleveland,Track_B,SVM,pr_auc,87.312,2.5527,84.1429,90.4811
+Cleveland,Track_B,SVM,accuracy,80.198,1.6649,78.1311,82.2649
+Cleveland,Track_B,SVM,sensitivity,76.268,8.9246,65.1884,87.3476
+Cleveland,Track_B,SVM,specificity,83.6,6.2054,75.8963,91.3037
+Cleveland,Track_B,SVM,precision,80.416,5.434,73.6699,87.1621
+Cleveland,Track_B,SVM,f1_score,77.758,3.2775,73.6891,81.8269
+Cleveland,Track_B,SVM,mcc,0.6061,0.0281,0.5712,0.641
+Cleveland,Track_B,SVM,brier_score,0.1441,0.0091,0.1327,0.1554
+Cleveland,Track_B,SVM,ece,0.1146,0.026,0.0823,0.1469
+Cleveland,Track_B,SVM,calibration_intercept,-0.0087,0.3068,-0.3896,0.3721
+Cleveland,Track_B,SVM,calibration_slope,1.1226,0.1858,0.8919,1.3532
+Cleveland,Track_B,XGBoost,roc_auc,86.134,1.2504,84.5817,87.6863
+Cleveland,Track_B,XGBoost,pr_auc,85.224,3.196,81.2562,89.1918
+Cleveland,Track_B,XGBoost,accuracy,76.24,3.7534,71.5803,80.8997
+Cleveland,Track_B,XGBoost,sensitivity,74.79,9.2212,63.3422,86.2378
+Cleveland,Track_B,XGBoost,specificity,77.52,8.8812,66.4943,88.5457
+Cleveland,Track_B,XGBoost,precision,74.588,7.2057,65.6424,83.5336
+Cleveland,Track_B,XGBoost,f1_score,74.164,4.0822,69.096,79.232
+Cleveland,Track_B,XGBoost,mcc,0.5287,0.0789,0.4308,0.6267
+Cleveland,Track_B,XGBoost,brier_score,0.1544,0.009,0.1433,0.1655
+Cleveland,Track_B,XGBoost,ece,0.1087,0.0176,0.0868,0.1305
+Cleveland,Track_B,XGBoost,calibration_intercept,-0.0338,0.3168,-0.4271,0.3595
+Cleveland,Track_B,XGBoost,calibration_slope,0.8749,0.1149,0.7322,1.0175
+Hungarian,Track_B,LogisticRegression,roc_auc,89.878,4.1598,84.7138,95.0422
+Hungarian,Track_B,LogisticRegression,pr_auc,86.474,5.907,79.1406,93.8074
+Hungarian,Track_B,LogisticRegression,accuracy,83.292,2.7073,79.931,86.653
+Hungarian,Track_B,LogisticRegression,sensitivity,70.604,11.5885,56.2172,84.9908
+Hungarian,Track_B,LogisticRegression,specificity,90.344,6.548,82.2149,98.4731
+Hungarian,Track_B,LogisticRegression,precision,81.996,8.1503,71.8777,92.1143
+Hungarian,Track_B,LogisticRegression,f1_score,75.056,5.4652,68.2711,81.8409
+Hungarian,Track_B,LogisticRegression,mcc,0.6377,0.0648,0.5573,0.7181
+Hungarian,Track_B,LogisticRegression,brier_score,0.1175,0.0239,0.0878,0.1472
+Hungarian,Track_B,LogisticRegression,ece,0.1175,0.0271,0.0839,0.1512
+Hungarian,Track_B,LogisticRegression,calibration_intercept,0.0369,0.5553,-0.6525,0.7262
+Hungarian,Track_B,LogisticRegression,calibration_slope,1.0656,0.2628,0.7393,1.3918
+Hungarian,Track_B,RandomForest,roc_auc,89.438,4.9357,83.3104,95.5656
+Hungarian,Track_B,RandomForest,pr_auc,85.526,6.7139,77.1909,93.8611
+Hungarian,Track_B,RandomForest,accuracy,82.276,4.9596,76.1188,88.4332
+Hungarian,Track_B,RandomForest,sensitivity,68.786,8.8999,57.7371,79.8349
+Hungarian,Track_B,RandomForest,specificity,89.774,10.3942,76.8699,102.6781
+Hungarian,Track_B,RandomForest,precision,82.294,12.8997,66.2794,98.3086
+Hungarian,Track_B,RandomForest,f1_score,73.904,5.1405,67.5223,80.2857
+Hungarian,Track_B,RandomForest,mcc,0.6209,0.0938,0.5044,0.7374
+Hungarian,Track_B,RandomForest,brier_score,0.1261,0.0249,0.0952,0.157
+Hungarian,Track_B,RandomForest,ece,0.1062,0.0239,0.0765,0.1359
+Hungarian,Track_B,RandomForest,calibration_intercept,0.2135,0.7886,-0.7656,1.1925
+Hungarian,Track_B,RandomForest,calibration_slope,1.3674,0.6584,0.55,2.1848
+Hungarian,Track_B,SVM,roc_auc,88.392,2.4832,85.3092,91.4748
+Hungarian,Track_B,SVM,pr_auc,84.16,6.3749,76.2458,92.0742
+Hungarian,Track_B,SVM,accuracy,83.284,2.133,80.636,85.932
+Hungarian,Track_B,SVM,sensitivity,68.742,9.5779,56.8514,80.6326
+Hungarian,Track_B,SVM,specificity,91.396,8.0002,81.4641,101.3279
+Hungarian,Track_B,SVM,precision,84.324,9.9719,71.9442,96.7038
+Hungarian,Track_B,SVM,f1_score,74.77,2.108,72.153,77.387
+Hungarian,Track_B,SVM,mcc,0.6404,0.0353,0.5966,0.6842
+Hungarian,Track_B,SVM,brier_score,0.1279,0.0172,0.1065,0.1492
+Hungarian,Track_B,SVM,ece,0.1157,0.0197,0.0912,0.1401
+Hungarian,Track_B,SVM,calibration_intercept,0.3257,0.7719,-0.6325,1.284
+Hungarian,Track_B,SVM,calibration_slope,1.2593,0.3995,0.7634,1.7553
+Hungarian,Track_B,XGBoost,roc_auc,90.05,3.37,85.8663,94.2337
+Hungarian,Track_B,XGBoost,pr_auc,87.086,4.6669,81.2922,92.8798
+Hungarian,Track_B,XGBoost,accuracy,82.608,2.9538,78.941,86.275
+Hungarian,Track_B,XGBoost,sensitivity,70.648,11.0742,56.8998,84.3962
+Hungarian,Track_B,XGBoost,specificity,89.232,9.2013,77.8089,100.6551
+Hungarian,Track_B,XGBoost,precision,81.56,10.7997,68.1526,94.9674
+Hungarian,Track_B,XGBoost,f1_score,74.5,3.5008,70.1539,78.8461
+Hungarian,Track_B,XGBoost,mcc,0.6287,0.0494,0.5674,0.69
+Hungarian,Track_B,XGBoost,brier_score,0.1244,0.0255,0.0927,0.156
+Hungarian,Track_B,XGBoost,ece,0.1062,0.0298,0.0692,0.1432
+Hungarian,Track_B,XGBoost,calibration_intercept,0.0989,0.6233,-0.675,0.8727
+Hungarian,Track_B,XGBoost,calibration_slope,1.087,0.3368,0.6689,1.5052
+VA Long Beach,Track_B,LogisticRegression,roc_auc,70.988,9.1909,59.5779,82.3981
+VA Long Beach,Track_B,LogisticRegression,pr_auc,87.022,4.4073,81.5504,92.4936
+VA Long Beach,Track_B,LogisticRegression,accuracy,74.846,9.4627,63.0983,86.5937
+VA Long Beach,Track_B,LogisticRegression,sensitivity,89.818,8.2621,79.5608,100.0752
+VA Long Beach,Track_B,LogisticRegression,specificity,31.636,16.7804,10.8037,52.4683
+VA Long Beach,Track_B,LogisticRegression,precision,79.134,5.6126,72.1661,86.1019
+VA Long Beach,Track_B,LogisticRegression,f1_score,84.064,6.257,76.2961,91.8319
+VA Long Beach,Track_B,LogisticRegression,mcc,0.2745,0.2752,-0.0671,0.6161
+VA Long Beach,Track_B,LogisticRegression,brier_score,0.1733,0.0318,0.1339,0.2128
+VA Long Beach,Track_B,LogisticRegression,ece,0.16,0.0266,0.127,0.193
+VA Long Beach,Track_B,LogisticRegression,calibration_intercept,0.2291,0.468,-0.3519,0.8101
+VA Long Beach,Track_B,LogisticRegression,calibration_slope,0.8756,0.5409,0.2042,1.5471
+VA Long Beach,Track_B,RandomForest,roc_auc,67.684,11.7585,53.0862,82.2818
+VA Long Beach,Track_B,RandomForest,pr_auc,85.204,6.2623,77.4295,92.9785
+VA Long Beach,Track_B,RandomForest,accuracy,75.346,5.6224,68.366,82.326
+VA Long Beach,Track_B,RandomForest,sensitivity,94.552,5.1508,88.1575,100.9465
+VA Long Beach,Track_B,RandomForest,specificity,19.454,11.7406,4.8785,34.0295
+VA Long Beach,Track_B,RandomForest,precision,77.322,3.0196,73.5733,81.0707
+VA Long Beach,Track_B,RandomForest,f1_score,85.046,3.5721,80.6113,89.4807
+VA Long Beach,Track_B,RandomForest,mcc,0.2193,0.2456,-0.0855,0.5242
+VA Long Beach,Track_B,RandomForest,brier_score,0.1791,0.0269,0.1458,0.2124
+VA Long Beach,Track_B,RandomForest,ece,0.109,0.0476,0.0499,0.1682
+VA Long Beach,Track_B,RandomForest,calibration_intercept,0.2501,0.6361,-0.5396,1.0398
+VA Long Beach,Track_B,RandomForest,calibration_slope,0.8421,0.6534,0.0309,1.6533
+VA Long Beach,Track_B,SVM,roc_auc,64.878,7.1826,55.961,73.795
+VA Long Beach,Track_B,SVM,pr_auc,83.228,1.9342,80.8267,85.6293
+VA Long Beach,Track_B,SVM,accuracy,74.384,2.5879,71.1712,77.5968
+VA Long Beach,Track_B,SVM,sensitivity,98.0,4.4721,92.448,103.552
+VA Long Beach,Track_B,SVM,specificity,5.818,5.3241,-0.7916,12.4276
+VA Long Beach,Track_B,SVM,precision,75.136,0.7176,74.2452,76.0268
+VA Long Beach,Track_B,SVM,f1_score,85.02,1.8485,82.7252,87.3148
+VA Long Beach,Track_B,SVM,mcc,0.1073,0.147,-0.0752,0.2897
+VA Long Beach,Track_B,SVM,brier_score,0.1808,0.0098,0.1687,0.1929
+VA Long Beach,Track_B,SVM,ece,0.0991,0.0412,0.0479,0.1502
+VA Long Beach,Track_B,SVM,calibration_intercept,-0.6913,1.1713,-2.1453,0.7628
+VA Long Beach,Track_B,SVM,calibration_slope,1.6866,1.135,0.2775,3.0956
+VA Long Beach,Track_B,XGBoost,roc_auc,65.958,9.9985,53.5452,78.3708
+VA Long Beach,Track_B,XGBoost,pr_auc,84.27,5.8712,76.9812,91.5588
+VA Long Beach,Track_B,XGBoost,accuracy,72.346,4.0873,67.2718,77.4202
+VA Long Beach,Track_B,XGBoost,sensitivity,89.128,6.2265,81.398,96.858
+VA Long Beach,Track_B,XGBoost,specificity,23.272,10.175,10.6401,35.9039
+VA Long Beach,Track_B,XGBoost,precision,77.178,1.9382,74.7718,79.5842
+VA Long Beach,Track_B,XGBoost,f1_score,82.65,3.256,78.6078,86.6922
+VA Long Beach,Track_B,XGBoost,mcc,0.1608,0.1094,0.025,0.2966
+VA Long Beach,Track_B,XGBoost,brier_score,0.1865,0.0292,0.1502,0.2227
+VA Long Beach,Track_B,XGBoost,ece,0.1366,0.0304,0.0989,0.1743
+VA Long Beach,Track_B,XGBoost,calibration_intercept,0.4876,0.4001,-0.0091,0.9843
+VA Long Beach,Track_B,XGBoost,calibration_slope,0.5483,0.3765,0.0809,1.0157
+Zurich,Track_B,LogisticRegression,roc_auc,59.566,27.1351,25.8788,93.2532
+Zurich,Track_B,LogisticRegression,pr_auc,95.88,3.0704,92.0682,99.6918
+Zurich,Track_B,LogisticRegression,accuracy,89.366,3.8964,84.5287,94.2033
+Zurich,Track_B,LogisticRegression,sensitivity,95.652,6.1483,88.0191,103.2849
+Zurich,Track_B,LogisticRegression,specificity,0.0,0.0,0.0,0.0
+Zurich,Track_B,LogisticRegression,precision,93.338,1.8336,91.0616,95.6144
+Zurich,Track_B,LogisticRegression,f1_score,94.346,2.2048,91.6088,97.0832
+Zurich,Track_B,LogisticRegression,mcc,-0.0283,0.0392,-0.077,0.0203
+Zurich,Track_B,LogisticRegression,brier_score,0.0822,0.0176,0.0604,0.1041
+Zurich,Track_B,LogisticRegression,ece,0.0681,0.0642,-0.0115,0.1477
+Zurich,Track_B,LogisticRegression,calibration_intercept,2.8911,4.2892,-2.4338,8.2159
+Zurich,Track_B,LogisticRegression,calibration_slope,0.0442,1.2943,-1.5626,1.651
+Zurich,Track_B,RandomForest,roc_auc,61.74,13.6294,44.8195,78.6605
+Zurich,Track_B,RandomForest,pr_auc,96.818,1.2141,95.3108,98.3252
+Zurich,Track_B,RandomForest,accuracy,93.532,2.0978,90.9277,96.1363
+Zurich,Track_B,RandomForest,sensitivity,100.0,0.0,100.0,100.0
+Zurich,Track_B,RandomForest,specificity,0.0,0.0,0.0,0.0
+Zurich,Track_B,RandomForest,precision,93.532,2.0978,90.9277,96.1363
+Zurich,Track_B,RandomForest,f1_score,96.646,1.1174,95.2588,98.0332
+Zurich,Track_B,RandomForest,mcc,0.0,0.0,0.0,0.0
+Zurich,Track_B,RandomForest,brier_score,0.0662,0.0134,0.0497,0.0828
+Zurich,Track_B,RandomForest,ece,0.0811,0.0155,0.0619,0.1003
+Zurich,Track_B,RandomForest,calibration_intercept,1.4759,1.3674,-0.2216,3.1735
+Zurich,Track_B,RandomForest,calibration_slope,0.4085,0.3417,-0.0157,0.8327
+Zurich,Track_B,SVM,roc_auc,46.956,25.6581,15.1024,78.8096
+Zurich,Track_B,SVM,pr_auc,93.988,4.5778,88.3048,99.6712
+Zurich,Track_B,SVM,accuracy,93.532,2.0978,90.9277,96.1363
+Zurich,Track_B,SVM,sensitivity,100.0,0.0,100.0,100.0
+Zurich,Track_B,SVM,specificity,0.0,0.0,0.0,0.0
+Zurich,Track_B,SVM,precision,93.532,2.0978,90.9277,96.1363
+Zurich,Track_B,SVM,f1_score,96.646,1.1174,95.2588,98.0332
+Zurich,Track_B,SVM,mcc,0.0,0.0,0.0,0.0
+Zurich,Track_B,SVM,brier_score,0.0681,0.0154,0.049,0.0872
+Zurich,Track_B,SVM,ece,0.0564,0.0427,0.0034,0.1095
+Zurich,Track_B,SVM,calibration_intercept,6.0998,6.3565,-1.7916,13.9912
+Zurich,Track_B,SVM,calibration_slope,-1.1934,2.3771,-4.1444,1.7577
+Zurich,Track_B,XGBoost,roc_auc,59.566,20.1345,34.5698,84.5622
+Zurich,Track_B,XGBoost,pr_auc,96.712,1.422,94.9467,98.4773
+Zurich,Track_B,XGBoost,accuracy,92.7,1.7555,90.5205,94.8795
+Zurich,Track_B,XGBoost,sensitivity,99.13,1.9454,96.7149,101.5451
+Zurich,Track_B,XGBoost,specificity,0.0,0.0,0.0,0.0
+Zurich,Track_B,XGBoost,precision,93.496,2.0495,90.9517,96.0403
+Zurich,Track_B,XGBoost,f1_score,96.202,0.9357,95.0404,97.3636
+Zurich,Track_B,XGBoost,mcc,-0.0087,0.0195,-0.0329,0.0155
+Zurich,Track_B,XGBoost,brier_score,0.0655,0.0158,0.0458,0.0852
+Zurich,Track_B,XGBoost,ece,0.07,0.0079,0.0602,0.0799
+Zurich,Track_B,XGBoost,calibration_intercept,3.425,5.7023,-3.6542,10.5043
+Zurich,Track_B,XGBoost,calibration_slope,0.0049,1.3964,-1.7286,1.7384

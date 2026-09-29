@@ -17,9 +17,11 @@ from sklearn.metrics import (
     roc_curve,
     brier_score_loss,
     precision_recall_curve,
-    average_precision_score
+    average_precision_score,
+    matthews_corrcoef
 )
 from sklearn.calibration import calibration_curve
+from sklearn.linear_model import LogisticRegression
 
 
 def compute_expected_calibration_error(y_true, y_proba, n_bins: int = 10) -> float:
@@ -30,50 +32,99 @@ def compute_expected_calibration_error(y_true, y_proba, n_bins: int = 10) -> flo
     y_true = np.array(y_true)
     y_proba = np.array(y_proba)
     bin_boundaries = np.linspace(0, 1, n_bins + 1)
-    
+
     ece = 0.0
     n = len(y_true)
-    
+
     for i in range(n_bins):
         bin_lower = bin_boundaries[i]
         bin_upper = bin_boundaries[i + 1]
-        
+
         # Select items in bin
         if i == n_bins - 1:
             in_bin = (y_proba >= bin_lower) & (y_proba <= bin_upper)
         else:
             in_bin = (y_proba >= bin_lower) & (y_proba < bin_upper)
-            
+
         bin_size = np.sum(in_bin)
         if bin_size > 0:
             bin_acc = np.mean(y_true[in_bin])
             bin_conf = np.mean(y_proba[in_bin])
             ece += (bin_size / n) * np.abs(bin_acc - bin_conf)
-            
+
     return float(ece)
+
+
+def compute_calibration_intercept_slope(y_true, y_proba, eps: float = 1e-6) -> tuple:
+    """
+    Computes calibration intercept and slope using logistic calibration (Cox's framework).
+    Fits: logit(p_true) = intercept + slope * logit(y_proba)
+    - Calibration Intercept: Measures overall calibration-in-the-large (ideal = 0.0).
+    - Calibration Slope: Measures spread of risk predictions (ideal = 1.0).
+      Slope < 1: Over-optimistic predictions (probabilities too extreme).
+      Slope > 1: Under-confident predictions (probabilities clustered near base rate).
+    """
+    y_arr = np.array(y_true)
+    # Check if single-class target in fold
+    if len(np.unique(y_arr)) < 2:
+        return 0.0, 1.0
+
+    p_arr = np.clip(np.array(y_proba), eps, 1.0 - eps)
+    logits = np.log(p_arr / (1.0 - p_arr)).reshape(-1, 1)
+
+    lr = LogisticRegression(solver="lbfgs", C=1e6, random_state=42)
+    lr.fit(logits, y_arr)
+
+    intercept = float(lr.intercept_[0])
+    slope = float(lr.coef_[0][0])
+    return round(intercept, 4), round(slope, 4)
 
 
 def evaluate_classifier(y_true, y_pred, y_proba) -> dict:
     """
     Computes comprehensive clinical diagnostic metrics including Brier calibration score and ECE.
     """
-    tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
+    cm = confusion_matrix(y_true, y_pred)
+    if cm.shape == (2, 2):
+        tn, fp, fn, tp = cm.ravel()
+    else:
+        # Handle single class edge case
+        tn, fp, fn, tp = 0, 0, 0, 0
+        if len(y_true) > 0 and y_true[0] == 0:
+            tn = len(y_true)
+        else:
+            tp = len(y_true)
+
     specificity = tn / (tn + fp) if (tn + fp) > 0 else 0.0
-    
+
     ece_val = compute_expected_calibration_error(y_true, y_proba, n_bins=10)
-    pr_auc = float(average_precision_score(y_true, y_proba)) * 100
-    
+    try:
+        pr_auc = float(average_precision_score(y_true, y_proba)) * 100
+    except Exception:
+        pr_auc = 0.0
+
+    try:
+        roc_auc = float(roc_auc_score(y_true, y_proba)) * 100
+    except Exception:
+        roc_auc = 50.0
+
+    mcc_val = float(matthews_corrcoef(y_true, y_pred)) if len(np.unique(y_true)) > 1 else 0.0
+    cal_intercept, cal_slope = compute_calibration_intercept_slope(y_true, y_proba)
+
     metrics = {
         "accuracy": round(float(accuracy_score(y_true, y_pred)) * 100, 2),
-        "roc_auc": round(float(roc_auc_score(y_true, y_proba)) * 100, 2),
+        "roc_auc": round(roc_auc, 2),
         "pr_auc": round(pr_auc, 2),
-        "sensitivity": round(float(recall_score(y_true, y_pred)) * 100, 2),
-        "recall": round(float(recall_score(y_true, y_pred)) * 100, 2),
+        "sensitivity": round(float(recall_score(y_true, y_pred, zero_division=0)) * 100, 2),
+        "recall": round(float(recall_score(y_true, y_pred, zero_division=0)) * 100, 2),
         "specificity": round(float(specificity) * 100, 2),
-        "precision": round(float(precision_score(y_true, y_pred)) * 100, 2),
-        "f1_score": round(float(f1_score(y_true, y_pred)) * 100, 2),
+        "precision": round(float(precision_score(y_true, y_pred, zero_division=0)) * 100, 2),
+        "f1_score": round(float(f1_score(y_true, y_pred, zero_division=0)) * 100, 2),
+        "mcc": round(mcc_val, 4),
         "brier_score": round(float(brier_score_loss(y_true, y_proba)), 4),
         "ece": round(ece_val, 4),
+        "calibration_intercept": cal_intercept,
+        "calibration_slope": cal_slope,
         "tp": int(tp),
         "tn": int(tn),
         "fp": int(fp),
@@ -101,43 +152,43 @@ def compute_decision_curve_analysis(y_true, y_proba, thresholds=None) -> go.Figu
     """
     if thresholds is None:
         thresholds = np.linspace(0.05, 0.90, 50)
-        
+
     n = len(y_true)
-    
+
     net_benefits_model = []
     net_benefits_all = []
     net_benefits_none = []
-    
+
     for pt in thresholds:
         # Model predictions at threshold pt
         y_pred_thresh = (y_proba >= pt).astype(int)
         tp = np.sum((y_pred_thresh == 1) & (y_true == 1))
         fp = np.sum((y_pred_thresh == 1) & (y_true == 0))
-        
+
         # Net Benefit = (TP/N) - (FP/N) * (pt / (1 - pt))
         nb_model = (tp / n) - (fp / n) * (pt / (1.0 - pt))
         net_benefits_model.append(nb_model)
-        
+
         # Treat All Strategy: TP = all positives, FP = all negatives
         tp_all = np.sum(y_true == 1)
         fp_all = np.sum(y_true == 0)
         nb_all = (tp_all / n) - (fp_all / n) * (pt / (1.0 - pt))
         net_benefits_all.append(nb_all)
-        
+
         # Treat None Strategy: Net Benefit = 0
         net_benefits_none.append(0.0)
-        
+
     fig = go.Figure()
-    
+
     # Model Net Benefit
     fig.add_trace(go.Scatter(
         x=thresholds * 100,
         y=net_benefits_model,
         mode="lines",
-        name="⚡ CardioPulse AI Model",
+        name="Clinical AI Model",
         line=dict(color="#00F0FF", width=3)
     ))
-    
+
     # Treat All Strategy
     fig.add_trace(go.Scatter(
         x=thresholds * 100,
@@ -146,7 +197,7 @@ def compute_decision_curve_analysis(y_true, y_proba, thresholds=None) -> go.Figu
         name="🏥 Treat All (Universal Angiography)",
         line=dict(color="#FF2E5B", dash="dash", width=2)
     ))
-    
+
     # Treat None Strategy
     fig.add_trace(go.Scatter(
         x=thresholds * 100,
@@ -155,7 +206,7 @@ def compute_decision_curve_analysis(y_true, y_proba, thresholds=None) -> go.Figu
         name="⚪ Treat None (No Intervention)",
         line=dict(color="#94A3B8", dash="dot", width=1.5)
     ))
-    
+
     fig.update_layout(
         title="<b>DECISION CURVE ANALYSIS (CLINICAL NET BENEFIT)</b>",
         title_font=dict(color="#00F0FF", size=13, family="'Chakra Petch', sans-serif"),
@@ -187,10 +238,10 @@ def plot_interactive_confusion_matrix(cm_data: dict, model_name: str = "Classifi
     """
     z = [[cm_data.get("tn", 0), cm_data.get("fp", 0)],
          [cm_data.get("fn", 0), cm_data.get("tp", 0)]]
-    
+
     x = ["Predicted Healthy (0)", "Predicted CAD (1)"]
     y = ["Actual Healthy (0)", "Actual CAD (1)"]
-    
+
     fig = px.imshow(
         z,
         x=x,
@@ -199,7 +250,7 @@ def plot_interactive_confusion_matrix(cm_data: dict, model_name: str = "Classifi
         text_auto=True,
         aspect="auto"
     )
-    
+
     fig.update_layout(
         title=f"<b>CONFUSION MATRIX ({model_name.upper()})</b>",
         title_font=dict(color="#00F0FF", size=13, family="'Chakra Petch', sans-serif"),
@@ -220,7 +271,7 @@ def plot_interactive_roc_curve(roc_curves_dict: dict) -> go.Figure:
     """
     fig = go.Figure()
     colors = ["#00F0FF", "#FF2E5B", "#00E599", "#FFB800", "#9D4EDD", "#3B82F6", "#EC4899", "#F97316", "#14B8A6", "#8B5CF6"]
-    
+
     for idx, (m_name, (fpr, tpr, auc_val)) in enumerate(roc_curves_dict.items()):
         color = colors[idx % len(colors)]
         fig.add_trace(go.Scatter(
@@ -230,7 +281,7 @@ def plot_interactive_roc_curve(roc_curves_dict: dict) -> go.Figure:
             name=f"{m_name[:22]} (AUC: {auc_val:.1f}%)",
             line=dict(color=color, width=2)
         ))
-        
+
     fig.add_trace(go.Scatter(
         x=[0, 1],
         y=[0, 1],
@@ -238,7 +289,7 @@ def plot_interactive_roc_curve(roc_curves_dict: dict) -> go.Figure:
         name="Random Classifier (50%)",
         line=dict(color="#64748B", dash="dash", width=1.5)
     ))
-    
+
     fig.update_layout(
         title="<b>MULTI-MODEL RECEIVER OPERATING CHARACTERISTIC (ROC)</b>",
         title_font=dict(color="#00F0FF", size=13, family="'Chakra Petch', sans-serif"),
@@ -269,12 +320,12 @@ def plot_model_radar_comparison(metrics_dict: dict) -> go.Figure:
     Renders Radar Chart comparing top models across clinical performance dimensions.
     """
     categories = ["Accuracy", "ROC-AUC", "Sensitivity", "Specificity", "Precision", "F1-Score"]
-    
+
     fig = go.Figure()
     colors = ["#00F0FF", "#FF2E5B", "#00E599", "#FFB800", "#9D4EDD"]
-    
+
     top_models = list(metrics_dict.items())[:4]
-    
+
     for idx, (m_name, m_data) in enumerate(top_models):
         values = [
             m_data.get("accuracy", 0),
@@ -285,7 +336,7 @@ def plot_model_radar_comparison(metrics_dict: dict) -> go.Figure:
             m_data.get("f1_score", 0)
         ]
         values.append(values[0])
-        
+
         color = colors[idx % len(colors)]
         fig.add_trace(go.Scatterpolar(
             r=values,
@@ -295,7 +346,7 @@ def plot_model_radar_comparison(metrics_dict: dict) -> go.Figure:
             line=dict(color=color, width=2),
             opacity=0.35
         ))
-        
+
     fig.update_layout(
         polar=dict(
             radialaxis=dict(visible=True, range=[50, 100], tickfont=dict(color="#64748B", size=8), gridcolor="rgba(0, 240, 255, 0.15)"),
@@ -316,7 +367,7 @@ def plot_interactive_calibration_curve(calibration_dict: dict) -> go.Figure:
     """Renders interactive Plotly reliability calibration curve."""
     fig = go.Figure()
     colors = ["#00F0FF", "#FF2E5B", "#00E599", "#FFB800", "#9D4EDD", "#3B82F6"]
-    
+
     for idx, (m_name, cal_data) in enumerate(calibration_dict.items()):
         color = colors[idx % len(colors)]
         brier = cal_data.get("brier_score", 0.0)
@@ -329,7 +380,7 @@ def plot_interactive_calibration_curve(calibration_dict: dict) -> go.Figure:
             line=dict(color=color, width=2),
             marker=dict(size=6)
         ))
-        
+
     # Perfect calibration reference line
     fig.add_trace(go.Scatter(
         x=[0, 100],
@@ -338,7 +389,7 @@ def plot_interactive_calibration_curve(calibration_dict: dict) -> go.Figure:
         name="Perfect Calibration (45°)",
         line=dict(color="#64748B", dash="dash", width=1.5)
     ))
-    
+
     fig.update_layout(
         title="<b>PROBABILITY CALIBRATION RELIABILITY CURVE (ECE & BRIER)</b>",
         title_font=dict(color="#00F0FF", size=13, family="'Chakra Petch', sans-serif"),

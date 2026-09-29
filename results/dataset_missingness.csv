@@ -1,0 +1,57 @@
+dataset,feature,missing_count,missing_percentage,zero_count,zero_percentage
+Cleveland,age,0,0.0,0,0.0
+Cleveland,sex,0,0.0,97,32.01
+Cleveland,cp,0,0.0,0,0.0
+Cleveland,trestbps,0,0.0,0,0.0
+Cleveland,chol,0,0.0,0,0.0
+Cleveland,fbs,0,0.0,258,85.15
+Cleveland,restecg,0,0.0,151,49.83
+Cleveland,thalach,0,0.0,0,0.0
+Cleveland,exang,0,0.0,204,67.33
+Cleveland,oldpeak,0,0.0,99,32.67
+Cleveland,slope,0,0.0,0,0.0
+Cleveland,ca,4,1.32,176,58.09
+Cleveland,thal,2,0.66,0,0.0
+Cleveland,target,0,0.0,164,54.13
+Hungarian,age,0,0.0,0,0.0
+Hungarian,sex,0,0.0,81,27.55
+Hungarian,cp,0,0.0,0,0.0
+Hungarian,trestbps,1,0.34,0,0.0
+Hungarian,chol,23,7.82,0,0.0
+Hungarian,fbs,8,2.72,266,90.48
+Hungarian,restecg,1,0.34,235,79.93
+Hungarian,thalach,1,0.34,0,0.0
+Hungarian,exang,1,0.34,204,69.39
+Hungarian,oldpeak,0,0.0,189,64.29
+Hungarian,slope,190,64.63,0,0.0
+Hungarian,ca,291,98.98,3,1.02
+Hungarian,thal,266,90.48,0,0.0
+Hungarian,target,0,0.0,188,63.95
+Zurich,age,0,0.0,0,0.0
+Zurich,sex,0,0.0,10,8.13
+Zurich,cp,0,0.0,0,0.0
+Zurich,trestbps,2,1.63,0,0.0
+Zurich,chol,0,0.0,123,100.0
+Zurich,fbs,75,60.98,43,34.96
+Zurich,restecg,1,0.81,85,69.11
+Zurich,thalach,1,0.81,0,0.0
+Zurich,exang,1,0.81,68,55.28
+Zurich,oldpeak,6,4.88,42,34.15
+Zurich,slope,17,13.82,0,0.0
+Zurich,ca,118,95.93,0,0.0
+Zurich,thal,52,42.28,0,0.0
+Zurich,target,0,0.0,8,6.5
+VA Long Beach,age,0,0.0,0,0.0
+VA Long Beach,sex,0,0.0,6,3.0
+VA Long Beach,cp,0,0.0,0,0.0
+VA Long Beach,trestbps,56,28.0,1,0.5
+VA Long Beach,chol,7,3.5,49,24.5
+VA Long Beach,fbs,7,3.5,125,62.5
+VA Long Beach,restecg,0,0.0,80,40.0
+VA Long Beach,thalach,53,26.5,0,0.0
+VA Long Beach,exang,53,26.5,52,26.0
+VA Long Beach,oldpeak,56,28.0,40,20.0
+VA Long Beach,slope,102,51.0,0,0.0
+VA Long Beach,ca,198,99.0,2,1.0
+VA Long Beach,thal,166,83.0,0,0.0
+VA Long Beach,target,0,0.0,51,25.5

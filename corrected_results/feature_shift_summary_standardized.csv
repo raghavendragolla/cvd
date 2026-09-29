@@ -1,0 +1,61 @@
+train_dataset,test_dataset,feature,feature_type,train_mean,train_std,test_mean,test_std,raw_wasserstein_distance,standardized_wasserstein_distance,smd,ks_statistic,ks_pvalue,tvd,jensen_shannon_divergence,chi2_statistic,chi2_pvalue
+Cleveland,Hungarian,age,continuous,54.439,9.039,47.823,7.825,6.6164,0.732,0.7827,0.3549,0.0,,,,
+Cleveland,Hungarian,sex,categorical,,,,,,,,,,0.0471,0.0019,1.365,0.242699
+Cleveland,Hungarian,cp,categorical,,,,,,,,,,0.1933,0.0401,32.559,0.0
+Cleveland,Hungarian,trestbps,continuous,131.69,17.6,132.661,17.607,1.4603,0.083,-0.0552,0.0645,0.536906,,,,
+Cleveland,Hungarian,fbs,categorical,,,,,,,,,,0.0783,0.0116,8.387,0.003779
+Cleveland,Hungarian,restecg,categorical,,,,,,,,,,0.4679,0.2791,189.833,0.0
+Cleveland,Hungarian,thalach,continuous,149.607,22.875,139.058,23.598,10.6216,0.4643,0.4539,0.2639,0.0,,,,
+Cleveland,Hungarian,exang,categorical,,,,,,,,,,0.0219,0.0004,0.237,0.626091
+Cleveland,Hungarian,oldpeak,continuous,1.04,1.161,0.588,0.91,0.4515,0.3889,0.433,0.3149,0.0,,,,
+Cleveland,Hungarian,slope,categorical,,,,,,,,,,0.413,0.1478,53.903,0.0
+Cleveland,Zurich,age,continuous,54.439,9.039,55.317,9.032,1.2734,0.1409,-0.0972,0.0839,0.535431,,,,
+Cleveland,Zurich,sex,categorical,,,,,,,,,,0.2388,0.0677,25.277,0.0
+Cleveland,Zurich,cp,categorical,,,,,,,,,,0.3215,0.0896,38.305,0.0
+Cleveland,Zurich,trestbps,continuous,131.69,17.6,130.207,22.559,4.8851,0.2776,0.0733,0.159,0.022437,,,,
+Cleveland,Zurich,fbs,categorical,,,,,,,,,,0.0443,0.0032,0.353,0.552153
+Cleveland,Zurich,restecg,categorical,,,,,,,,,,0.4311,0.2444,109.354,0.0
+Cleveland,Zurich,thalach,continuous,149.607,22.875,121.557,25.977,28.0499,1.2262,1.146,0.4642,0.0,,,,
+Cleveland,Zurich,exang,categorical,,,,,,,,,,0.1159,0.0103,4.58,0.032353
+Cleveland,Zurich,oldpeak,continuous,1.04,1.161,0.654,1.056,0.3858,0.3322,0.3476,0.1263,0.122416,,,,
+Cleveland,Zurich,slope,categorical,,,,,,,,,,0.1573,0.0199,8.474,0.014449
+Cleveland,VA Long Beach,age,continuous,54.439,9.039,59.357,7.831,4.9178,0.5441,-0.5816,0.2609,0.0,,,,
+Cleveland,VA Long Beach,sex,categorical,,,,,,,,,,0.29,0.1195,60.169,0.0
+Cleveland,VA Long Beach,cp,categorical,,,,,,,,,,0.183,0.0308,19.537,0.000212
+Cleveland,VA Long Beach,trestbps,continuous,131.69,17.6,134.592,18.466,2.9889,0.1698,-0.1609,0.0991,0.275621,,,,
+Cleveland,VA Long Beach,fbs,categorical,,,,,,,,,,0.2057,0.0415,27.059,0.0
+Cleveland,VA Long Beach,restecg,categorical,,,,,,,,,,0.4491,0.2743,171.988,0.0
+Cleveland,VA Long Beach,thalach,continuous,149.607,22.875,122.829,22.062,26.7785,1.1706,1.1916,0.5147,0.0,,,,
+Cleveland,VA Long Beach,exang,categorical,,,,,,,,,,0.3171,0.0739,39.141,0.0
+Cleveland,VA Long Beach,oldpeak,continuous,1.04,1.161,1.33,1.105,0.354,0.3049,-0.2563,0.2274,6.7e-05,,,,
+Cleveland,VA Long Beach,slope,categorical,,,,,,,,,,0.3054,0.1124,48.979,0.0
+Hungarian,Cleveland,age,continuous,47.823,7.825,54.439,9.039,6.6164,0.8456,-0.7827,0.3549,0.0,,,,
+Hungarian,Cleveland,sex,categorical,,,,,,,,,,0.0471,0.0019,1.365,0.242699
+Hungarian,Cleveland,cp,categorical,,,,,,,,,,0.1933,0.0401,32.559,0.0
+Hungarian,Cleveland,trestbps,continuous,132.661,17.607,131.69,17.6,1.4603,0.0829,0.0552,0.0645,0.536906,,,,
+Hungarian,Cleveland,fbs,categorical,,,,,,,,,,0.0783,0.0116,8.387,0.003779
+Hungarian,Cleveland,restecg,categorical,,,,,,,,,,0.4679,0.2791,189.833,0.0
+Hungarian,Cleveland,thalach,continuous,139.058,23.598,149.607,22.875,10.6216,0.4501,-0.4539,0.2639,0.0,,,,
+Hungarian,Cleveland,exang,categorical,,,,,,,,,,0.0219,0.0004,0.237,0.626091
+Hungarian,Cleveland,oldpeak,continuous,0.588,0.91,1.04,1.161,0.4515,0.4965,-0.433,0.3149,0.0,,,,
+Hungarian,Cleveland,slope,categorical,,,,,,,,,,0.413,0.1478,53.903,0.0
+Zurich,Cleveland,age,continuous,55.317,9.032,54.439,9.039,1.2734,0.141,0.0972,0.0839,0.535431,,,,
+Zurich,Cleveland,sex,categorical,,,,,,,,,,0.2388,0.0677,25.277,0.0
+Zurich,Cleveland,cp,categorical,,,,,,,,,,0.3215,0.0896,38.305,0.0
+Zurich,Cleveland,trestbps,continuous,130.207,22.559,131.69,17.6,4.8851,0.2165,-0.0733,0.159,0.022437,,,,
+Zurich,Cleveland,fbs,categorical,,,,,,,,,,0.0443,0.0032,0.353,0.552153
+Zurich,Cleveland,restecg,categorical,,,,,,,,,,0.4311,0.2444,109.354,0.0
+Zurich,Cleveland,thalach,continuous,121.557,25.977,149.607,22.875,28.0499,1.0798,-1.146,0.4642,0.0,,,,
+Zurich,Cleveland,exang,categorical,,,,,,,,,,0.1159,0.0103,4.58,0.032353
+Zurich,Cleveland,oldpeak,continuous,0.654,1.056,1.04,1.161,0.3858,0.3653,-0.3476,0.1263,0.122416,,,,
+Zurich,Cleveland,slope,categorical,,,,,,,,,,0.1573,0.0199,8.474,0.014449
+VA Long Beach,Cleveland,age,continuous,59.357,7.831,54.439,9.039,4.9178,0.628,0.5816,0.2609,0.0,,,,
+VA Long Beach,Cleveland,sex,categorical,,,,,,,,,,0.29,0.1195,60.169,0.0
+VA Long Beach,Cleveland,cp,categorical,,,,,,,,,,0.183,0.0308,19.537,0.000212
+VA Long Beach,Cleveland,trestbps,continuous,134.592,18.466,131.69,17.6,2.9889,0.1619,0.1609,0.0991,0.275621,,,,
+VA Long Beach,Cleveland,fbs,categorical,,,,,,,,,,0.2057,0.0415,27.059,0.0
+VA Long Beach,Cleveland,restecg,categorical,,,,,,,,,,0.4491,0.2743,171.988,0.0
+VA Long Beach,Cleveland,thalach,continuous,122.829,22.062,149.607,22.875,26.7785,1.2138,-1.1916,0.5147,0.0,,,,
+VA Long Beach,Cleveland,exang,categorical,,,,,,,,,,0.3171,0.0739,39.141,0.0
+VA Long Beach,Cleveland,oldpeak,continuous,1.33,1.105,1.04,1.161,0.354,0.3205,0.2563,0.2274,6.7e-05,,,,
+VA Long Beach,Cleveland,slope,categorical,,,,,,,,,,0.3054,0.1124,48.979,0.0

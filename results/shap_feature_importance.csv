@@ -1,0 +1,481 @@
+experiment_id,train_dataset,test_dataset,model,cohort_type,feature,mean_abs_shap,median_abs_shap,std_abs_shap,iqr_abs_shap,feature_rank
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,development,age,0.20304,0.189137,0.14375,0.226525,8
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,development,sex,0.754551,0.579844,0.2546,0.545735,1
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,development,cp,0.634702,0.641445,0.417101,0.490982,2
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,development,trestbps,0.247472,0.193944,0.209133,0.256138,6
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,development,fbs,0.057858,0.03547,0.053607,0.0,10
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,development,restecg,0.245559,0.213307,0.042242,0.069449,7
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,development,thalach,0.381814,0.326513,0.27083,0.369243,5
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,development,exang,0.447911,0.349915,0.140671,0.299927,4
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,development,oldpeak,0.459447,0.482569,0.355398,0.265038,3
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,development,slope,0.169625,0.161605,0.073853,0.023941,9
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,external,age,0.23042,0.195735,0.182395,0.281506,8
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,external,sex,0.72885,0.579844,0.243136,0.545735,1
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,external,cp,0.699824,0.641445,0.34396,0.300925,2
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,external,trestbps,0.247616,0.193944,0.210964,0.220809,6
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,external,fbs,0.04576,0.03547,0.038017,0.0,10
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,external,restecg,0.236468,0.282756,0.095312,0.0,7
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,external,thalach,0.41432,0.367403,0.304338,0.429353,5
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,external,exang,0.441019,0.349915,0.13793,0.299927,3
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,external,oldpeak,0.434507,0.482569,0.230023,0.0,4
+PAIRWISE_E1_CLEV_TO_HUNG_LogisticRegression,Cleveland,Hungarian,LogisticRegression,external,slope,0.145712,0.137663,0.020227,0.023941,9
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,development,age,0.041406,0.041931,0.019142,0.026919,7
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,development,sex,0.051731,0.04383,0.023944,0.029036,5
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,development,cp,0.128718,0.126771,0.020395,0.025869,1
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,development,trestbps,0.017668,0.010963,0.020037,0.01518,8
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,development,fbs,0.001707,0.000876,0.002533,0.001375,10
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,development,restecg,0.010644,0.009731,0.004679,0.005758,9
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,development,thalach,0.068329,0.067884,0.036745,0.057049,3
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,development,exang,0.063436,0.052908,0.028609,0.043737,4
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,development,oldpeak,0.069662,0.063379,0.043046,0.051486,2
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,development,slope,0.046098,0.045721,0.010767,0.012916,6
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,external,age,0.034765,0.037309,0.015484,0.023308,7
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,external,sex,0.050868,0.044824,0.02156,0.02533,5
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,external,cp,0.130608,0.129419,0.019915,0.022168,1
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,external,trestbps,0.017739,0.011929,0.020641,0.012829,8
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,external,fbs,0.001302,0.00082,0.00165,0.001394,10
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,external,restecg,0.008968,0.008271,0.004576,0.004605,9
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,external,thalach,0.077535,0.078713,0.036771,0.05269,2
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,external,exang,0.067117,0.058991,0.027787,0.043673,4
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,external,oldpeak,0.073336,0.079359,0.032622,0.046182,3
+PAIRWISE_E2_CLEV_TO_HUNG_RandomForest,Cleveland,Hungarian,RandomForest,external,slope,0.045618,0.046025,0.007451,0.009089,6
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,development,age,0.027086,0.023945,0.018771,0.026359,8
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,development,sex,0.077292,0.046301,0.068484,0.080249,2
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,development,cp,0.091436,0.074076,0.053229,0.037318,1
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,development,trestbps,0.01992,0.012623,0.023894,0.019381,9
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,development,fbs,0.012757,0.008769,0.014699,0.010978,10
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,development,restecg,0.040182,0.035685,0.025995,0.031396,6
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,development,thalach,0.065238,0.056096,0.045081,0.062127,3
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,development,exang,0.064916,0.05315,0.042333,0.041138,4
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,development,oldpeak,0.064803,0.065581,0.042602,0.047198,5
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,development,slope,0.031492,0.031184,0.017132,0.02375,7
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,external,age,0.018941,0.014048,0.016531,0.02245,9
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,external,sex,0.065389,0.039363,0.054259,0.061125,4
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,external,cp,0.090446,0.07499,0.042565,0.065356,1
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,external,trestbps,0.019795,0.014116,0.021022,0.017321,8
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,external,fbs,0.009472,0.007522,0.009292,0.008657,10
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,external,restecg,0.032917,0.027623,0.024517,0.031095,6
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,external,thalach,0.077479,0.072835,0.054147,0.072578,2
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,external,exang,0.06401,0.052434,0.038605,0.043151,5
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,external,oldpeak,0.072643,0.075216,0.035185,0.046473,3
+PAIRWISE_E3_CLEV_TO_HUNG_SVM,Cleveland,Hungarian,SVM,external,slope,0.031842,0.032703,0.014929,0.021812,7
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,development,age,0.344085,0.344805,0.20793,0.314175,4
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,development,sex,0.46322,0.3491,0.225013,0.357908,2
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,development,cp,0.857574,0.851846,0.139109,0.167495,1
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,development,trestbps,0.138816,0.078507,0.16418,0.116705,8
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,development,fbs,0.009506,0.006783,0.012371,0.006377,10
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,development,restecg,0.112078,0.113817,0.029128,0.038112,9
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,development,thalach,0.299536,0.203121,0.255342,0.338912,5
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,development,exang,0.292405,0.245878,0.148193,0.235556,6
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,development,oldpeak,0.457719,0.374697,0.336771,0.312921,3
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,development,slope,0.258506,0.261869,0.072435,0.085836,7
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,external,age,0.307257,0.279619,0.200353,0.316337,5
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,external,sex,0.460057,0.354513,0.22196,0.321062,2
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,external,cp,0.831229,0.822998,0.146934,0.209475,1
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,external,trestbps,0.132375,0.069434,0.160722,0.107302,8
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,external,fbs,0.007212,0.006783,0.008928,0.004484,10
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,external,restecg,0.096516,0.096283,0.026106,0.034095,9
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,external,thalach,0.377079,0.352072,0.244747,0.388927,4
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,external,exang,0.30203,0.24195,0.154738,0.209721,6
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,external,oldpeak,0.452519,0.436362,0.230746,0.215165,3
+PAIRWISE_E4_CLEV_TO_HUNG_XGBoost,Cleveland,Hungarian,XGBoost,external,slope,0.265886,0.263593,0.053428,0.077219,7
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,development,age,0.20304,0.189137,0.14375,0.226525,8
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,development,sex,0.754551,0.579844,0.2546,0.545735,1
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,development,cp,0.634702,0.641445,0.417101,0.490982,2
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,development,trestbps,0.247472,0.193944,0.209133,0.256138,6
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,development,fbs,0.057858,0.03547,0.053607,0.0,10
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,development,restecg,0.245559,0.213307,0.042242,0.069449,7
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,development,thalach,0.381814,0.326513,0.27083,0.369243,5
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,development,exang,0.447911,0.349915,0.140671,0.299927,4
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,development,oldpeak,0.459447,0.482569,0.355398,0.265038,3
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,development,slope,0.169625,0.161605,0.073853,0.023941,9
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,external,age,0.197004,0.161646,0.149567,0.192436,8
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,external,sex,0.624213,0.579844,0.149148,0.0,1
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,external,cp,0.618911,0.641445,0.273118,0.0,3
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,external,trestbps,0.332845,0.285948,0.240507,0.295884,6
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,external,fbs,0.041598,0.03547,0.02977,0.0,10
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,external,restecg,0.216291,0.282756,0.106592,0.15874,7
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,external,thalach,0.619232,0.571857,0.429655,0.592916,2
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,external,exang,0.48159,0.349915,0.148844,0.299927,4
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,external,oldpeak,0.452874,0.482569,0.297643,0.250036,5
+PAIRWISE_E5_CLEV_TO_ZURI_LogisticRegression,Cleveland,Zurich,LogisticRegression,external,slope,0.173478,0.137663,0.087255,0.023941,9
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,development,age,0.041406,0.041931,0.019142,0.026919,7
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,development,sex,0.051731,0.04383,0.023944,0.029036,5
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,development,cp,0.128718,0.126771,0.020395,0.025869,1
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,development,trestbps,0.017668,0.010963,0.020037,0.01518,8
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,development,fbs,0.001707,0.000876,0.002533,0.001375,10
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,development,restecg,0.010644,0.009731,0.004679,0.005758,9
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,development,thalach,0.068329,0.067884,0.036745,0.057049,3
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,development,exang,0.063436,0.052908,0.028609,0.043737,4
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,development,oldpeak,0.069662,0.063379,0.043046,0.051486,2
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,development,slope,0.046098,0.045721,0.010767,0.012916,6
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,external,age,0.028772,0.027777,0.014746,0.021514,7
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,external,sex,0.046909,0.044822,0.016059,0.01541,5
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,external,cp,0.127875,0.126568,0.019021,0.026482,1
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,external,trestbps,0.025372,0.015315,0.027374,0.02834,8
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,external,fbs,0.001081,0.000623,0.001172,0.001085,10
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,external,restecg,0.011354,0.010697,0.004952,0.007775,9
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,external,thalach,0.088795,0.098631,0.036744,0.045075,2
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,external,exang,0.076369,0.074136,0.024837,0.036797,4
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,external,oldpeak,0.081512,0.087296,0.036168,0.04451,3
+PAIRWISE_E6_CLEV_TO_ZURI_RandomForest,Cleveland,Zurich,RandomForest,external,slope,0.046686,0.045823,0.01054,0.011148,6
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,development,age,0.026727,0.022705,0.019155,0.026935,8
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,development,sex,0.077718,0.046294,0.068305,0.082338,2
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,development,cp,0.091782,0.075487,0.053506,0.039609,1
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,development,trestbps,0.020362,0.013001,0.024883,0.018135,9
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,development,fbs,0.012198,0.007861,0.014593,0.010219,10
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,development,restecg,0.040245,0.035123,0.025389,0.031201,6
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,development,thalach,0.064967,0.055944,0.044779,0.064295,4
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,development,exang,0.06512,0.055256,0.042614,0.039676,3
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,development,oldpeak,0.064186,0.065304,0.041639,0.045035,5
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,development,slope,0.031484,0.031996,0.016972,0.022313,7
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,external,age,0.017797,0.014941,0.0147,0.016128,9
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,external,sex,0.050681,0.0419,0.033701,0.021322,5
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,external,cp,0.066009,0.057421,0.034489,0.02486,4
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,external,trestbps,0.02703,0.021147,0.026113,0.025922,8
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,external,fbs,0.008947,0.007999,0.006667,0.008509,10
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,external,restecg,0.036009,0.027337,0.026955,0.040354,6
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,external,thalach,0.099826,0.098115,0.061139,0.079677,1
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,external,exang,0.06832,0.063007,0.036756,0.05511,2
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,external,oldpeak,0.067558,0.06309,0.042286,0.061769,3
+PAIRWISE_E7_CLEV_TO_ZURI_SVM,Cleveland,Zurich,SVM,external,slope,0.0355,0.036405,0.015948,0.019149,7
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,development,age,0.344085,0.344805,0.20793,0.314175,4
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,development,sex,0.46322,0.3491,0.225013,0.357908,2
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,development,cp,0.857574,0.851846,0.139109,0.167495,1
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,development,trestbps,0.138816,0.078507,0.16418,0.116705,8
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,development,fbs,0.009506,0.006783,0.012371,0.006377,10
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,development,restecg,0.112078,0.113817,0.029128,0.038112,9
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,development,thalach,0.299536,0.203121,0.255342,0.338912,5
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,development,exang,0.292405,0.245878,0.148193,0.235556,6
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,development,oldpeak,0.457719,0.374697,0.336771,0.312921,3
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,development,slope,0.258506,0.261869,0.072435,0.085836,7
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,external,age,0.230226,0.225654,0.154236,0.255235,7
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,external,sex,0.370649,0.34676,0.134077,0.080424,4
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,external,cp,0.803184,0.808061,0.150034,0.219038,1
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,external,trestbps,0.213261,0.096974,0.225778,0.319537,8
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,external,fbs,0.00413,0.002875,0.003878,0.006377,10
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,external,restecg,0.109621,0.109147,0.025306,0.033701,9
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,external,thalach,0.44546,0.472504,0.257845,0.403455,3
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,external,exang,0.348215,0.322463,0.14046,0.210704,5
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,external,oldpeak,0.510162,0.512489,0.267266,0.368534,2
+PAIRWISE_E8_CLEV_TO_ZURI_XGBoost,Cleveland,Zurich,XGBoost,external,slope,0.245211,0.246982,0.065067,0.087078,6
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,development,age,0.20304,0.189137,0.14375,0.226525,8
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,development,sex,0.754551,0.579844,0.2546,0.545735,1
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,development,cp,0.634702,0.641445,0.417101,0.490982,2
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,development,trestbps,0.247472,0.193944,0.209133,0.256138,6
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,development,fbs,0.057858,0.03547,0.053607,0.0,10
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,development,restecg,0.245559,0.213307,0.042242,0.069449,7
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,development,thalach,0.381814,0.326513,0.27083,0.369243,5
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,development,exang,0.447911,0.349915,0.140671,0.299927,4
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,development,oldpeak,0.459447,0.482569,0.355398,0.265038,3
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,development,slope,0.169625,0.161605,0.073853,0.023941,9
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,external,age,0.195138,0.168244,0.146962,0.192436,7
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,external,sex,0.596298,0.579844,0.093322,0.0,1
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,external,cp,0.593055,0.641445,0.328274,0.0,2
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,external,trestbps,0.229315,0.177474,0.202565,0.276011,6
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,external,fbs,0.086982,0.03547,0.071497,0.150748,10
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,external,restecg,0.158665,0.213307,0.117035,0.248031,9
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,external,thalach,0.495864,0.408294,0.365084,0.57247,4
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,external,exang,0.517211,0.649842,0.148959,0.299927,3
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,external,oldpeak,0.43326,0.482569,0.307731,0.285041,5
+PAIRWISE_E9_CLEV_TO_VA L_LogisticRegression,Cleveland,VA Long Beach,LogisticRegression,external,slope,0.185125,0.137663,0.104361,0.023941,8
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,development,age,0.041406,0.041931,0.019142,0.026919,7
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,development,sex,0.051731,0.04383,0.023944,0.029036,5
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,development,cp,0.128718,0.126771,0.020395,0.025869,1
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,development,trestbps,0.017668,0.010963,0.020037,0.01518,8
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,development,fbs,0.001707,0.000876,0.002533,0.001375,10
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,development,restecg,0.010644,0.009731,0.004679,0.005758,9
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,development,thalach,0.068329,0.067884,0.036745,0.057049,3
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,development,exang,0.063436,0.052908,0.028609,0.043737,4
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,development,oldpeak,0.069662,0.063379,0.043046,0.051486,2
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,development,slope,0.046098,0.045721,0.010767,0.012916,6
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,external,age,0.031109,0.032353,0.017254,0.020539,7
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,external,sex,0.04081,0.03899,0.012878,0.015923,6
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,external,cp,0.131738,0.130607,0.018222,0.021018,1
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,external,trestbps,0.014432,0.007703,0.016014,0.014652,8
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,external,fbs,0.002458,0.001228,0.003513,0.0026,10
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,external,restecg,0.007836,0.007581,0.004694,0.00695,9
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,external,thalach,0.082901,0.085576,0.031241,0.039948,2
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,external,exang,0.078001,0.076293,0.024432,0.039078,3
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,external,oldpeak,0.074891,0.085284,0.043376,0.07762,4
+PAIRWISE_E10_CLEV_TO_VA L_RandomForest,Cleveland,VA Long Beach,RandomForest,external,slope,0.048088,0.047198,0.009634,0.012809,5
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,development,age,0.026799,0.021823,0.018893,0.025308,8
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,development,sex,0.077535,0.046594,0.069071,0.084332,2
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,development,cp,0.091138,0.075528,0.052746,0.039394,1
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,development,trestbps,0.020237,0.012219,0.025013,0.018736,9
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,development,fbs,0.01295,0.008824,0.015546,0.011285,10
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,development,restecg,0.04016,0.034881,0.025064,0.028874,6
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,development,thalach,0.064784,0.057031,0.045105,0.065776,3
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,development,exang,0.064412,0.052429,0.042563,0.040812,4
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,development,oldpeak,0.064349,0.065459,0.042749,0.047473,5
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,development,slope,0.031257,0.030946,0.017136,0.022014,7
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,external,age,0.023437,0.021533,0.014538,0.018336,8
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,external,sex,0.041476,0.03622,0.021638,0.01971,5
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,external,cp,0.081119,0.06855,0.048358,0.024545,1
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,external,trestbps,0.017607,0.012879,0.016295,0.016548,10
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,external,fbs,0.017995,0.011853,0.018999,0.015058,9
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,external,restecg,0.02435,0.016679,0.02188,0.024541,7
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,external,thalach,0.0801,0.068869,0.053353,0.063375,2
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,external,exang,0.078657,0.06961,0.043377,0.065723,3
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,external,oldpeak,0.059371,0.060139,0.038803,0.058784,4
+PAIRWISE_E11_CLEV_TO_VA L_SVM,Cleveland,VA Long Beach,SVM,external,slope,0.035631,0.03725,0.014048,0.016839,6
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,development,age,0.344085,0.344805,0.20793,0.314175,4
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,development,sex,0.46322,0.3491,0.225013,0.357908,2
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,development,cp,0.857574,0.851846,0.139109,0.167495,1
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,development,trestbps,0.138816,0.078507,0.16418,0.116705,8
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,development,fbs,0.009506,0.006783,0.012371,0.006377,10
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,development,restecg,0.112078,0.113817,0.029128,0.038112,9
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,development,thalach,0.299536,0.203121,0.255342,0.338912,5
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,development,exang,0.292405,0.245878,0.148193,0.235556,6
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,development,oldpeak,0.457719,0.374697,0.336771,0.312921,3
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,development,slope,0.258506,0.261869,0.072435,0.085836,7
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,external,age,0.239383,0.221595,0.179589,0.296549,7
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,external,sex,0.338865,0.325917,0.09602,0.093947,5
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,external,cp,0.836395,0.831933,0.151535,0.204329,1
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,external,trestbps,0.128817,0.080594,0.14365,0.11961,8
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,external,fbs,0.010242,0.007069,0.013085,0.008303,10
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,external,restecg,0.096755,0.096134,0.024986,0.032978,9
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,external,thalach,0.396222,0.376612,0.234906,0.40841,3
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,external,exang,0.372783,0.365475,0.144623,0.246371,4
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,external,oldpeak,0.496619,0.47025,0.332974,0.454892,2
+PAIRWISE_E12_CLEV_TO_VA L_XGBoost,Cleveland,VA Long Beach,XGBoost,external,slope,0.260893,0.27014,0.077207,0.101617,6
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,development,age,0.093264,0.081937,0.065497,0.098092,8
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,development,sex,0.486802,0.314863,0.280555,0.629726,3
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,development,cp,0.703434,0.766315,0.354439,0.097828,2
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,development,trestbps,0.041524,0.036857,0.033181,0.030281,10
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,development,fbs,0.202948,0.118218,0.313042,0.0,6
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,development,restecg,0.145934,0.091383,0.12339,0.0,7
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,development,thalach,0.049037,0.041635,0.035156,0.056325,9
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,development,exang,0.455415,0.324137,0.198751,0.432183,4
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,development,oldpeak,0.827192,0.688833,0.515176,0.0,1
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,development,slope,0.356544,0.235211,0.256707,0.0,5
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,external,age,0.134084,0.125598,0.084083,0.127199,8
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,external,sex,0.516458,0.314863,0.293784,0.629726,4
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,external,cp,0.648148,0.766315,0.443818,0.717402,2
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,external,trestbps,0.041388,0.036857,0.033466,0.043434,10
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,external,fbs,0.302569,0.118218,0.441416,0.0,7
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,external,restecg,0.410961,0.323993,0.321988,0.647985,6
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,external,thalach,0.056126,0.054436,0.034523,0.051205,9
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,external,exang,0.465346,0.324137,0.202702,0.432183,5
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,external,oldpeak,0.971523,0.688833,0.88243,0.489575,1
+PAIRWISE_E13_HUNG_TO_CLEV_LogisticRegression,Hungarian,Cleveland,LogisticRegression,external,slope,0.617287,0.884843,0.372484,0.649631,3
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,development,age,0.01055,0.007625,0.009725,0.011422,8
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,development,sex,0.034098,0.026847,0.024741,0.023874,5
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,development,cp,0.115392,0.116965,0.033572,0.03664,1
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,development,trestbps,0.016336,0.015041,0.010393,0.011548,7
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,development,fbs,0.006256,0.003302,0.011929,0.001484,9
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,development,restecg,0.004599,0.002299,0.006516,0.00491,10
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,development,thalach,0.035001,0.030745,0.020344,0.025508,4
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,development,exang,0.107882,0.082065,0.050913,0.083489,2
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,development,oldpeak,0.097514,0.081759,0.046818,0.032729,3
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,development,slope,0.024869,0.019329,0.023179,0.017168,6
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,external,age,0.013156,0.009445,0.012038,0.014822,8
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,external,sex,0.036775,0.027182,0.027188,0.023097,5
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,external,cp,0.103391,0.104445,0.034036,0.048021,1
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,external,trestbps,0.018012,0.015336,0.011953,0.012883,7
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,external,fbs,0.011055,0.003885,0.018724,0.002167,9
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,external,restecg,0.008076,0.004173,0.009427,0.008063,10
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,external,thalach,0.034085,0.03,0.017062,0.023237,6
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,external,exang,0.099754,0.074004,0.049761,0.080636,3
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,external,oldpeak,0.100174,0.074754,0.063383,0.096608,2
+PAIRWISE_E14_HUNG_TO_CLEV_RandomForest,Hungarian,Cleveland,RandomForest,external,slope,0.043156,0.029738,0.031931,0.030395,4
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,development,age,0.012176,0.010159,0.01063,0.009788,7
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,development,sex,0.038758,0.034405,0.023628,0.033892,5
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,development,cp,0.057429,0.05912,0.024219,0.036813,3
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,development,trestbps,0.011038,0.00895,0.011481,0.009285,9
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,development,fbs,0.012143,0.006211,0.027334,0.005491,8
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,development,restecg,0.008643,0.006509,0.009521,0.008401,10
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,development,thalach,0.018923,0.017071,0.013761,0.015894,6
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,development,exang,0.113346,0.095925,0.059302,0.066507,1
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,development,oldpeak,0.102113,0.089841,0.061947,0.057691,2
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,development,slope,0.042137,0.02637,0.045766,0.045642,4
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,external,age,0.019259,0.011909,0.020587,0.019818,8
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,external,sex,0.042714,0.037171,0.026262,0.030084,4
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,external,cp,0.041042,0.032831,0.024518,0.030749,5
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,external,trestbps,0.012197,0.008727,0.011412,0.012497,10
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,external,fbs,0.023799,0.007631,0.04406,0.007374,7
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,external,restecg,0.03099,0.009634,0.041804,0.035831,6
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,external,thalach,0.017805,0.014679,0.013235,0.016821,9
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,external,exang,0.081107,0.058653,0.04721,0.061039,2
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,external,oldpeak,0.084433,0.055018,0.072601,0.067704,1
+PAIRWISE_E15_HUNG_TO_CLEV_SVM,Hungarian,Cleveland,SVM,external,slope,0.068402,0.050227,0.055351,0.061602,3
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,development,age,0.116103,0.097604,0.08192,0.127707,8
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,development,sex,0.369984,0.267306,0.257768,0.328109,4
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,development,cp,0.860359,0.917532,0.342378,0.50263,1
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,development,trestbps,0.177373,0.167432,0.108679,0.110328,5
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,development,fbs,0.078033,0.0476,0.1343,0.015636,9
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,development,restecg,0.047446,0.028048,0.054247,0.036326,10
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,development,thalach,0.149655,0.121221,0.115109,0.182043,7
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,development,exang,0.519155,0.433257,0.181181,0.297426,3
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,development,oldpeak,0.761008,0.652475,0.372849,0.283687,2
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,development,slope,0.173681,0.10354,0.192072,0.083804,6
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,external,age,0.113547,0.11415,0.072408,0.120908,9
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,external,sex,0.393699,0.273651,0.276788,0.343002,4
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,external,cp,0.665312,0.669858,0.338619,0.537952,2
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,external,trestbps,0.182946,0.163995,0.118364,0.143203,6
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,external,fbs,0.125217,0.04676,0.203286,0.017816,7
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,external,restecg,0.078111,0.047772,0.074571,0.095567,10
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,external,thalach,0.118353,0.082081,0.102,0.131327,8
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,external,exang,0.487695,0.40771,0.178911,0.313154,3
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,external,oldpeak,0.690431,0.530694,0.426434,0.645484,1
+PAIRWISE_E16_HUNG_TO_CLEV_XGBoost,Hungarian,Cleveland,XGBoost,external,slope,0.297744,0.159624,0.244341,0.307578,5
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,development,age,0.043549,0.037175,0.03268,0.044126,7
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,development,sex,0.252763,0.145204,0.361563,0.0,4
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,development,cp,0.342038,0.235408,0.311358,0.0,1
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,development,trestbps,0.022795,0.017497,0.016832,0.021984,9
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,development,fbs,0.116882,0.068135,0.215261,0.0,5
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,development,restecg,0.038701,0.025524,0.026404,0.028714,8
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,development,thalach,0.340197,0.314016,0.266426,0.400446,2
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,development,exang,0.334293,0.285636,0.054102,0.108814,3
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,development,oldpeak,0.011871,0.008882,0.008557,0.009592,10
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,development,slope,0.102401,0.045052,0.075716,0.124431,6
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,external,age,0.044698,0.041406,0.031361,0.048357,8
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,external,sex,0.568729,0.145204,0.617202,1.322971,1
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,external,cp,0.55439,0.437186,0.466497,0.201778,2
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,external,trestbps,0.017105,0.013698,0.014683,0.017726,9
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,external,fbs,0.216548,0.068135,0.355366,0.0,5
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,external,restecg,0.078888,0.054238,0.053952,0.108477,7
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,external,thalach,0.493875,0.497554,0.285094,0.427809,3
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,external,exang,0.321189,0.285636,0.051036,0.108814,4
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,external,oldpeak,0.012882,0.008882,0.011814,0.006739,10
+PAIRWISE_E17_ZURI_TO_CLEV_LogisticRegression,Zurich,Cleveland,LogisticRegression,external,slope,0.118235,0.169483,0.071346,0.124431,6
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,development,age,0.013997,0.010269,0.016998,0.012629,4
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,development,sex,7.3e-05,3.1e-05,0.000149,3.1e-05,9
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,development,cp,0.03591,0.022422,0.030982,0.018258,1
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,development,trestbps,0.009095,0.005347,0.010351,0.007459,5
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,development,fbs,0.0,0.0,0.0,0.0,10
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,development,restecg,0.00419,0.001996,0.007559,0.001798,8
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,development,thalach,0.017213,0.013275,0.015362,0.008912,3
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,development,exang,0.006189,0.005009,0.003501,0.002989,7
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,development,oldpeak,0.008707,0.005324,0.013089,0.005395,6
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,development,slope,0.019656,0.015398,0.016319,0.009058,2
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,external,age,0.017176,0.014083,0.014181,0.019282,4
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,external,sex,0.000158,5.1e-05,0.000339,0.000146,9
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,external,cp,0.071612,0.061627,0.051735,0.08954,1
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,external,trestbps,0.008106,0.006265,0.006931,0.006971,6
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,external,fbs,0.0,0.0,0.0,0.0,10
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,external,restecg,0.014717,0.007707,0.012533,0.023275,5
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,external,thalach,0.033202,0.025191,0.024436,0.035515,2
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,external,exang,0.007746,0.007389,0.00366,0.005596,7
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,external,oldpeak,0.006597,0.006245,0.004298,0.006322,8
+PAIRWISE_E18_ZURI_TO_CLEV_RandomForest,Zurich,Cleveland,RandomForest,external,slope,0.025857,0.021033,0.014655,0.023017,3
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,development,age,0.001912,0.001083,0.00361,0.001151,6
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,development,sex,0.00097,0.000566,0.001547,0.000522,9
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,development,cp,0.006273,0.002826,0.009364,0.004103,1
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,development,trestbps,0.002785,0.002115,0.003751,0.001864,3
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,development,fbs,0.000877,0.00046,0.001951,0.000328,10
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,development,restecg,0.002317,0.001375,0.003759,0.001935,5
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,development,thalach,0.002486,0.001285,0.004554,0.001732,4
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,development,exang,0.001732,0.001225,0.002269,0.001356,8
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,development,oldpeak,0.001805,0.00089,0.002659,0.001413,7
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,development,slope,0.004705,0.003602,0.004246,0.003069,2
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,external,age,0.002437,0.001234,0.003438,0.002432,6
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,external,sex,0.003609,0.00097,0.006136,0.003432,5
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,external,cp,0.014372,0.007963,0.015938,0.018242,1
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,external,trestbps,0.001859,0.001518,0.001617,0.001542,10
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,external,fbs,0.001904,0.000504,0.004276,0.001037,9
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,external,restecg,0.004807,0.002633,0.005207,0.005323,4
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,external,thalach,0.00602,0.003197,0.007687,0.006955,2
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,external,exang,0.002195,0.001482,0.002314,0.00243,8
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,external,oldpeak,0.002384,0.001216,0.002997,0.002563,7
+PAIRWISE_E19_ZURI_TO_CLEV_SVM,Zurich,Cleveland,SVM,external,slope,0.004923,0.002912,0.005722,0.005124,3
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,development,age,0.202308,0.175667,0.143197,0.201361,4
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,development,sex,0.0,0.0,0.0,0.0,10
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,development,cp,1.029848,0.973106,0.249742,0.263501,1
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,development,trestbps,0.097449,0.089684,0.063288,0.097431,6
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,development,fbs,0.0,0.0,0.0,0.0,9
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,development,restecg,0.075685,0.074005,0.027918,0.040574,7
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,development,thalach,0.56377,0.611147,0.260913,0.430259,2
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,development,exang,0.125721,0.115985,0.055876,0.091149,5
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,development,oldpeak,0.337892,0.353763,0.116038,0.159379,3
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,development,slope,0.05167,0.048119,0.019613,0.029962,8
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,external,age,0.30167,0.299026,0.159627,0.223807,3
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,external,sex,0.0,0.0,0.0,0.0,10
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,external,cp,1.108656,1.101166,0.26073,0.510524,1
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,external,trestbps,0.109608,0.089929,0.070719,0.125112,5
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,external,fbs,0.0,0.0,0.0,0.0,9
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,external,restecg,0.06545,0.052483,0.025193,0.026739,8
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,external,thalach,0.655571,0.696751,0.215336,0.250477,2
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,external,exang,0.098175,0.073463,0.046718,0.05294,6
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,external,oldpeak,0.286179,0.295148,0.127542,0.189598,4
+PAIRWISE_E20_ZURI_TO_CLEV_XGBoost,Zurich,Cleveland,XGBoost,external,slope,0.070456,0.071035,0.022594,0.042436,7
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,development,age,0.193785,0.133885,0.16316,0.194507,5
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,development,sex,0.062939,0.032364,0.173408,0.0,9
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,development,cp,0.446288,0.332419,0.322406,0.027702,1
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,development,trestbps,0.037506,0.029842,0.029732,0.03624,10
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,development,fbs,0.393008,0.288464,0.141921,0.297205,2
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,development,restecg,0.173135,0.232514,0.108126,0.166933,6
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,development,thalach,0.080977,0.064427,0.064606,0.087469,7
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,development,exang,0.313706,0.256016,0.07746,0.161694,4
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,development,oldpeak,0.328207,0.299265,0.238734,0.402586,3
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,development,slope,0.069309,0.024498,0.067077,0.12599,8
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,external,age,0.259099,0.22271,0.203881,0.300188,7
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,external,sex,0.357001,0.032364,0.473092,1.014071,4
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,external,cp,0.566374,0.360121,0.427309,0.027702,1
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,external,trestbps,0.040784,0.034959,0.031653,0.045153,10
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,external,fbs,0.332603,0.288464,0.105689,0.0,5
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,external,restecg,0.294376,0.232514,0.070313,0.131162,6
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,external,thalach,0.15519,0.158443,0.088573,0.131696,8
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,external,exang,0.36488,0.417711,0.075838,0.161694,3
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,external,oldpeak,0.394057,0.425389,0.264812,0.322069,2
+PAIRWISE_E21_VA L_TO_CLEV_LogisticRegression,VA Long Beach,Cleveland,LogisticRegression,external,slope,0.115237,0.150488,0.084951,0.174986,9
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,development,age,0.027993,0.016408,0.041576,0.025156,4
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,development,sex,0.001552,0.000938,0.003932,0.000296,10
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,development,cp,0.054845,0.040531,0.053553,0.017053,1
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,development,trestbps,0.019995,0.01587,0.019774,0.021647,7
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,development,fbs,0.023404,0.019458,0.013355,0.017788,6
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,development,restecg,0.012188,0.007691,0.011472,0.013182,9
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,development,thalach,0.024169,0.015101,0.028126,0.021143,5
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,development,exang,0.034138,0.028961,0.018416,0.021619,3
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,development,oldpeak,0.034925,0.032598,0.023333,0.041535,2
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,development,slope,0.013407,0.009049,0.010791,0.010952,8
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,external,age,0.043884,0.014737,0.060897,0.034249,3
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,external,sex,0.005625,0.000833,0.007693,0.011444,10
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,external,cp,0.069546,0.045199,0.05607,0.025321,1
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,external,trestbps,0.025038,0.01847,0.02254,0.027217,6
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,external,fbs,0.022246,0.020927,0.009638,0.013864,7
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,external,restecg,0.021328,0.020129,0.010042,0.015051,8
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,external,thalach,0.048525,0.040554,0.040113,0.068096,2
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,external,exang,0.036094,0.034425,0.016477,0.021902,5
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,external,oldpeak,0.039765,0.04286,0.022361,0.03232,4
+PAIRWISE_E22_VA L_TO_CLEV_RandomForest,VA Long Beach,Cleveland,RandomForest,external,slope,0.012042,0.010089,0.008146,0.006819,9
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,development,age,0.010784,0.006637,0.016159,0.006002,9
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,development,sex,0.008796,0.006633,0.014619,0.004526,10
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,development,cp,0.02541,0.017868,0.031288,0.015845,3
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,development,trestbps,0.012333,0.007555,0.01378,0.011333,7
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,development,fbs,0.047973,0.041437,0.027803,0.034965,1
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,development,restecg,0.019724,0.010581,0.024076,0.02125,4
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,development,thalach,0.018353,0.011719,0.021315,0.013688,5
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,development,exang,0.047034,0.042562,0.025728,0.031511,2
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,development,oldpeak,0.014984,0.008264,0.019108,0.013406,6
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,development,slope,0.012289,0.009636,0.010381,0.010593,8
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,external,age,0.012186,0.00666,0.016334,0.010225,10
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,external,sex,0.017325,0.005695,0.026839,0.013316,8
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,external,cp,0.033432,0.021969,0.028145,0.019481,3
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,external,trestbps,0.015183,0.01013,0.014846,0.016622,9
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,external,fbs,0.039377,0.0372,0.020271,0.030131,2
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,external,restecg,0.029375,0.024131,0.022194,0.030248,4
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,external,thalach,0.021459,0.013569,0.021653,0.027993,7
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,external,exang,0.041161,0.035339,0.02463,0.028209,1
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,external,oldpeak,0.02425,0.017791,0.020377,0.028275,5
+PAIRWISE_E23_VA L_TO_CLEV_SVM,VA Long Beach,Cleveland,SVM,external,slope,0.02289,0.012993,0.023029,0.026248,6
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,development,age,0.186347,0.127101,0.222726,0.187795,6
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,development,sex,0.003444,0.002084,0.006681,0.000639,10
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,development,cp,0.436615,0.373455,0.245238,0.157194,1
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,development,trestbps,0.162924,0.122551,0.151401,0.158901,7
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,development,fbs,0.210543,0.179768,0.11806,0.165712,4
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,development,restecg,0.090447,0.071606,0.070753,0.10511,8
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,development,thalach,0.251991,0.160263,0.236844,0.290705,3
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,development,exang,0.201519,0.185423,0.073489,0.0997,5
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,development,oldpeak,0.3202,0.218329,0.313454,0.278022,2
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,development,slope,0.072153,0.042374,0.073952,0.023938,9
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,external,age,0.256976,0.10579,0.328227,0.202991,4
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,external,sex,0.012423,0.002084,0.016015,0.035015,10
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,external,cp,0.535021,0.441872,0.281209,0.204678,1
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,external,trestbps,0.140714,0.122219,0.112444,0.134206,8
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,external,fbs,0.211393,0.208304,0.089139,0.114649,6
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,external,restecg,0.14152,0.141548,0.064416,0.089494,7
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,external,thalach,0.345443,0.368846,0.23492,0.415515,2
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,external,exang,0.224319,0.215659,0.071062,0.091472,5
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,external,oldpeak,0.322485,0.259846,0.295893,0.233011,3
+PAIRWISE_E24_VA L_TO_CLEV_XGBoost,VA Long Beach,Cleveland,XGBoost,external,slope,0.044602,0.031945,0.054296,0.031761,9
