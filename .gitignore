@@ -32,9 +32,17 @@ desktop.ini
 *.log
 catboost_info/
 
-# Streamlit Local Cache
-.streamlit/*
-!.streamlit/config.toml
+# Local Streamlit Application & Assets
+.streamlit/
+app.py
+predict.py
+assets/
+
+# Secondary Figure Export Folders & Root Image Copies
+01_methodological_architecture.png
+04_shap_explanation_stability.png
+corrected_figures_final/
+corrected_images/
 
 # LaTeX Compilation Artifacts (keep main.tex, references.bib, and main.pdf)
 main.aux
@@ -49,12 +57,19 @@ main.run.xml
 *.fls
 *.fdb_latexmk
 
-# Local Working Drafts (Office formats)
+# Legacy Project & Presentation Files
+build_*.py
+generate_report_assets.py
+presentation_assets/
+paper/
+models/
+staged-files.txt
+
+# Local Working Drafts & PDFs (keep main.pdf)
 *.docx
 *.pptx
-
-# Legacy Model Binaries
-models/*.joblib
+*.pdf
+!main.pdf
 
 # Internal Documentation & Audit Notes
 docs/
