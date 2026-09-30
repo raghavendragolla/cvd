@@ -152,6 +152,8 @@ Research_Project/
 
 ## 7. Data Availability & Raw Datasets
 
+The reported results in the manuscript were generated exclusively from the publicly available UCI Heart Disease datasets. The synthetic heart-dataset generator is retained only as an offline fallback and was not used in the reported experiments.
+
 **Raw UCI source datasets are NOT redistributed in this repository.**
 
 To comply with academic distribution considerations, users wishing to execute the ingestion pipeline from raw source files should acquire the four original clinical data files directly from the official **UCI Machine Learning Repository Heart Disease study** (Janosi et al., 1988):
