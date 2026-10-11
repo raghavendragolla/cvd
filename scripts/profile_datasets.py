@@ -619,7 +619,7 @@ def generate_docs_reports(raw_data, profile_df, matrix_df, miss_df, quality_df):
 
 **Status**: Phase 2 Dataset Inspection Baseline
 **Target Architecture**: Cross-Dataset Generalization, Transportability & Explanation Stability
-**Cohorts Profiled**: Cleveland ($N=303$), Hungarian ($N=294$), Zurich/Switzerland ($N=123$), VA Long Beach ($N=200$) — Total $N=920$.
+**Cohorts Profiled**: Cleveland ($N=303$), Hungarian ($N=294$), Zurich/Switzerland ($N=123$), VA Long Beach ($N=200$) — Total $N=920$ raw records (918 after removing 2 exact duplicates).
 
 ---
 
@@ -627,7 +627,7 @@ def generate_docs_reports(raw_data, profile_df, matrix_df, miss_df, quality_df):
 
 In order to conduct true cross-dataset external validation without data leakage or feature fabrications:
 1. **Track A (13 Clinical Biomarkers)**: Complete clinical and diagnostic imaging schema available strictly for the **Cleveland Clinic cohort** ($N=303$). Features include fluoroscopy (`ca`) and thallium stress scintigraphy (`thal`).
-2. **Track B (11 Harmonized Clinical Features)**: Universally recorded physiological parameters across all 4 international centers ($N=920$ patients across USA, Hungary, and Switzerland). Features `ca` and `thal` are omitted from Track B due to 90–99% non-measurement in European and VA cohorts.
+2. **Track B (11 Harmonized Clinical Features)**: Universally recorded physiological parameters across all 4 international centers ($N=920$ raw records; 918 analysed, across USA, Hungary, and Switzerland). Features `ca` and `thal` are omitted from Track B due to 90–99% non-measurement in European and VA cohorts.
 
 ---
 
@@ -707,7 +707,7 @@ In order to conduct true cross-dataset external validation without data leakage 
 
 | Clinical Characteristic | Cleveland (USA) | Hungarian (Budapest) | Zurich (Switzerland) | VA Long Beach (USA) | Primary Clinical Driver |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Sample Size ($N$)** | 303 | 294 | 123 | 200 | Cohort collection period |
+| **Raw Sample Size ($N$)** | 303 | 294 | 123 | 200 | Cohort collection period |
 | **Mean Age (years)** | 54.4 ± 9.0 | 47.9 ± 8.1 | 55.3 ± 8.0 | 59.4 ± 7.9 | Hungarian cohort is ~7 years younger; VA is older. |
 | **Age Range** | 29.0 – 77.0 | 28.0 – 66.0 | 32.0 – 74.0 | 35.0 – 77.0 | Pediatric cases absent; all adults. |
 | **Male Proportion (%)** | 68.0% | 72.4% | **91.9%** | **97.0%** | Veterans hospital (VA) and Zurich tertiary center are overwhelmingly male. |
@@ -760,12 +760,12 @@ In order to conduct true cross-dataset external validation without data leakage 
 **Auditor**: Antigravity Clinical AI Research Agent
 **Date**: September 2026
 **Status**: Completed
-**Cohorts**: Cleveland ($N=303$), Hungarian ($N=294$), Zurich ($N=123$), VA Long Beach ($N=200$) — Total $N=920$
+**Cohorts**: Cleveland ($N=303$), Hungarian ($N=294$), Zurich ($N=123$), VA Long Beach ($N=200$) — Total $N=920$ raw records (918 after removing 2 exact duplicates)
 
 ---
 
 ## 1. Dataset Overview
-All 4 international cardiology datasets located in `data/raw/` were profiled without modification or imputation. The total cohort encompasses 920 cardiac patients across two continents, reflecting distinct clinical workflows ranging from outpatient screening to acute catheterization laboratory referrals.
+All 4 international cardiology datasets located in `data/raw/` were profiled without modification or imputation. The total raw cohort contains 920 records (918 unique patients after removing 2 exact duplicates) across two continents, reflecting distinct clinical workflows ranging from outpatient screening to acute catheterization laboratory referrals.
 
 ## 2. Cleveland Clinic (USA)
 - **File**: `cleveland_raw.csv` ($N=303$, 14 columns)
