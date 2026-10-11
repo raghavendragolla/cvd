@@ -1,11 +1,11 @@
 """
 Dataset loading, multi-hospital international cohort ingestion, and Dual-Track partitioning.
 Supports 4 international cardiology centers: Cleveland (USA), Hungarian (Budapest),
-Switzerland (Zurich), and Long Beach VA (California) — Total ~920 clinical cases.
+Switzerland (Zurich), and Long Beach VA (California) — 920 raw records (918 after removing 2 exact duplicates).
 
 Tracks:
 - Track A (13 Features): Complete Cleveland cohort (n=303) with full diagnostic imaging.
-- Track B (11 Features): Merged 4-center international cohort (N~920) on universally available parameters.
+- Track B (11 Features): Merged 4-center international cohort (920 raw records; 918 after de-duplication) on universally available parameters.
 """
 
 import os
@@ -147,8 +147,10 @@ def load_cleveland_track_a(data_dir: str = "data/raw") -> pd.DataFrame:
 
 def load_multicenter_track_b(data_dir: str = "data/raw") -> pd.DataFrame:
     """
-    Loads Track B: Merged 4-Center International Cohort (N~920) across Cleveland, Hungary,
-    Switzerland, and Long Beach using the 11 universally recorded clinical parameters.
+    Loads Track B: Merged 4-Center International Cohort (920 raw records, not de-duplicated)
+    across Cleveland, Hungary, Switzerland, and Long Beach using the 11 universally recorded
+    clinical parameters. The analyses use load_harmonized_cohort(..., drop_duplicates=True),
+    which yields 918 records.
     """
     multi_dict = load_multi_hospital_datasets(data_dir)
     merged_rows = []

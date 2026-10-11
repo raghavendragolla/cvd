@@ -27,14 +27,16 @@ The experimental framework addresses four core questions:
 
 ## 3. Study Design & Cohorts
 
-The investigation benchmarks four international cardiology cohorts from the UCI Heart Disease repository ($N = 920$ total patients):
+The investigation benchmarks four international cardiology cohorts from the UCI Heart Disease repository: 920 raw records, of which 2 exact duplicates (1 Hungarian, 1 VA Long Beach) are removed, leaving $N = 918$ patients for analysis:
 
-| Cohort | Clinical Center | Sample Size ($N$) | CAD Prevalence |
-| :--- | :--- | :---: | :---: |
-| **Cleveland** | Cleveland Clinic Foundation (Cleveland, OH, USA) | 303 | 45.87% |
-| **Hungarian** | Hungarian Institute of Cardiology (Budapest, Hungary) | 294 | 36.05% |
-| **Zurich** | University Hospital Zurich (Zurich, Switzerland) | 123 | 79.67% |
-| **VA Long Beach** | V.A. Medical Center (Long Beach, CA, USA) | 200 | 74.50% |
+| Cohort | Clinical Center | Raw N | Analysed N | CAD Prevalence (analysed) |
+| :--- | :--- | :---: | :---: | :---: |
+| **Cleveland** | Cleveland Clinic Foundation (Cleveland, OH, USA) | 303 | 303 | 45.87% |
+| **Hungarian** | Hungarian Institute of Cardiology (Budapest, Hungary) | 294 | 293 | 36.18% |
+| **Zurich** | University Hospital Zurich (Zurich, Switzerland) | 123 | 123 | 93.50% |
+| **VA Long Beach** | V.A. Medical Center (Long Beach, CA, USA) | 200 | 199 | 74.37% |
+
+CAD prevalence = patients with any coronary artery disease (`target > 0`) / analysed N.
 
 ### Harmonized Track B 10-Feature Representation
 To evaluate transportability without data leakage or reliance on center-specific invasive diagnostic imaging, the study defines a universal 10-feature non-invasive clinical representation:
